@@ -23,14 +23,16 @@
 <link rel="stylesheet" href="../assets/site.css">
 <style>
 .vic-card { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px; }
-@media (max-width: 860px) { .vic-card { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .vic-card { grid-template-columns: minmax(0, 1fr); } }
 .vic-card h2 { font-size: clamp(26px, 3.4vw, 36px); margin: 4px 0 10px; }
 .vic-card p { margin: 0 0 12px; }
 .dates { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px; }
 .dates li { display: grid; grid-template-columns: 96px 1fr; gap: 10px; }
+@media (max-width: 300px) { .dates li { grid-template-columns: 1fr; gap: 2px; } }
 .dates b { font-family: var(--mono); font-weight: 500; font-size: 13px; color: var(--leaf); padding-top: 2px; }
 .state-card h3 { margin: 0 0 6px; font-size: 19px; display: flex; justify-content: space-between; gap: 8px; }
 .state-card p { margin: 0 0 8px; color: var(--muted); font-size: 15px; }
+.state-card > a { display: inline-flex; align-items: center; min-height: 44px; }
 .state-card .nums { font-family: var(--mono); font-size: 13px; color: var(--muted); font-weight: 500; }
 </style>
 </head>
@@ -55,7 +57,7 @@
         <button class="more-btn" type="button" aria-expanded="false">More</button>
         <div class="more-list">
           <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
-          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../my-journey/">Journey tracker<small>Track an EOI from lodgement</small></a>
           <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
           <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
           <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
@@ -70,7 +72,7 @@
   <div class="wrap">
     <div class="page-hero">
       <span class="kicker"><i></i>Subclass 190 and 491</span>
-      <h1>State <span class="hl">nominations</span></h1>
+      <h1>State nominations</h1>
       <p class="lede">Each state and territory gets a set number of 190 and 491 nomination places every program year, and each picks candidates its own way. Victoria comes first here, because it’s the one this site is built around.</p>
     </div>
 
@@ -80,7 +82,7 @@
           <span class="eyebrow">Victoria</span>
           <h2 id="vic-h">Victoria’s skilled nomination program</h2>
           <div id="vic-summary"></div>
-          <div class="actions"><a class="btn primary" href="../" style="text-decoration:none">Calculate my VPT score</a><span id="vic-links" class="actions"></span></div>
+          <div class="actions"><a class="btn primary" href="../" style="text-decoration:none">Calculate VPT score</a><span id="vic-links" class="actions"></span></div>
         </div>
         <div>
           <div class="stats" id="vic-stats" style="margin-bottom:16px"></div>
@@ -111,7 +113,7 @@
     <p class="source" id="src"></p>
 <!-- footer -->
     <footer class="site-foot">
-      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">Journey tracker</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
       <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
       <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
     </footer>

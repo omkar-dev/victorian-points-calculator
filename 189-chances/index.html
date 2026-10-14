@@ -52,7 +52,7 @@
         <button class="more-btn" type="button" aria-expanded="false">More</button>
         <div class="more-list">
           <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
-          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../my-journey/">Journey tracker<small>Track an EOI from lodgement</small></a>
           <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
           <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
           <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
@@ -67,7 +67,7 @@
   <div class="wrap">
     <div class="page-hero">
       <span class="kicker"><i></i>Subclass 189 · official round results</span>
-      <h1>Check your <span class="hl">189 chances</span></h1>
+      <h1>Check your 189 chances</h1>
       <p class="lede">Compare your points with the lowest score invited for your occupation in recent SkillSelect rounds. You’ll also see how many EOIs sit at or above your score, and how much of your occupation’s ceiling is left.</p>
     </div>
 
@@ -95,7 +95,7 @@
     <p class="source" id="src"></p>
 <!-- footer -->
     <footer class="site-foot">
-      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">Journey tracker</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
       <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
       <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
     </footer>
@@ -171,7 +171,7 @@
       '<section class="block"><div class="grid-2">' +
       '<div class="panel"><h3 class="sub">' + V.esc(o.name) + ": 189 cut-off by round</h3><div id='hist'></div></div>" +
       '<div class="panel"><h3 class="sub">189 EOI pool by points</h3><p class="small muted" style="margin:0 0 8px">Your score is in yellow. Counts under 20 are hidden by Home Affairs.</p><div id="pool"></div></div>' +
-      '</div><div class="actions" style="margin-top:16px"><a class="btn" style="text-decoration:none" href="../occupations/?code=' + o.anzsco + '">Occupation details</a><a class="btn" style="text-decoration:none" href="../my-journey/?occ=' + encodeURIComponent(o.name) + "&points=" + pts + (doe ? "&doe=" + doe : "") + '">Track in My journey</a></div></section>';
+      '</div><div class="actions" style="margin-top:16px"><a class="btn" style="text-decoration:none" href="../occupations/?code=' + o.anzsco + '">Occupation details</a><a class="btn" style="text-decoration:none" href="../my-journey/?occ=' + encodeURIComponent(o.name) + "&points=" + pts + (doe ? "&doe=" + doe : "") + '">Add to journey tracker</a></div></section>';
 
     function draw() {
       if (!$("hist")) return;

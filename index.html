@@ -128,7 +128,7 @@
         <button class="more-btn" type="button" aria-expanded="false">More</button>
         <div class="more-list">
           <a href="compare/">Compare occupations<small>Side by side, up to four</small></a>
-          <a href="my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="my-journey/">Journey tracker<small>Track an EOI from lodgement</small></a>
           <a href="eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
           <a href="visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
           <a href="occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
@@ -157,7 +157,7 @@
             <p class="q-help">Use your age on the day you lodge your Registration of Interest.</p>
             <div class="slider">
               <div class="slider-read"><output id="age-out" for="age">29</output><span id="age-note">years old</span></div>
-              <input type="range" id="age" min="18" max="45" step="1" value="29" aria-describedby="age-note">
+              <input type="range" id="age" data-stepper="age" min="18" max="45" step="1" value="29" aria-describedby="age-note">
               <div class="scale" aria-hidden="true"><span>18</span><span>25</span><span>30</span><span>35</span><span>40</span><span>45+</span></div>
             </div>
           </div>
@@ -173,7 +173,7 @@
             <p class="q-help">Your yearly salary before tax, without super, from your current skilled job in Victoria. Slide all the way left if you’re offshore.</p>
             <div class="slider">
               <div class="slider-read"><output id="salary-out" for="salary">Under $80k</output><span id="salary-note">a year</span></div>
-              <input type="range" id="salary" min="75000" max="170000" step="5000" value="75000" aria-describedby="salary-note">
+              <input type="range" id="salary" data-stepper="salary" min="75000" max="170000" step="5000" value="75000" aria-describedby="salary-note">
               <div class="scale" aria-hidden="true"><span>&lt;$80k</span><span>$100k</span><span>$120k</span><span>$140k</span><span>$170k+</span></div>
             </div>
           </div>
@@ -220,7 +220,7 @@
               <ul class="tips" id="tips"></ul>
             </div>
             <div class="actions">
-              <button type="button" class="btn primary" id="share">Copy link to my score</button>
+              <button type="button" class="btn primary" id="share">Copy score link</button>
               <button type="button" class="btn" id="reset">Start over</button>
             </div>
             <p class="private">Everything stays in your browser. Your answers are saved in the link so you can come back to them.</p>
@@ -311,13 +311,13 @@
         <p>Your VPT score is one part of it. You also need 65 federal points, an occupation on the right list, and an invitation from a SkillSelect round. These tools cover the rest.</p>
       </div>
       <div class="tools">
-        <a class="tool" href="skillselect-points/"><h3>Federal points calculator</h3><p>Work out your SkillSelect points for 189, 190 and 491, including nomination points.</p><span class="go">Calculate my points →</span></a>
-        <a class="tool" href="189-chances/"><h3>189 chances</h3><p>Compare your points and date of effect with the latest cut-off for your occupation.</p><span class="go">Check my chances →</span></a>
+        <a class="tool" href="skillselect-points/"><h3>Federal points calculator</h3><p>Work out your SkillSelect points for 189, 190 and 491, including nomination points.</p><span class="go">Calculate points →</span></a>
+        <a class="tool" href="189-chances/"><h3>189 chances</h3><p>Compare your points and date of effect with the latest cut-off for your occupation.</p><span class="go">Check chances →</span></a>
         <a class="tool" href="rounds/"><h3>Invitation rounds</h3><p>Every 189 and 491 round with invitation counts, minimum points and trends.</p><span class="go">See the rounds →</span></a>
-        <a class="tool" href="occupations/"><h3>Occupations</h3><p>Search by name or ANZSCO code to see lists, visas, assessors, cut-offs and ceilings.</p><span class="go">Find my occupation →</span></a>
+        <a class="tool" href="occupations/"><h3>Occupations</h3><p>Search by name or ANZSCO code to see lists, visas, assessors, cut-offs and ceilings.</p><span class="go">Find an occupation →</span></a>
         <a class="tool" href="state-nominations/"><h3>State nominations</h3><p>190 and 491 places for every state and territory, and how each one selects.</p><span class="go">Compare states →</span></a>
         <a class="tool" href="compare/"><h3>Compare occupations</h3><p>Put up to four occupations side by side: cut-offs, EOIs waiting and ceilings.</p><span class="go">Compare →</span></a>
-        <a class="tool" href="my-journey/"><h3>My journey</h3><p>Track days since your date of effect and each step to a grant. It stays in your browser.</p><span class="go">Start tracking →</span></a>
+        <a class="tool" href="my-journey/"><h3>Journey tracker</h3><p>Track days since your date of effect and each step to a grant. It stays in your browser.</p><span class="go">Start tracking →</span></a>
         <a class="tool" href="eoi-pool/"><h3>EOI pool</h3><p>How many EOIs are waiting for 189, 190 and 491, by points and by occupation.</p><span class="go">See the pool →</span></a>
         <a class="tool" href="visa-grants/"><h3>Visa grants</h3><p>Migration Program places and grants by visa and year.</p><span class="go">See grants →</span></a>
         <a class="tool" href="occupation-ceilings/"><h3>Occupation ceilings</h3><p>The cap on invitations for each occupation group this program year.</p><span class="go">See ceilings →</span></a>
@@ -347,7 +347,7 @@
 
 <!-- footer -->
     <footer class="site-foot">
-      <p class="foot-links"><a href="./">VIC Points Test</a> · <a href="skillselect-points/">Points calculator</a> · <a href="189-chances/">189 chances</a> · <a href="rounds/">Invitation rounds</a> · <a href="occupations/">Occupations</a> · <a href="state-nominations/">State nominations</a> · <a href="compare/">Compare occupations</a> · <a href="my-journey/">My journey</a> · <a href="eoi-pool/">EOI pool</a> · <a href="visa-grants/">Visa grants</a> · <a href="occupation-ceilings/">Occupation ceilings</a></p>
+      <p class="foot-links"><a href="./">VIC Points Test</a> · <a href="skillselect-points/">Points calculator</a> · <a href="189-chances/">189 chances</a> · <a href="rounds/">Invitation rounds</a> · <a href="occupations/">Occupations</a> · <a href="state-nominations/">State nominations</a> · <a href="compare/">Compare occupations</a> · <a href="my-journey/">Journey tracker</a> · <a href="eoi-pool/">EOI pool</a> · <a href="visa-grants/">Visa grants</a> · <a href="occupation-ceilings/">Occupation ceilings</a></p>
       <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
       <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
     </footer>
@@ -571,7 +571,7 @@
   });
   $("share").addEventListener("click", function () {
     flushUrl();
-    var btn = this, done = function () { btn.textContent = "Link copied"; setTimeout(function () { btn.textContent = "Copy link to my score"; }, 1800); };
+    var btn = this, done = function () { btn.textContent = "Link copied"; setTimeout(function () { btn.textContent = "Copy score link"; }, 1800); };
     var fallback = function () { window.prompt("Copy this link:", location.href); };
     if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, fallback); else fallback();
   });

@@ -28,6 +28,7 @@
 .visa-tiles b { font-family: var(--display); font-size: 24px; font-variant-numeric: tabular-nums; }
 .visa-tiles small { font-size: 12.5px; color: var(--muted); }
 .cap-note { font-size: 13.5px; color: var(--warn); margin: 0; }
+@media (max-width: 300px) { .visa-tiles { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -51,7 +52,7 @@
         <button class="more-btn" type="button" aria-expanded="false">More</button>
         <div class="more-list">
           <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
-          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../my-journey/">Journey tracker<small>Track an EOI from lodgement</small></a>
           <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
           <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
           <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
@@ -66,7 +67,7 @@
   <div class="wrap">
     <div class="page-hero">
       <span class="kicker"><i></i>Federal points test · 189, 190 and 491</span>
-      <h1>SkillSelect <span class="hl">points</span> calculator</h1>
+      <h1>SkillSelect points calculator</h1>
       <p class="lede">You need at least 65 points to lodge an Expression of Interest. Answer the questions below to see your points for each visa, including the nomination points a state adds.</p>
     </div>
 
@@ -81,7 +82,7 @@
             <p class="q-help">Your age on the day you’re invited to apply. You must be under 45.</p>
             <div class="slider">
               <div class="slider-read"><output id="age-out" for="age">29</output><span id="age-note">years old</span></div>
-              <input type="range" id="age" min="18" max="45" step="1" value="29" aria-describedby="age-note">
+              <input type="range" id="age" data-stepper="age" min="18" max="45" step="1" value="29" aria-describedby="age-note">
               <div class="scale" aria-hidden="true"><span>18</span><span>25</span><span>33</span><span>40</span><span>45+</span></div>
             </div>
           </div>
@@ -143,7 +144,7 @@
               <ul class="tips" id="tips"></ul>
             </div>
             <div class="actions">
-              <a class="btn primary" id="chances" href="../189-chances/" style="text-decoration:none">Check my 189 chances</a>
+              <a class="btn primary" id="chances" href="../189-chances/" style="text-decoration:none">Check 189 chances</a>
               <button type="button" class="btn" id="share">Copy link</button>
               <button type="button" class="btn" id="reset">Start over</button>
             </div>
@@ -184,7 +185,7 @@
     </section>
 <!-- footer -->
     <footer class="site-foot">
-      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">Journey tracker</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
       <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
       <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
     </footer>

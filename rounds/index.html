@@ -43,7 +43,7 @@
         <button class="more-btn" type="button" aria-expanded="false">More</button>
         <div class="more-list">
           <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
-          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../my-journey/">Journey tracker<small>Track an EOI from lodgement</small></a>
           <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
           <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
           <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
@@ -58,7 +58,7 @@
   <div class="wrap">
     <div class="page-hero">
       <span class="kicker"><i></i>Official round results</span>
-      <h1>Invitation <span class="hl">rounds</span></h1>
+      <h1>Invitation rounds</h1>
       <p class="lede">Every SkillSelect round for subclass 189 and 491 family-sponsored since July 2023: how many people were invited, the lowest score that got through for each occupation, and how cut-offs moved.</p>
     </div>
 
@@ -105,7 +105,7 @@
     <p class="source" id="src"></p>
 <!-- footer -->
     <footer class="site-foot">
-      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">Journey tracker</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
       <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
       <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
     </footer>
@@ -146,6 +146,10 @@
       var fyAsc = fy.slice().sort(function (a, b) { return a.fy < b.fy ? -1 : 1; });
       V.chart($("fy-chart"), {
         title: "Subclass 189 invitations by program year", type: "col", unit: "invitations", height: 220,
+        summary: (function () {
+          var done = fyAsc.filter(function (x) { return x["189"] > 0; }), top = done.slice().sort(function (a, b) { return b["189"] - a["189"]; })[0], cur = fyAsc[fyAsc.length - 1];
+          return (top ? "Most in " + top.fy + ": " + V.num(top["189"]) + ". " : "") + (cur && !cur["189"] ? cur.fy + " has had no 189 rounds yet." : "");
+        })(),
         labels: fyAsc.map(function (x) { return x.fy; }),
         series: [{ name: "Subclass 189", color: "var(--leaf)", values: fyAsc.map(function (x) { return x["189"]; }) }]
       });

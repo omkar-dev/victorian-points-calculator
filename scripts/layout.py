@@ -25,7 +25,7 @@ PRIMARY = [
 ]
 MORE = [
     ("compare/", "Compare occupations", "Side by side, up to four"),
-    ("my-journey/", "My journey", "Track your EOI from lodgement"),
+    ("my-journey/", "Journey tracker", "Track an EOI from lodgement"),
     ("eoi-pool/", "EOI pool", "Who is waiting, by points and occupation"),
     ("visa-grants/", "Visa grants", "Program places and grants by visa"),
     ("occupation-ceilings/", "Occupation ceilings", "Caps on 189 and 491 family invitations"),

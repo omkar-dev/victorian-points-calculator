@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My Journey: Skilled Visa EOI Tracker | 189, 190 &amp; 491</title>
+<title>Journey Tracker: Skilled Visa EOI Tracker | 189, 190 &amp; 491</title>
 <meta name="description" content="Track your skilled visa journey from Expression of Interest to grant. See days since your date of effect, log each milestone and keep several scenarios. Private: it stays in your browser.">
 <link rel="canonical" href="https://vptpoints.com/my-journey/">
 <meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
@@ -11,7 +11,7 @@
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VPT Points">
-<meta property="og:title" content="My Journey: skilled visa EOI tracker">
+<meta property="og:title" content="Journey tracker for skilled visa EOIs">
 <meta property="og:description" content="Days since your date of effect, every milestone to your grant, and several scenarios side by side.">
 <meta property="og:url" content="https://vptpoints.com/my-journey/">
 <meta property="og:image" content="https://vptpoints.com/og-image.png">
@@ -66,7 +66,7 @@
         <button class="more-btn is-current" type="button" aria-expanded="false">More</button>
         <div class="more-list">
           <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
-          <a href="../my-journey/" aria-current="page">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../my-journey/" aria-current="page">Journey tracker<small>Track an EOI from lodgement</small></a>
           <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
           <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
           <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
@@ -81,7 +81,7 @@
   <div class="wrap">
     <div class="page-hero">
       <span class="kicker"><i></i>Private tracker · saved in this browser</span>
-      <h1>My <span class="hl">journey</span></h1>
+      <h1>Journey tracker</h1>
       <p class="lede">Log your EOI and each step after it. You’ll see how long you’ve been waiting, what comes next, and how your scenarios compare. Nothing leaves your device.</p>
     </div>
 
@@ -121,7 +121,7 @@
     </section>
 <!-- footer -->
     <footer class="site-foot">
-      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">Journey tracker</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
       <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
       <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
     </footer>
@@ -210,7 +210,7 @@
       if (!Array.isArray(data)) throw new Error("Not a backup");
       list = data.filter(function (j) { return j && j.name && STEPS[j.visa] && /^\d{4}-\d{2}-\d{2}$/.test(j.doe); });
       save(); render();
-    }).catch(function () { alert("That file isn’t a My journey backup."); });
+    }).catch(function () { alert("That file isn’t a journey tracker backup."); });
     this.value = "";
   });
   try {

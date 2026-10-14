@@ -24,8 +24,11 @@
 <style>
 .detail { display: grid; gap: 18px; }
 .detail-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: start; }
+.detail-head > div { min-width: 0; }
+@media (max-width: 300px) { .detail-head h2 { font-size: 22px; } .detail .kv { grid-template-columns: minmax(0, 1fr); } .detail .kv dd { margin-bottom: 6px; } }
+.detail-head .pill { white-space: normal; }
 .detail-head h2 { font-size: clamp(26px, 3.4vw, 38px); margin: 0 0 6px; }
-.star { all: unset; cursor: pointer; font-size: 18px; color: var(--muted); padding: 2px 6px; border-radius: 8px; }
+.star { all: unset; cursor: pointer; font-size: 18px; color: var(--muted); border-radius: 8px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
 .star[aria-pressed="true"] { color: var(--sun); }
 .star:focus-visible { outline: 3px solid var(--sun); }
 .kv { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; font-size: 15px; margin: 0; }
@@ -54,7 +57,7 @@
         <button class="more-btn" type="button" aria-expanded="false">More</button>
         <div class="more-list">
           <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
-          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../my-journey/">Journey tracker<small>Track an EOI from lodgement</small></a>
           <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
           <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
           <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
@@ -69,7 +72,7 @@
   <div class="wrap">
     <div class="page-hero">
       <span class="kicker"><i></i>Official skilled occupation list</span>
-      <h1>Occupation <span class="hl">search</span></h1>
+      <h1>Occupation search</h1>
       <p class="lede">Find your occupation by name or ANZSCO code. You’ll see which visas it’s eligible for, who assesses it, its recent 189 cut-offs, how many EOIs are waiting and its ceiling.</p>
     </div>
 
@@ -88,7 +91,7 @@
     </section>
 <!-- footer -->
     <footer class="site-foot">
-      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">Journey tracker</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
       <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
       <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
     </footer>
@@ -115,7 +118,7 @@
     $("detail").innerHTML =
       '<div class="detail-head"><div><span class="crumbs">ANZSCO <span class="code">' + V.esc(o.anzsco) + "</span>" + (o.aka.length ? " · also listed as " + V.esc(o.aka.join(", ")) : "") + "</span>" +
       "<h2>" + V.esc(o.name) + "</h2><div>" + pills(o.lists) + pills(o.visas.map(function (v) { return "Subclass " + v; }), "sun") + "</div></div>" +
-      '<div class="actions">' + star(o) + (o.visas.indexOf("189") >= 0 ? '<a class="btn primary" style="text-decoration:none" href="../189-chances/?occ=' + o.anzsco + '">Check my 189 chances</a>' : "") + '<button class="btn" type="button" id="close">Close</button></div></div>' +
+      '<div class="actions">' + star(o) + (o.visas.indexOf("189") >= 0 ? '<a class="btn primary" style="text-decoration:none" href="../189-chances/?occ=' + o.anzsco + '">Check 189 chances</a>' : "") + '<button class="btn" type="button" id="close">Close</button></div></div>' +
       '<div class="stats">' +
       stat("Latest 189 cut-off", o.cutoff ? o.cutoff.minPoints + " pts" : "Not invited", o.cutoff ? V.date(o.cutoff.roundDate) + " round" + (inLatest ? "" : " (not in the latest round)") : "In rounds since July 2023") +
       stat("EOIs waiting · 189", V.num(e.submitted189), "190: " + V.num(e.submitted190) + " · 491: " + V.num(e.submitted491)) +

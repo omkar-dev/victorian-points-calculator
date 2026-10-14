@@ -38,6 +38,20 @@
     }, true);
   }
 
+  // Steppers beside each slider (sliders.md): exact one-step changes without dragging.
+  document.querySelectorAll('input[type="range"][data-stepper]').forEach(function (r) {
+    var read = r.closest(".slider").querySelector(".slider-read"), name = r.getAttribute("data-stepper");
+    var box = document.createElement("span");
+    box.className = "stepper";
+    box.innerHTML = '<button type="button" data-d="-1" aria-label="Decrease ' + name + '">−</button><button type="button" data-d="1" aria-label="Increase ' + name + '">+</button>';
+    box.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      if (b.getAttribute("data-d") === "1") r.stepUp(); else r.stepDown();
+      r.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    read.appendChild(box);
+  });
+
   var VPT = window.VPT = {};
 
   VPT.$ = function (sel, root) { return (root || document).querySelector(sel); };
@@ -169,7 +183,8 @@
     var n = spec.labels.length, band = iw / n;
     var x = function (i) { return m.l + band * i + band / 2; };
     var fmt = spec.fmt || VPT.compact;
-    var svg = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + VPT.esc(spec.title || "Chart") + '">';
+    // The picture is for sighted readers; the same numbers go to assistive tech as a table below.
+    var svg = '<svg viewBox="0 0 ' + W + " " + H + '" aria-hidden="true" focusable="false">';
     svg += '<g class="axis">';
     for (var t = lo; t <= hi + 1e-9; t += step) {
       svg += '<line class="gridline" x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + y(t) + '" y2="' + y(t) + '"/>';
@@ -188,6 +203,13 @@
         svg += '<path d="' + d + '" fill="none" stroke="' + s.color + '" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
         s.values.forEach(function (v, i) { if (v != null) svg += '<circle cx="' + x(i) + '" cy="' + y(v) + '" r="4" fill="' + s.color + '" stroke="var(--card)" stroke-width="2"/>'; });
       });
+      // Label each line's latest value at its end, so the main number needs no hover.
+      if (k <= 3) spec.series.forEach(function (s) {
+        for (var i = s.values.length - 1; i >= 0; i--) if (s.values[i] != null) {
+          svg += '<text class="lbl-val" x="' + x(i) + '" y="' + (y(s.values[i]) - 10) + '" text-anchor="' + (i === n - 1 ? "end" : "middle") + '">' + fmt(s.values[i]) + "</text>";
+          break;
+        }
+      });
     } else {
       var bw = Math.min(24, (band - 6) / k - 2);
       spec.series.forEach(function (s, si) {
@@ -202,7 +224,7 @@
     spec.labels.forEach(function (l, i) { svg += '<rect data-i="' + i + '" x="' + (m.l + band * i) + '" y="' + m.t + '" width="' + band + '" height="' + ih + '" fill="transparent"/>'; });
     svg += "</svg>";
     var legend = k > 1 ? '<ul class="chart-legend">' + spec.series.map(function (s) { return '<li><i style="background:' + s.color + '"></i>' + VPT.esc(s.name) + "</li>"; }).join("") + "</ul>" : "";
-    el.innerHTML = legend + '<div class="chart">' + svg + '<div class="tip-box"></div></div>';
+    el.innerHTML = '<p class="chart-sum">' + VPT.esc(summarize(spec)) + "</p>" + legend + '<div class="chart">' + svg + '<div class="tip-box"></div></div>' + dataTable(spec);
     var box = el.querySelector(".chart"), tip = el.querySelector(".tip-box"), svgEl = el.querySelector("svg");
     function show(i) {
       var vals = spec.series.map(function (s) { return s.values[i]; });
@@ -218,6 +240,33 @@
     svgEl.addEventListener("mousemove", function (e) { var r = e.target.closest && e.target.closest("rect[data-i]"); if (r) show(+r.getAttribute("data-i")); });
     svgEl.addEventListener("mouseleave", function () { tip.classList.remove("on"); });
   };
+  // One line that states what the chart shows: the latest value of each series,
+  // and for a single series of columns, its highest value too.
+  function summarize(spec) {
+    if (spec.summary) return spec.summary;
+    var tips = spec.tipLabels || spec.labels, parts = [];
+    spec.series.forEach(function (s) {
+      var last = -1, hi = -1;
+      s.values.forEach(function (v, i) { if (v == null) return; last = i; if (hi < 0 || v > s.values[hi]) hi = i; });
+      if (last < 0) return;
+      var who = spec.series.length > 1 ? s.name + ": " : "";
+      var unit = spec.unit ? " " + spec.unit : "";
+      parts.push(who + "latest " + VPT.num(s.values[last]) + unit + " (" + tips[last] + ")" +
+        (spec.type !== "line" && spec.series.length === 1 && hi !== last ? ", highest " + VPT.num(s.values[hi]) + " (" + tips[hi] + ")" : ""));
+    });
+    var t = parts.join(" · ");
+    return t.charAt(0).toUpperCase() + t.slice(1) + ".";
+  }
+  function dataTable(spec) {
+    var tips = spec.tipLabels || spec.labels;
+    // Wrapped: a table grows to fit its content, so .sr-only's 1px width has to sit on a block.
+    return '<div class="sr-only"><table><caption>' + VPT.esc(spec.title || "Chart data") + "</caption><thead><tr><th scope=\"col\">Label</th>" +
+      spec.series.map(function (s) { return '<th scope="col">' + VPT.esc(s.name) + "</th>"; }).join("") + "</tr></thead><tbody>" +
+      tips.map(function (l, i) {
+        return '<tr><th scope="row">' + VPT.esc(l) + "</th>" + spec.series.map(function (s) { return "<td>" + (s.values[i] == null ? "no data" : VPT.num(s.values[i])) + "</td>"; }).join("") + "</tr>";
+      }).join("") + "</tbody></table></div>";
+  }
+
   function niceStep(raw) {
     if (raw <= 0) return 1;
     var p = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / p;

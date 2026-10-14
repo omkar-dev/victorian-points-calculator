@@ -15,7 +15,7 @@ Live: https://vptpoints.com/
 | `/occupations/` | Search the skilled occupation list, with per-occupation detail |
 | `/state-nominations/` | 190 / 491 allocations by state (Victoria first) and how each state selects |
 | `/compare/` | Up to four occupations side by side |
-| `/my-journey/` | EOI-to-grant tracker kept in the browser (localStorage) |
+| `/my-journey/` | Journey tracker: EOI to grant kept in the browser (localStorage) |
 | `/eoi-pool/` | SkillSelect EOI counts by visa, points and occupation |
 | `/visa-grants/` | Migration Program planning levels and grants |
 | `/occupation-ceilings/` | 2025–26 occupation ceilings |
