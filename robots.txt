@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://omkar-dev.github.io/victorian-points-calculator/sitemap.xml
+Sitemap: https://vptpoints.com/sitemap.xml
