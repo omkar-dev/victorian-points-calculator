@@ -9,8 +9,8 @@
 <meta name="author" content="omkar-dev">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://omkar-dev.github.io/victorian-points-calculator/">
-<meta name="theme-color" content="#0b5cad" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1613" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 
 <meta property="og:type" content="website">
@@ -100,520 +100,599 @@
 }
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
+/* Layout: a friendly question-by-question form on the left, a live "score card" that stays beside you (desktop) or docks to the bottom (phone). */
 :root {
-  --bg: #f6f7f9;
-  --surface: #ffffff;
-  --surface-2: #eef1f5;
-  --text: #0f1720;
-  --muted: #55606e;
-  --line: #dde2e8;
-  --brand: #0b5cad;
-  --brand-ink: #ffffff;
-  --brand-soft: #e3effb;
-  --good: #11784a;
-  --good-soft: #def5e8;
-  --warn: #9a5b00;
-  --warn-soft: #fdf0d9;
-  --track: #e3e7ec;
-  --shadow: 0 1px 2px rgba(15,23,32,.04), 0 8px 24px rgba(15,23,32,.06);
-  --radius: 14px;
-  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --paper: #f4f6f1;
+  --card: #ffffff;
+  --ink: #13261f;
+  --muted: #56675f;
+  --line: #d8e0d8;
+  --leaf: #1d5a44;
+  --leaf-soft: #e1ece4;
+  --sun: #f2b81f;
+  --sun-soft: #fcefc4;
+  --sun-ink: #3b2900;
+  --track: #e4eae4;
+  --warn: #9c4a12;
+  --warn-soft: #fbe6d6;
+  --f1: #1d5a44; --f2: #3f9670; --f3: #f2b81f; --f4: #86b59c; --f5: #2f5d8a; --f6: #8fb8dc; --f7: #c7792f;
+  --shadow: 0 1px 0 rgba(19,38,31,.04), 0 12px 32px -12px rgba(19,38,31,.18);
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Instrument Sans", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0d1117; --surface: #151b23; --surface-2: #1c2430; --text: #e6edf3; --muted: #9aa6b2;
-    --line: #2a3441; --brand: #6cb4ff; --brand-ink: #071320; --brand-soft: #13263b;
-    --good: #4fd69a; --good-soft: #10291e; --warn: #f2b64c; --warn-soft: #2d2210; --track: #263040;
-    --shadow: none;
+    --paper: #0e1613; --card: #15201b; --ink: #e8f0ea; --muted: #9fb2a8; --line: #253530;
+    --leaf: #7fd0aa; --leaf-soft: #17291f; --sun: #f5c845; --sun-soft: #3a2f0d; --sun-ink: #1d1500;
+    --track: #22312b; --warn: #f2a26b; --warn-soft: #34200f;
+    --f1: #7fd0aa; --f2: #4fae82; --f3: #f5c845; --f4: #b7dcc7; --f5: #7aa9da; --f6: #b9d6f0; --f7: #e59a55;
+    --shadow: none; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0d1117; --surface: #151b23; --surface-2: #1c2430; --text: #e6edf3; --muted: #9aa6b2;
-  --line: #2a3441; --brand: #6cb4ff; --brand-ink: #071320; --brand-soft: #13263b;
-  --good: #4fd69a; --good-soft: #10291e; --warn: #f2b64c; --warn-soft: #2d2210; --track: #263040;
-  --shadow: none;
+  --paper: #0e1613; --card: #15201b; --ink: #e8f0ea; --muted: #9fb2a8; --line: #253530;
+  --leaf: #7fd0aa; --leaf-soft: #17291f; --sun: #f5c845; --sun-soft: #3a2f0d; --sun-ink: #1d1500;
+  --track: #22312b; --warn: #f2a26b; --warn-soft: #34200f;
+  --f1: #7fd0aa; --f2: #4fae82; --f3: #f5c845; --f4: #b7dcc7; --f5: #7aa9da; --f6: #b9d6f0; --f7: #e59a55;
+  --shadow: none; color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-body {
-  margin: 0; background: var(--bg); color: var(--text);
-  font: 16px/1.6 var(--font); -webkit-font-smoothing: antialiased;
-}
-a { color: var(--brand); text-underline-offset: 2px; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
-
-.skip { position: absolute; left: -9999px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+a { color: var(--leaf); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
+@media (max-width: 480px) { .wrap { padding-inline: 16px; } }
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.skip:focus { left: 16px; top: 8px; background: var(--surface); padding: 8px 12px; border-radius: 8px; z-index: 10; }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 16px; top: 8px; background: var(--card); padding: 8px 12px; border-radius: 8px; z-index: 20; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; letter-spacing: -.015em; }
 
-header.site { border-bottom: 1px solid var(--line); background: var(--surface); }
-header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; }
-.logo { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
-.logo svg { flex: none; }
-nav.top { display: flex; gap: 18px; font-size: 14px; }
-nav.top a { color: var(--muted); text-decoration: none; }
-nav.top a:hover { color: var(--text); }
-@media (max-width: 640px) { nav.top { display: none; } }
+/* Header */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--ink); text-decoration: none; }
+.top nav { display: flex; gap: 22px; font-size: 15px; }
+.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a:hover { color: var(--ink); }
+@media (max-width: 720px) { .top nav { display: none; } }
 
-.hero { padding: 40px 0 8px; }
-.eyebrow { display: inline-block; font-size: 13px; font-weight: 600; color: var(--brand); background: var(--brand-soft); padding: 3px 10px; border-radius: 999px; }
-h1 { font-size: clamp(28px, 4.6vw, 44px); line-height: 1.12; letter-spacing: -.02em; margin: 14px 0 12px; }
-.lede { font-size: 18px; color: var(--muted); max-width: 720px; margin: 0; }
+/* Hero */
+.hero { padding-block: 28px 8px; display: grid; gap: 16px; max-width: 820px; }
+.kicker { display: inline-flex; align-items: center; gap: 8px; width: fit-content; font-size: 14px; font-weight: 600; color: var(--leaf); background: var(--leaf-soft); padding: 5px 12px 5px 8px; border-radius: 999px; }
+.kicker i { width: 8px; height: 8px; border-radius: 50%; background: var(--sun); box-shadow: 0 0 0 3px var(--sun-soft); }
+h1 { font-size: clamp(36px, 6.2vw, 68px); line-height: 1.02; font-weight: 800; margin: 0; }
+h1 .hl { background: linear-gradient(transparent 62%, var(--sun) 62%, var(--sun) 92%, transparent 92%); padding-inline: 2px; }
+.lede { font-size: clamp(18px, 2.1vw, 21px); color: var(--muted); margin: 0; max-width: 62ch; }
 
-.calc { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 20px; margin: 28px 0 8px; align-items: start; }
-@media (max-width: 860px) { .calc { grid-template-columns: 1fr; } }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
-.inputs { padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; }
-@media (max-width: 560px) { .inputs { grid-template-columns: 1fr; padding: 16px; } }
-.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
-.field.wide { grid-column: 1 / -1; }
-.field label { display: flex; justify-content: space-between; gap: 8px; font-weight: 600; font-size: 14px; }
-.field label .max { font-weight: 500; color: var(--muted); font-family: var(--mono); font-size: 12px; }
-.field .hint { font-size: 12.5px; color: var(--muted); margin: 0; }
-select {
-  width: 100%; appearance: none; -webkit-appearance: none;
-  font: inherit; font-size: 15px; color: var(--text);
-  background: var(--surface-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23889' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center;
-  border: 1px solid var(--line); border-radius: 10px; padding: 10px 34px 10px 12px; min-height: 44px; cursor: pointer;
+/* Calculator */
+.calc { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; margin-block: 36px 12px; align-items: start; }
+@media (max-width: 900px) { .calc { grid-template-columns: 1fr; } }
+
+.form { display: grid; gap: 14px; }
+.q { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px 22px 20px; display: grid; gap: 14px; min-width: 0; margin: 0; }
+@media (max-width: 480px) { .q { padding: 18px 16px; border-radius: 16px; } }
+.q-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.q legend, .q .q-title { padding: 0; font-family: var(--display); font-weight: 700; font-size: 21px; line-height: 1.25; }
+.q legend { float: left; width: 100%; }
+.q-pts { flex: none; font-family: var(--mono); font-size: 13px; color: var(--leaf); background: var(--leaf-soft); padding: 3px 9px; border-radius: 999px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.q-help { margin: -6px 0 0; font-size: 15px; color: var(--muted); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { position: relative; }
+.chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.chip span { display: flex; flex-direction: column; gap: 1px; padding: 10px 16px; border: 1.5px solid var(--line); border-radius: 14px; background: var(--paper); font-weight: 600; font-size: 15.5px; line-height: 1.3; cursor: pointer; transition: border-color .15s, background .15s, transform .1s; }
+.chip span small { font-weight: 500; font-size: 13px; color: var(--muted); }
+.chip:hover span { border-color: var(--leaf); }
+.chip input:checked + span { background: var(--leaf); border-color: var(--leaf); color: var(--card); }
+.chip input:checked + span small { color: inherit; opacity: .8; }
+.chip input:focus-visible + span { outline: 3px solid var(--sun); outline-offset: 2px; }
+.chip input:active + span { transform: scale(.98); }
+.chips.grow { display: grid; grid-template-columns: repeat(var(--cols, var(--count, 2)), minmax(0, 1fr)); }
+.chips.grow .chip span { height: 100%; }
+@media (max-width: 560px) { .chips.grow[data-key="qualification"] { --cols: 2; } .chips.grow[data-key="english"] .chip span { padding-inline: 10px; } }
+
+.slider { display: grid; gap: 6px; }
+.slider-read { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.slider-read output { white-space: nowrap; }
+.slider-read output { font-family: var(--display); font-weight: 800; font-size: 40px; line-height: 1; font-variant-numeric: tabular-nums; }
+.slider-read span { color: var(--muted); font-size: 15px; }
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 36px; background: transparent; cursor: pointer; margin: 0; }
+input[type="range"]::-webkit-slider-runnable-track { height: 8px; border-radius: 999px; background: linear-gradient(to right, var(--leaf) var(--p, 50%), var(--track) var(--p, 50%)); }
+input[type="range"]::-moz-range-track { height: 8px; border-radius: 999px; background: var(--track); }
+input[type="range"]::-moz-range-progress { height: 8px; border-radius: 999px; background: var(--leaf); }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; margin-top: -10px; border-radius: 50%; background: var(--sun); border: 4px solid var(--card); box-shadow: 0 1px 4px rgba(0,0,0,.25); }
+input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--sun); border: 4px solid var(--card); box-shadow: 0 1px 4px rgba(0,0,0,.25); }
+input[type="range"]:focus-visible { outline: none; }
+input[type="range"]:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 4px var(--sun-soft), 0 0 0 6px var(--sun); }
+.scale { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+/* Score card */
+.score { position: sticky; top: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 24px; box-shadow: var(--shadow); overflow: hidden; min-width: 0; }
+.score-top { background: var(--leaf); color: var(--card); padding: 22px 24px 20px; position: relative; }
+:root[data-theme="dark"] .score-top { color: #0e1613; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .score-top { color: #0e1613; } }
+.score-top .lbl { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; opacity: .85; }
+.big { display: flex; align-items: baseline; gap: 10px; margin-top: 4px; }
+.big strong { font-family: var(--display); font-weight: 800; font-size: clamp(64px, 9vw, 88px); line-height: .95; font-variant-numeric: tabular-nums; letter-spacing: -.03em; }
+.big span { font-family: var(--display); font-size: 22px; opacity: .8; }
+.badge { position: absolute; top: 20px; right: 20px; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; background: var(--sun); color: var(--sun-ink); }
+.badge.out { background: var(--warn-soft); color: var(--warn); }
+.summary { margin: 12px 0 0; font-size: 15.5px; line-height: 1.5; opacity: .92; max-width: 40ch; }
+
+.score-body { padding: 20px 24px 24px; display: grid; gap: 20px; }
+.stack { display: flex; height: 14px; border-radius: 999px; overflow: hidden; background: var(--track); }
+.stack i { display: block; height: 100%; transition: width .45s cubic-bezier(.2,.8,.2,1); }
+.stack i + i { box-shadow: inset 2px 0 0 var(--card); }
+.legend { list-style: none; margin: 10px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; font-size: 14px; }
+.legend li { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.legend li b { margin-left: auto; font-family: var(--mono); font-weight: 500; font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.legend .dot { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.legend li.zero { color: var(--muted); }
+
+.sub { font-family: var(--display); font-weight: 700; font-size: 16px; margin: 0 0 8px; }
+.tips { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.tips li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.4; }
+.tips .gain { flex: none; min-width: 52px; text-align: center; font-family: var(--mono); font-size: 13px; font-weight: 500; padding: 3px 0; border-radius: 8px; background: var(--leaf-soft); color: var(--leaf); }
+.tips li.warn .gain { background: var(--warn-soft); color: var(--warn); }
+
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { font: 600 15px/1 var(--body); padding: 13px 18px; border-radius: 12px; border: 1.5px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.btn:hover { border-color: var(--ink); }
+.btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn.primary:hover { opacity: .9; }
+.private { font-size: 13.5px; color: var(--muted); margin: 0; }
+
+/* Mobile dock */
+.dock { display: none; }
+@media (max-width: 900px) {
+  .score { position: static; }
+  .dock { display: flex; position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 10; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 18px; background: var(--leaf); color: var(--card); border-radius: 18px; box-shadow: 0 10px 30px -8px rgba(0,0,0,.4); text-decoration: none; transition: transform .25s, opacity .25s; }
+  :root[data-theme="dark"] .dock { color: #0e1613; }
+  .dock.hide { transform: translateY(140%); opacity: 0; pointer-events: none; }
+  .dock strong { font-family: var(--display); font-size: 28px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .dock small { font-size: 14px; opacity: .85; margin-left: 4px; }
+  .dock em { font-style: normal; font-weight: 700; font-size: 14px; background: var(--sun); color: var(--sun-ink); padding: 9px 14px; border-radius: 12px; }
 }
-select:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+@media (max-width: 900px) and (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .dock { color: #0e1613; } }
 
-.result { position: sticky; top: 16px; padding: 20px; }
-.score-row { display: flex; align-items: center; gap: 18px; }
-.gauge { position: relative; width: 132px; height: 132px; flex: none; }
-.gauge svg { width: 100%; height: 100%; transform: rotate(-90deg); }
-.gauge circle { fill: none; stroke-width: 11; }
-.gauge .bg { stroke: var(--track); }
-.gauge .fg { stroke: var(--brand); stroke-linecap: round; transition: stroke-dashoffset .5s cubic-bezier(.16,1,.3,1); }
-.gauge .num { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
-.gauge .num strong { font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
-.gauge .num span { font-size: 12px; color: var(--muted); }
-.tier { display: inline-block; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
-.tier.t-high { background: var(--good-soft); color: var(--good); }
-.tier.t-mid { background: var(--brand-soft); color: var(--brand); }
-.tier.t-low { background: var(--warn-soft); color: var(--warn); }
-.score-meta p { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+/* Content sections */
+main > section, .section { padding-block: 72px 0; }
+.sec-head { display: grid; gap: 10px; max-width: 760px; margin-bottom: 28px; }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--leaf); }
+h2 { font-size: clamp(30px, 4.2vw, 46px); line-height: 1.06; font-weight: 800; margin: 0; }
+.sec-head p { margin: 0; color: var(--muted); font-size: 18px; max-width: 62ch; }
 
-.bars { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
-.bars li { display: grid; gap: 4px; }
-.bars .row { display: flex; justify-content: space-between; font-size: 13.5px; }
-.bars .row b { font-family: var(--mono); font-weight: 500; color: var(--muted); font-size: 12.5px; }
-.bar { height: 6px; background: var(--track); border-radius: 999px; overflow: hidden; }
-.bar i { display: block; height: 100%; background: var(--brand); border-radius: 999px; transition: width .4s ease; }
+.age-chart { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 24px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 28px; align-items: center; }
+@media (max-width: 820px) { .age-chart { grid-template-columns: 1fr; padding: 18px 14px; } }
+.age-chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+.age-chart .axis { fill: var(--muted); font: 500 11px var(--mono); }
+.age-chart .grid { stroke: var(--line); stroke-width: 1; }
+.age-chart .area { fill: var(--leaf-soft); }
+.age-chart .line { fill: none; stroke: var(--leaf); stroke-width: 3; stroke-linejoin: round; }
+.age-chart .you { fill: var(--sun); stroke: var(--card); stroke-width: 3; transition: cx .3s, cy .3s; }
+.age-chart .you-lbl { fill: var(--ink); font: 700 13px var(--body); }
+.age-chart .you-stem { stroke: var(--sun); stroke-width: 2; stroke-dasharray: 3 3; }
+.callouts { display: grid; gap: 18px; }
+.callouts div { display: grid; gap: 2px; }
+.callouts strong { font-family: var(--display); font-size: 34px; font-weight: 800; line-height: 1; }
+.callouts span { color: var(--muted); font-size: 15px; }
 
-.tips { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
-.tips h3 { font-size: 14px; margin: 0 0 8px; }
-.tips ul { margin: 0; padding-left: 18px; font-size: 13.5px; color: var(--muted); }
-.tips li + li { margin-top: 4px; }
-.tips li b { color: var(--text); }
-.actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
-.btn { font: inherit; font-size: 14px; font-weight: 600; border-radius: 10px; padding: 9px 14px; min-height: 40px; cursor: pointer; border: 1px solid var(--line); background: var(--surface-2); color: var(--text); }
-.btn.primary { background: var(--brand); color: var(--brand-ink); border-color: transparent; }
-.btn:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.changes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+@media (max-width: 820px) { .changes { grid-template-columns: 1fr; } }
+.change { padding: 22px; border-radius: 20px; background: var(--card); border: 1px solid var(--line); }
+.change .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 6px; background: var(--sun-soft); color: var(--sun-ink); margin-bottom: 12px; }
+:root[data-theme="dark"] .change .tag { color: var(--sun); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .change .tag { color: var(--sun); } }
+.change h3 { margin: 0 0 6px; font-size: 21px; }
+.change p { margin: 0; color: var(--muted); font-size: 15.5px; }
 
-.note { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+.formula { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-block: 4px 24px; }
+.formula span { padding: 8px 14px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); font-weight: 600; font-size: 15px; }
+.formula span b { font-family: var(--mono); font-weight: 500; color: var(--leaf); margin-left: 4px; }
+.formula .op { padding: 0; border: 0; background: none; color: var(--muted); }
+.formula .eq { background: var(--sun); color: var(--sun-ink); border-color: var(--sun); }
+.formula .eq b { color: var(--sun-ink); }
+.prose { max-width: 68ch; }
+.prose p { margin: 0 0 16px; }
 
-main section { padding: 40px 0 0; }
-h2 { font-size: clamp(22px, 3vw, 28px); letter-spacing: -.01em; line-height: 1.2; margin: 0 0 12px; }
-h3 { font-size: 18px; margin: 24px 0 8px; }
-.prose { max-width: 760px; }
-.prose p { margin: 0 0 14px; }
-
-.changes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
-.changes .card { padding: 16px 18px; }
-.changes h3 { margin: 0 0 6px; font-size: 16px; }
-.changes p { margin: 0; font-size: 14.5px; color: var(--muted); }
-
-.tables { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 16px; }
-.tbl { padding: 4px 0 8px; overflow: hidden; }
-.tbl h3 { margin: 12px 16px 6px; font-size: 16px; }
+.tables { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+@media (max-width: 980px) { .tables { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .tables { grid-template-columns: 1fr; } }
+.tbl { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 8px 0 10px; min-width: 0; }
+.tbl h3 { margin: 14px 20px 6px; font-size: 17px; }
 .tbl-scroll { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-th, td { text-align: left; padding: 7px 16px; border-bottom: 1px solid var(--line); }
-th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
-td:last-child, th:last-child { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; }
-tr:last-child td { border-bottom: 0; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 7px 20px; border-bottom: 1px solid var(--line); }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
+td:last-child, th:last-child { text-align: right; font-family: var(--mono); font-size: 14px; font-variant-numeric: tabular-nums; }
+tbody tr:last-child td { border-bottom: 0; }
+tr.is-you td { background: var(--sun-soft); font-weight: 600; }
 .age-grid { display: grid; grid-template-columns: 1fr 1fr; }
 .age-grid table:first-child { border-right: 1px solid var(--line); }
+.age-grid th, .age-grid td { padding-inline: 16px; }
 
-details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 0 16px; }
-details + details { margin-top: 10px; }
-summary { cursor: pointer; font-weight: 600; padding: 14px 0; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+.tips-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 720px) { .tips-grid { grid-template-columns: 1fr; } }
+.tip { padding: 22px; border-radius: 20px; background: var(--card); border: 1px solid var(--line); }
+.tip .worth { font-family: var(--mono); font-size: 13px; color: var(--leaf); background: var(--leaf-soft); padding: 3px 9px; border-radius: 999px; }
+.tip h3 { margin: 12px 0 6px; font-size: 21px; }
+.tip p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+.faq { display: grid; gap: 10px; max-width: 860px; }
+details { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding-inline: 22px; }
+summary { cursor: pointer; font-family: var(--display); font-weight: 700; font-size: 18.5px; padding-block: 18px; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 summary::-webkit-details-marker { display: none; }
-summary::after { content: "+"; color: var(--muted); font-weight: 400; font-size: 20px; line-height: 1; }
-details[open] summary::after { content: "−"; }
-details p { margin: 0 0 14px; color: var(--muted); }
+summary::after { content: ""; flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--leaf-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 1v10M1 6h10' stroke='%233f9670' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center no-repeat; transition: transform .2s; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { margin: 0 0 18px; color: var(--muted); max-width: 70ch; }
 
-.disclaimer { margin-top: 40px; padding: 16px 18px; border-radius: 12px; background: var(--warn-soft); color: var(--text); font-size: 14px; }
-footer.site { margin-top: 48px; border-top: 1px solid var(--line); padding: 24px 0 40px; font-size: 13.5px; color: var(--muted); }
-footer.site p { margin: 0 0 6px; }
+.note-box { margin-top: 72px; padding: 22px 24px; border-radius: 20px; background: var(--card); border: 1px dashed var(--line); font-size: 15px; color: var(--muted); }
+.note-box strong { color: var(--ink); }
+footer { padding-block: 40px 120px; font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
 
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; scroll-behavior: auto !important; }
-}
-@media print {
-  header.site, nav, .actions, footer.site { display: none; }
-  .result { position: static; }
-}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 </style>
 </head>
 <body>
-<a class="skip" href="#calculator">Skip to calculator</a>
+<a class="skip" href="#calculator">Skip to the calculator</a>
 
-<header class="site">
-  <div class="wrap">
-    <a class="logo" href="./" aria-label="VPT Calculator home">
-      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--brand)"/><path d="M8 10l8 14 8-14" fill="none" stroke="var(--brand-ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./" aria-label="VPT Calculator home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--leaf)"/><path d="M9 10l7 13 7-13" fill="none" stroke="var(--sun)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       VPT Calculator
     </a>
-    <nav class="top" aria-label="Page sections">
+    <nav aria-label="On this page">
       <a href="#calculator">Calculator</a>
       <a href="#whats-new">What changed</a>
       <a href="#points-tables">Points tables</a>
       <a href="#faq">FAQ</a>
     </nav>
-  </div>
-</header>
+  </header>
+</div>
 
 <main id="main">
   <div class="wrap">
     <div class="hero">
-      <span class="eyebrow">Updated for 2026–27 · October 2026</span>
-      <h1>Victorian Points Test Calculator (VPT) 2026–27</h1>
-      <p class="lede">Work out your Victorian Points Test score for subclass 190 and 491 state nomination. This calculator uses the updated tables, with age points for each year and earnings in $5,000 bands, and scores you out of 950.</p>
+      <span class="kicker"><i></i>Updated for the 2026–27 program</span>
+      <h1>Victorian Points Test <span class="hl">calculator</span></h1>
+      <p class="lede">Answer seven quick questions to see your VPT score for Victoria’s 190 and 491 nomination. It uses the new tables, with age points for every year and salary in $5,000 steps.</p>
     </div>
 
     <section id="calculator" aria-labelledby="calc-h" style="padding-top:0">
-      <h2 id="calc-h" class="sr-only">VPT score calculator</h2>
+      <h2 id="calc-h" class="sr-only">Work out your VPT score</h2>
       <div class="calc">
-        <form class="card inputs" id="vpt-form" onsubmit="return false" aria-label="Your details">
-          <div class="field">
-            <label for="age">Age <span class="max">max 300</span></label>
-            <select id="age" name="age"></select>
-            <p class="hint">Your age when you lodge your ROI.</p>
+        <form class="form" id="vpt-form" aria-label="Your details">
+
+          <div class="q">
+            <div class="q-head"><label class="q-title" for="age">How old are you?</label><span class="q-pts" id="age-pts">300 pts</span></div>
+            <p class="q-help">Use your age on the day you lodge your Registration of Interest.</p>
+            <div class="slider">
+              <div class="slider-read"><output id="age-out" for="age">29</output><span id="age-note">years old</span></div>
+              <input type="range" id="age" min="18" max="45" step="1" value="29" aria-describedby="age-note">
+              <div class="scale" aria-hidden="true"><span>18</span><span>25</span><span>30</span><span>35</span><span>40</span><span>45+</span></div>
+            </div>
           </div>
-          <div class="field">
-            <label for="english">English level <span class="max">max 200</span></label>
-            <select id="english" name="english"></select>
-            <p class="hint">From IELTS, PTE, TOEFL, OET or CAE results.</p>
+
+          <fieldset class="q">
+            <legend>How good is your English?</legend>
+            <p class="q-help">Based on your IELTS, PTE, TOEFL, OET or CAE results. The IELTS scores shown are for each of the four parts.</p>
+            <div class="chips grow" data-key="english"></div>
+          </fieldset>
+
+          <div class="q">
+            <div class="q-head"><label class="q-title" for="salary">What do you earn in Victoria?</label><span class="q-pts" id="salary-pts">0 pts</span></div>
+            <p class="q-help">Your yearly salary before tax, without super, from your current skilled job in Victoria. Slide all the way left if you’re offshore.</p>
+            <div class="slider">
+              <div class="slider-read"><output id="salary-out" for="salary">Under $80k</output><span id="salary-note">a year</span></div>
+              <input type="range" id="salary" min="75000" max="170000" step="5000" value="75000" aria-describedby="salary-note">
+              <div class="scale" aria-hidden="true"><span>&lt;$80k</span><span>$100k</span><span>$120k</span><span>$140k</span><span>$170k+</span></div>
+            </div>
           </div>
-          <div class="field wide">
-            <label for="salary">Annual salary in Victoria <span class="max">max 150</span></label>
-            <select id="salary" name="salary"></select>
-            <p class="hint">Pre-tax and excluding super, from your current skilled job in Victoria. Choose “below $80,000” if you are offshore.</p>
-          </div>
-          <div class="field">
-            <label for="experience">Experience in nominated occupation <span class="max">max 100</span></label>
-            <select id="experience" name="experience"></select>
-          </div>
-          <div class="field">
-            <label for="qualification">Highest qualification <span class="max">max 100</span></label>
-            <select id="qualification" name="qualification"></select>
-          </div>
-          <div class="field">
-            <label for="skill">ANZSCO skill level <span class="max">max 50</span></label>
-            <select id="skill" name="skill"></select>
-          </div>
-          <div class="field">
-            <label for="partner">Partner skills <span class="max">max 50</span></label>
-            <select id="partner" name="partner"></select>
-          </div>
+
+          <fieldset class="q">
+            <legend>How long have you worked in your occupation?</legend>
+            <p class="q-help">Count skilled work in your nominated occupation, in Australia or overseas.</p>
+            <div class="chips" data-key="experience"></div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>What’s your highest qualification?</legend>
+            <div class="chips grow" data-key="qualification"></div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>What skill level is your occupation?</legend>
+            <p class="q-help">Skill level 1 is usually bachelor-level work, like engineers, nurses, teachers, accountants and software developers. Check your occupation’s ANZSCO code if you’re unsure.</p>
+            <div class="chips grow" data-key="skill"></div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Does your partner add points?</legend>
+            <p class="q-help">You get 50 points only if all three are true: you claim the 10 partner points in your EOI, your partner is in your application, and their occupation is on Victoria’s current priority list.</p>
+            <div class="chips grow" data-key="partner"></div>
+          </fieldset>
         </form>
 
-        <aside class="card result" aria-live="polite" aria-labelledby="result-h">
-          <h2 id="result-h" class="sr-only">Your VPT score</h2>
-          <div class="score-row">
-            <div class="gauge">
-              <svg viewBox="0 0 120 120" aria-hidden="true">
-                <circle class="bg" cx="60" cy="60" r="50"/>
-                <circle class="fg" id="gauge" cx="60" cy="60" r="50" stroke-dasharray="314.16" stroke-dashoffset="314.16"/>
-              </svg>
-              <div class="num"><strong id="total">0</strong><span>of 950</span></div>
-            </div>
-            <div class="score-meta">
-              <span class="tier" id="tier">—</span>
-              <p id="tier-text"></p>
-            </div>
+        <aside class="score" id="score" aria-labelledby="score-h">
+          <div class="score-top">
+            <h2 id="score-h" class="sr-only">Your VPT score</h2>
+            <div class="lbl">Your VPT score</div>
+            <div class="big" aria-live="polite"><strong id="total">560</strong><span>/ 950</span></div>
+            <span class="badge" id="badge">Competitive</span>
+            <p class="summary" id="summary"></p>
           </div>
-          <ul class="bars" id="bars"></ul>
-          <div class="tips">
-            <h3>Quickest ways to add points</h3>
-            <ul id="tips"></ul>
-          </div>
-          <div class="actions">
-            <button type="button" class="btn primary" id="share">Copy link to my score</button>
-            <button type="button" class="btn" id="reset">Reset</button>
+          <div class="score-body">
+            <div>
+              <div class="stack" id="stack" role="img" aria-label="How your points are made up"></div>
+              <ul class="legend" id="legend"></ul>
+            </div>
+            <div>
+              <h3 class="sub">Where you can gain the most</h3>
+              <ul class="tips" id="tips"></ul>
+            </div>
+            <div class="actions">
+              <button type="button" class="btn primary" id="share">Copy link to my score</button>
+              <button type="button" class="btn" id="reset">Start over</button>
+            </div>
+            <p class="private">Everything stays in your browser. Your answers are saved in the link so you can come back to them.</p>
           </div>
         </aside>
       </div>
-      <p class="note">Your selections are saved in the page link so you can share or bookmark them. Nothing is sent to a server.</p>
     </section>
+  </div>
 
+  <a class="dock" id="dock" href="#score" aria-label="See your score breakdown">
+    <span><strong id="dock-total">560</strong><small>/ 950</small></span>
+    <em>See breakdown</em>
+  </a>
+
+  <div class="wrap">
     <section id="whats-new" aria-labelledby="new-h">
-      <h2 id="new-h">What changed in the Victorian Points Test</h2>
-      <div class="prose">
-        <p>Victoria now scores Registrations of Interest for its 2026–27 skilled nomination program more finely. Two factors changed the most, so older calculators that use broad bands can be off by more than 60 points.</p>
+      <div class="sec-head">
+        <span class="eyebrow">What changed</span>
+        <h2 id="new-h">Every birthday now counts</h2>
+        <p>Victoria scores Registrations of Interest more finely for 2026–27. Age is now scored for each year, and salary in $5,000 steps. Calculators that still use the old five-year age bands can be out by more than 100 points.</p>
       </div>
+
+      <div class="age-chart">
+        <svg id="age-svg" viewBox="0 0 560 280" role="img" aria-labelledby="age-svg-t">
+          <title id="age-svg-t">VPT age points by age, from 265 at 18 to 300 at ages 20 to 29, down to 16 at 44 and 0 from 45</title>
+        </svg>
+        <div class="callouts">
+          <div><strong>300</strong><span>points at every age from 20 to 29</span></div>
+          <div><strong>−14 to −16</strong><span>points for each birthday from 30 to 40</span></div>
+          <div><strong>−30</strong><span>points for each birthday from 41 to 44</span></div>
+        </div>
+      </div>
+
       <div class="changes">
-        <div class="card">
-          <h3>Age points for each year</h3>
-          <p>Age is no longer scored in five-year bands. Ages 20–29 still get 300 points, but from 30 you lose 14 to 16 points each year down to 136 at 40. After that the drop is 30 points a year, reaching 16 at 44.</p>
-        </div>
-        <div class="card">
-          <h3>Salary in $5,000 steps</h3>
-          <p>Victorian earnings now have 19 bands. Each $5,000 adds about 8 points, from 8 points at $80,000 up to the 150-point maximum at $170,000 or more.</p>
-        </div>
-        <div class="card">
-          <h3>New fees for 2026–27</h3>
-          <p>Victoria announced a $60 + GST fee to lodge an ROI and a $180 + GST fee for a 190 or 491 nomination application. You pay the application fee only if you are invited.</p>
-        </div>
+        <div class="change"><span class="tag">Age</span><h3>Points for each year</h3><p>Ages 20–29 still get the full 300. After that you lose points every year, down to 136 at 40 and 16 at 44.</p></div>
+        <div class="change"><span class="tag">Salary</span><h3>19 bands of $5,000</h3><p>Each $5,000 step adds about 8 points. You start at 8 points at $80,000 and reach the full 150 at $170,000.</p></div>
+        <div class="change"><span class="tag">Fees</span><h3>$60 to register, $180 to apply</h3><p>Both fees are plus GST. You only pay the $180 for a 190 or 491 nomination application if Victoria invites you.</p></div>
       </div>
     </section>
 
     <section id="how-it-works" aria-labelledby="how-h">
-      <h2 id="how-h">How the VPT score is calculated</h2>
+      <div class="sec-head">
+        <span class="eyebrow">How it works</span>
+        <h2 id="how-h">Seven factors, 950 points</h2>
+      </div>
+      <div class="formula" aria-label="Age 300 plus English 200 plus salary 150 plus experience 100 plus qualification 100 plus skill level 50 plus partner 50 equals 950">
+        <span>Age<b>300</b></span><span class="op">+</span>
+        <span>English<b>200</b></span><span class="op">+</span>
+        <span>Salary<b>150</b></span><span class="op">+</span>
+        <span>Experience<b>100</b></span><span class="op">+</span>
+        <span>Qualification<b>100</b></span><span class="op">+</span>
+        <span>Skill level<b>50</b></span><span class="op">+</span>
+        <span>Partner<b>50</b></span><span class="op">=</span>
+        <span class="eq">Total<b>950</b></span>
+      </div>
       <div class="prose">
-        <p>The Victorian Points Test adds up seven factors taken from your SkillSelect Expression of Interest and your Victorian Registration of Interest. The highest possible total is <strong>950 points</strong>:</p>
-        <p>Age (300) + English (200) + Victorian salary (150) + experience (100) + qualification (100) + ANZSCO skill level (50) + partner skills (50).</p>
-        <p>Age and English together are worth more than half the total, which is why a 29-year-old with Superior English starts on 500 points before anything else is counted. For applicants who already live in Victoria, salary is the factor most within their control: moving up one $5,000 band is usually worth 7 or 8 points.</p>
-        <p>The VPT does not have a pass mark. Victoria ranks all ROIs against each other and invites the highest-ranked candidates in each occupation group, so the score you need changes with demand. You still need at least 65 points in the federal SkillSelect points test to lodge your EOI.</p>
+        <p>Victoria takes these factors from your SkillSelect Expression of Interest and your Victorian Registration of Interest, then adds them up.</p>
+        <p>Age and English make up more than half the total. A 29-year-old with Superior English is already on 500 points before anything else counts. If you already live and work in Victoria, salary is the factor you can change most easily. Each $5,000 band is worth 7 or 8 points.</p>
+        <p>There is no pass mark. Victoria ranks everyone’s ROI against each other and invites the highest scorers in each occupation group, so the score you need depends on demand. You still need at least 65 points on the federal SkillSelect test to lodge your EOI.</p>
       </div>
     </section>
 
     <section id="points-tables" aria-labelledby="tables-h">
-      <h2 id="tables-h">Victorian Points Test points tables</h2>
-      <p class="prose">The full tables used by this calculator. Check them against Victoria’s official guidelines before you lodge.</p>
+      <div class="sec-head">
+        <span class="eyebrow">Reference</span>
+        <h2 id="tables-h">Full VPT points tables</h2>
+        <p>These are the tables the calculator uses, with your answers highlighted. Check them against Victoria’s official guidelines before you lodge.</p>
+      </div>
       <div class="tables">
-        <div class="card tbl">
-          <h3>Age</h3>
-          <div class="age-grid" id="age-table"></div>
-        </div>
-        <div class="card tbl">
-          <h3>Annual salary in Victoria</h3>
-          <div class="tbl-scroll"><table id="salary-table"><thead><tr><th scope="col">Salary (AUD)</th><th scope="col">Points</th></tr></thead><tbody></tbody></table></div>
-        </div>
-        <div class="card tbl">
-          <h3>English</h3>
-          <table id="english-table"><thead><tr><th scope="col">Level</th><th scope="col">Points</th></tr></thead><tbody></tbody></table>
-          <h3>Experience in nominated occupation</h3>
-          <table id="experience-table"><thead><tr><th scope="col">Experience</th><th scope="col">Points</th></tr></thead><tbody></tbody></table>
-          <h3>Qualification</h3>
-          <table id="qualification-table"><thead><tr><th scope="col">Qualification</th><th scope="col">Points</th></tr></thead><tbody></tbody></table>
-          <h3>ANZSCO skill level</h3>
-          <table id="skill-table"><thead><tr><th scope="col">Skill level</th><th scope="col">Points</th></tr></thead><tbody></tbody></table>
-          <h3>Partner skills</h3>
-          <table id="partner-table"><thead><tr><th scope="col">Partner</th><th scope="col">Points</th></tr></thead><tbody></tbody></table>
+        <div class="tbl"><h3>Age</h3><div class="age-grid" id="age-table"></div></div>
+        <div class="tbl"><h3>Salary in Victoria</h3><div class="tbl-scroll"><table id="salary-table"><thead><tr><th scope="col">Yearly salary</th><th scope="col">Points</th></tr></thead><tbody></tbody></table></div></div>
+        <div class="tbl">
+          <h3>English</h3><table id="english-table"><thead><tr><th scope="col">Level</th><th scope="col">Points</th></tr></thead><tbody></tbody></table>
+          <h3>Experience</h3><table id="experience-table"><thead><tr><th scope="col">Years</th><th scope="col">Points</th></tr></thead><tbody></tbody></table>
+          <h3>Qualification</h3><table id="qualification-table"><thead><tr><th scope="col">Highest</th><th scope="col">Points</th></tr></thead><tbody></tbody></table>
+          <h3>Skill level</h3><table id="skill-table"><thead><tr><th scope="col">ANZSCO</th><th scope="col">Points</th></tr></thead><tbody></tbody></table>
+          <h3>Partner</h3><table id="partner-table"><thead><tr><th scope="col">Partner</th><th scope="col">Points</th></tr></thead><tbody></tbody></table>
         </div>
       </div>
     </section>
 
     <section id="improve" aria-labelledby="improve-h">
-      <h2 id="improve-h">How to improve your Victorian Points Test score</h2>
-      <div class="prose">
-        <h3>Retake your English test</h3>
-        <p>Moving from Competent to Proficient, or from Proficient to Superior, adds 100 points each time. No other single change is worth as much, so it is usually the best place to start.</p>
-        <h3>Lodge your ROI before your next birthday</h3>
-        <p>From age 30 every birthday costs points, and from 40 each birthday costs 30. If you are close to a birthday, lodging or updating your ROI sooner keeps the higher age score.</p>
-        <h3>Count all your Victorian earnings</h3>
-        <p>Use your full annual pre-tax salary from your current skilled job in Victoria, excluding superannuation. A pay rise that moves you into the next band adds about 8 points.</p>
-        <h3>Check partner eligibility</h3>
-        <p>The 50 partner points depend on Victoria’s current priority occupation list. If your partner’s occupation is on it and you already claim the federal 10 partner points, make sure they are included in your application.</p>
+      <div class="sec-head">
+        <span class="eyebrow">Raise your score</span>
+        <h2 id="improve-h">Four ways to improve your VPT score</h2>
+      </div>
+      <div class="tips-grid">
+        <div class="tip"><span class="worth">up to +200</span><h3>Retake your English test</h3><p>Going from Competent to Proficient, or from Proficient to Superior, adds 100 points each time. Nothing else adds as much, so start here.</p></div>
+        <div class="tip"><span class="worth">up to +30 a year</span><h3>Lodge before your birthday</h3><p>From 30, every birthday costs you points, and from 41 each one costs 30. If your birthday is close, lodge or update your ROI first.</p></div>
+        <div class="tip"><span class="worth">about +8 per $5k</span><h3>Count all your Victorian salary</h3><p>Use your full yearly salary before tax, without super, from your current skilled job. A pay rise that moves you up a band adds about 8 points.</p></div>
+        <div class="tip"><span class="worth">+50</span><h3>Check your partner’s occupation</h3><p>If your partner’s occupation is on Victoria’s priority list and you already claim the 10 federal partner points, make sure they’re included in your application.</p></div>
       </div>
     </section>
 
     <section id="faq" aria-labelledby="faq-h">
-      <h2 id="faq-h">Victorian Points Test FAQ</h2>
-      <details open>
-        <summary>What is the Victorian Points Test (VPT)?</summary>
-        <p>The Victorian Points Test is the ranking system Victoria uses to select Registrations of Interest (ROIs) for subclass 190 and subclass 491 state nomination. It scores seven factors to a theoretical maximum of 950 points. It is separate from the federal SkillSelect points test.</p>
-      </details>
-      <details>
-        <summary>What is the maximum Victorian Points Test score?</summary>
-        <p>Adding the maximum of each factor gives 950: age 300, English 200, Victorian salary 150, experience 100, qualification 100, skill level 50 and partner skills 50.</p>
-      </details>
-      <details>
-        <summary>What changed in the Victorian Points Test?</summary>
-        <p>Age is now scored for each year rather than in five-year bands, falling from 300 points at 29 to 16 points at 44. Victorian earnings are scored in 19 bands of $5,000, from 8 points at $80,000 to 150 points at $170,000 or more.</p>
-      </details>
-      <details>
-        <summary>What is the pass mark for the Victorian Points Test?</summary>
-        <p>There is no fixed pass mark. Victoria ranks Registrations of Interest against each other and invites higher-ranked candidates, so the score needed changes with demand.</p>
-      </details>
-      <details>
-        <summary>How many VPT points do I get for my age?</summary>
-        <p>Ages 20 to 29 score 300. Age 18 scores 265 and 19 scores 282. From 30 the points fall each year: 286, 270, 256, 240, 226, 210, 196, 180, 166, 150, 136, 106, 76, 46 and 16 at age 44.</p>
-      </details>
-      <details>
-        <summary>Does the VPT replace the federal 65-point test?</summary>
-        <p>No. You still need at least 65 points in the federal SkillSelect test to lodge an Expression of Interest. The VPT is only used by Victoria to rank candidates for nomination. Victorian nomination then adds 5 federal points for subclass 190 or 15 for subclass 491.</p>
-      </details>
-      <details>
-        <summary>How much does it cost to apply for Victorian nomination in 2026–27?</summary>
-        <p>Victoria announced a $60 (excluding GST) Registration of Interest fee and a $180 (excluding GST) nomination application fee for subclass 190 and 491 in 2026–27. The application fee is only payable if you are invited. GST applies if you are in Australia when you pay.</p>
-      </details>
-      <details>
-        <summary>Who gets the 50 partner points in the VPT?</summary>
-        <p>You get 50 points only if you claimed the 10 federal partner-skills points in your EOI, your partner is included in your application, and your partner’s occupation is on Victoria’s current priority occupation list.</p>
-      </details>
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-h">Questions people ask about the VPT</h2>
+      </div>
+      <div class="faq">
+        <details open><summary>What is the Victorian Points Test (VPT)?</summary><p>The Victorian Points Test is the ranking system Victoria uses to select Registrations of Interest (ROIs) for subclass 190 and subclass 491 state nomination. It scores seven factors to a theoretical maximum of 950 points. It is separate from the federal SkillSelect points test.</p></details>
+        <details><summary>What is the maximum Victorian Points Test score?</summary><p>Adding the maximum of each factor gives 950: age 300, English 200, Victorian salary 150, experience 100, qualification 100, skill level 50 and partner skills 50.</p></details>
+        <details><summary>What changed in the Victorian Points Test?</summary><p>Age is now scored for each year rather than in five-year bands, falling from 300 points at 29 to 16 points at 44. Victorian earnings are scored in 19 bands of $5,000, from 8 points at $80,000 to 150 points at $170,000 or more.</p></details>
+        <details><summary>What is the pass mark for the Victorian Points Test?</summary><p>There is no fixed pass mark. Victoria ranks Registrations of Interest against each other and invites higher-ranked candidates, so the score needed changes with demand.</p></details>
+        <details><summary>How many VPT points do I get for my age?</summary><p>Ages 20 to 29 score 300. Age 18 scores 265 and 19 scores 282. From 30 the points fall each year: 286, 270, 256, 240, 226, 210, 196, 180, 166, 150, 136, 106, 76, 46 and 16 at age 44.</p></details>
+        <details><summary>Does the VPT replace the federal 65-point test?</summary><p>No. You still need at least 65 points in the federal SkillSelect test to lodge an Expression of Interest. The VPT is only used by Victoria to rank candidates for nomination. Victorian nomination then adds 5 federal points for subclass 190 or 15 for subclass 491.</p></details>
+        <details><summary>How much does it cost to apply for Victorian nomination in 2026–27?</summary><p>Victoria announced a $60 (excluding GST) Registration of Interest fee and a $180 (excluding GST) nomination application fee for subclass 190 and 491 in 2026–27. The application fee is only payable if you are invited. GST applies if you are in Australia when you pay.</p></details>
+        <details><summary>Who gets the 50 partner points in the VPT?</summary><p>You get 50 points only if you claimed the 10 federal partner-skills points in your EOI, your partner is included in your application, and your partner’s occupation is on Victoria’s current priority occupation list.</p></details>
+      </div>
     </section>
 
-    <aside class="disclaimer" role="note">
-      <strong>Not an official tool.</strong> This independent calculator is not affiliated with or endorsed by the Victorian Government or the Department of Home Affairs. Results are an estimate based on published 2026–27 tables and do not guarantee an invitation. Check the official guidelines on <a href="https://liveinmelbourne.vic.gov.au/migrate/skilled-migration-visas/vpt" rel="noopener">Live in Melbourne</a> or ask a registered migration agent before you lodge.
+    <aside class="note-box" role="note">
+      <strong>This is an independent calculator.</strong> It isn’t made by or connected to the Victorian Government or the Department of Home Affairs. Your score is an estimate based on the published 2026–27 tables and doesn’t guarantee an invitation. Check the official guidelines on <a href="https://liveinmelbourne.vic.gov.au/migrate/skilled-migration-visas/vpt" rel="noopener">Live in Melbourne</a> or talk to a registered migration agent before you lodge.
     </aside>
+
+    <footer>
+      <span>Victorian Points Test Calculator · Updated 14 October 2026</span>
+      <span>Free, private, and it works offline once loaded.</span>
+    </footer>
   </div>
 </main>
-
-<footer class="site">
-  <div class="wrap">
-    <p>Victorian Points Test Calculator · Last updated 14 October 2026</p>
-    <p>Free, private and runs entirely in your browser.</p>
-  </div>
-</footer>
 
 <script>
 (function () {
   "use strict";
-
-  var AGE = { 18: 265, 19: 282, 30: 286, 31: 270, 32: 256, 33: 240, 34: 226, 35: 210, 36: 196, 37: 180, 38: 166, 39: 150, 40: 136, 41: 106, 42: 76, 43: 46, 44: 16 };
-  for (var a = 20; a <= 29; a++) AGE[a] = 300;
-
-  var SALARY_BANDS = [
-    [170000, 150], [165000, 142], [160000, 134], [155000, 126], [150000, 118],
-    [145000, 111], [140000, 103], [135000, 95], [130000, 87], [125000, 79],
-    [120000, 71], [115000, 63], [110000, 55], [105000, 47], [100000, 39],
-    [95000, 32], [90000, 24], [85000, 16], [80000, 8]
-  ];
-  function money(n) { return "$" + n.toLocaleString("en-AU"); }
-
-  var FACTORS = [
-    { key: "age", label: "Age", max: 300, def: "29",
-      options: (function () {
-        var o = [];
-        for (var y = 18; y <= 44; y++) o.push({ v: String(y), label: y + " years", pts: AGE[y] });
-        o.push({ v: "45", label: "45 or older (not eligible)", pts: 0 });
-        return o;
-      })() },
-    { key: "english", label: "English", max: 200, def: "proficient",
-      options: [
-        { v: "superior", label: "Superior", pts: 200 },
-        { v: "proficient", label: "Proficient", pts: 100 },
-        { v: "competent", label: "Competent", pts: 0 }
-      ] },
-    { key: "salary", label: "Victorian salary", max: 150, def: "0",
-      options: SALARY_BANDS.map(function (b, i) {
-        var label = i === 0 ? money(b[0]) + " or more" : money(b[0]) + " – " + money(SALARY_BANDS[i - 1][0] - 1);
-        return { v: String(b[0]), label: label, pts: b[1] };
-      }).concat([{ v: "0", label: "Below $80,000 or offshore", pts: 0 }]) },
-    { key: "experience", label: "Experience", max: 100, def: "3",
-      options: [
-        { v: "8", label: "More than 8 years", pts: 100 },
-        { v: "6", label: "6–8 years", pts: 80 },
-        { v: "3", label: "3–5 years", pts: 60 },
-        { v: "2", label: "1–3 years", pts: 40 },
-        { v: "1", label: "1 year", pts: 20 },
-        { v: "0", label: "Less than 1 year", pts: 0 }
-      ] },
-    { key: "qualification", label: "Qualification", max: 100, def: "bachelor",
-      options: [
-        { v: "phd", label: "Doctorate (PhD)", pts: 100 },
-        { v: "masters", label: "Master’s degree", pts: 75 },
-        { v: "bachelor", label: "Bachelor’s or Honours degree", pts: 50 },
-        { v: "other", label: "Other recognised qualification", pts: 25 }
-      ] },
-    { key: "skill", label: "ANZSCO skill level", max: 50, def: "1",
-      options: [
-        { v: "1", label: "Skill level 1", pts: 50 },
-        { v: "23", label: "Skill level 2 or 3", pts: 0 }
-      ] },
-    { key: "partner", label: "Partner skills", max: 50, def: "no",
-      options: [
-        { v: "yes", label: "Meets all three conditions", pts: 50 },
-        { v: "no", label: "No, single, or partner not eligible", pts: 0 }
-      ] }
-  ];
-  var MAX = 950;
-
   var $ = function (id) { return document.getElementById(id); };
 
-  // Build selects and reference tables from the same data.
-  FACTORS.forEach(function (f) {
-    var sel = $(f.key);
-    f.options.forEach(function (o) {
-      var opt = document.createElement("option");
-      opt.value = o.v;
-      opt.textContent = o.label + " — " + o.pts + " pts";
-      sel.appendChild(opt);
-    });
-    sel.value = f.def;
-    sel.addEventListener("change", update);
+  var AGE = { 18: 265, 19: 282, 30: 286, 31: 270, 32: 256, 33: 240, 34: 226, 35: 210, 36: 196, 37: 180, 38: 166, 39: 150, 40: 136, 41: 106, 42: 76, 43: 46, 44: 16, 45: 0 };
+  for (var a = 20; a <= 29; a++) AGE[a] = 300;
 
-    if (f.key === "age") return;
-    var tb = document.querySelector("#" + f.key + "-table tbody");
-    tb.innerHTML = f.options.map(function (o) {
-      return "<tr><td>" + o.label + "</td><td>" + o.pts + "</td></tr>";
+  var SALARY = [[170000,150],[165000,142],[160000,134],[155000,126],[150000,118],[145000,111],[140000,103],[135000,95],[130000,87],[125000,79],[120000,71],[115000,63],[110000,55],[105000,47],[100000,39],[95000,32],[90000,24],[85000,16],[80000,8]];
+  function salaryPts(v) { for (var i = 0; i < SALARY.length; i++) if (v >= SALARY[i][0]) return SALARY[i][1]; return 0; }
+  function k(n) { return "$" + Math.round(n / 1000) + "k"; }
+  function money(n) { return "$" + n.toLocaleString("en-AU"); }
+
+  var CHOICES = {
+    english: { label: "English", def: "proficient", options: [
+      { v: "competent", label: "Competent", sub: "IELTS 6 · 0 pts", pts: 0 },
+      { v: "proficient", label: "Proficient", sub: "IELTS 7 · 100 pts", pts: 100 },
+      { v: "superior", label: "Superior", sub: "IELTS 8 · 200 pts", pts: 200 } ] },
+    experience: { label: "Experience", def: "3", options: [
+      { v: "0", label: "Under 1 year", pts: 0 }, { v: "1", label: "1 year", pts: 20 },
+      { v: "2", label: "1–3 years", pts: 40 }, { v: "3", label: "3–5 years", pts: 60 },
+      { v: "6", label: "6–8 years", pts: 80 }, { v: "8", label: "8+ years", pts: 100 } ] },
+    qualification: { label: "Qualification", def: "bachelor", options: [
+      { v: "other", label: "Diploma or trade", sub: "25 pts", pts: 25 },
+      { v: "bachelor", label: "Bachelor’s", sub: "or Honours · 50 pts", pts: 50 },
+      { v: "masters", label: "Master’s", sub: "75 pts", pts: 75 },
+      { v: "phd", label: "PhD", sub: "100 pts", pts: 100 } ] },
+    skill: { label: "Skill level", def: "1", options: [
+      { v: "1", label: "Skill level 1", sub: "50 pts", pts: 50 },
+      { v: "23", label: "Skill level 2 or 3", sub: "0 pts", pts: 0 } ] },
+    partner: { label: "Partner", def: "no", options: [
+      { v: "no", label: "No, or I’m single", sub: "0 pts", pts: 0 },
+      { v: "yes", label: "Yes, all three apply", sub: "50 pts", pts: 50 } ] }
+  };
+  var FACTORS = [
+    { key: "age", label: "Age", max: 300, color: "--f1" },
+    { key: "english", label: "English", max: 200, color: "--f2" },
+    { key: "salary", label: "Salary", max: 150, color: "--f3" },
+    { key: "experience", label: "Experience", max: 100, color: "--f4" },
+    { key: "qualification", label: "Qualification", max: 100, color: "--f5" },
+    { key: "skill", label: "Skill level", max: 50, color: "--f6" },
+    { key: "partner", label: "Partner", max: 50, color: "--f7" }
+  ];
+  var DEFAULTS = { age: "29", salary: "75000" };
+
+  // Build chip groups.
+  Object.keys(CHOICES).forEach(function (key) {
+    var c = CHOICES[key], box = document.querySelector('.chips[data-key="' + key + '"]');
+    box.style.setProperty("--count", c.options.length);
+    c.options.forEach(function (o, i) {
+      var id = key + "-" + o.v;
+      box.insertAdjacentHTML("beforeend",
+        '<label class="chip" for="' + id + '"><input type="radio" name="' + key + '" id="' + id + '" value="' + o.v + '"' + (o.v === c.def ? " checked" : "") + '>' +
+        '<span>' + o.label + (o.sub ? "<small>" + o.sub + "</small>" : "<small>" + o.pts + " pts</small>") + '</span></label>');
+    });
+    var tb = document.querySelector("#" + key + "-table tbody");
+    tb.innerHTML = c.options.slice().sort(function (x, y) { return y.pts - x.pts; }).map(function (o) {
+      return '<tr data-v="' + o.v + '"><td>' + o.label + (key === "qualification" && o.v === "bachelor" ? " or Honours" : "") + "</td><td>" + o.pts + "</td></tr>";
     }).join("");
   });
 
-  (function ageTable() {
-    var rows = FACTORS[0].options;
-    var half = Math.ceil(rows.length / 2);
+  // Reference tables for age and salary.
+  (function () {
+    var ages = []; for (var y = 18; y <= 45; y++) ages.push(y);
+    var half = Math.ceil(ages.length / 2);
     var mk = function (list) {
-      return "<table><thead><tr><th scope=\"col\">Age</th><th scope=\"col\">Points</th></tr></thead><tbody>" +
-        list.map(function (o) { return "<tr><td>" + o.v + (o.v === "45" ? "+" : "") + "</td><td>" + o.pts + "</td></tr>"; }).join("") +
-        "</tbody></table>";
+      return '<table><thead><tr><th scope="col">Age</th><th scope="col">Points</th></tr></thead><tbody>' +
+        list.map(function (y) { return '<tr data-v="' + y + '"><td>' + y + (y === 45 ? "+" : "") + "</td><td>" + AGE[y] + "</td></tr>"; }).join("") + "</tbody></table>";
     };
-    $("age-table").innerHTML = mk(rows.slice(0, half)) + mk(rows.slice(half));
+    $("age-table").innerHTML = mk(ages.slice(0, half)) + mk(ages.slice(half));
+    $("salary-table").querySelector("tbody").innerHTML = SALARY.map(function (b, i) {
+      var label = i === 0 ? money(b[0]) + " or more" : money(b[0]) + " – " + money(SALARY[i - 1][0] - 1);
+      return '<tr data-v="' + b[0] + '"><td>' + label + "</td><td>" + b[1] + "</td></tr>";
+    }).join("") + '<tr data-v="75000"><td>Under $80,000 or offshore</td><td>0</td></tr>';
   })();
 
-  // Restore from URL.
+  // Age chart, drawn to one scale.
+  var CH = { w: 560, h: 280, l: 40, r: 16, t: 30, b: 30 };
+  function cx(age) { return CH.l + (age - 18) / (45 - 18) * (CH.w - CH.l - CH.r); }
+  function cy(p) { return CH.t + (1 - p / 300) * (CH.h - CH.t - CH.b); }
+  (function () {
+    var s = "", y0 = cy(0);
+    [0, 100, 200, 300].forEach(function (p) {
+      s += '<line class="grid" x1="' + CH.l + '" x2="' + (CH.w - CH.r) + '" y1="' + cy(p) + '" y2="' + cy(p) + '"/>';
+      s += '<text class="axis" x="' + (CH.l - 8) + '" y="' + (cy(p) + 4) + '" text-anchor="end">' + p + "</text>";
+    });
+    [18, 20, 25, 30, 35, 40, 45].forEach(function (a) {
+      s += '<text class="axis" x="' + cx(a) + '" y="' + (CH.h - 8) + '" text-anchor="middle">' + (a === 45 ? "45+" : a) + "</text>";
+    });
+    var pts = []; for (var a = 18; a <= 45; a++) pts.push(cx(a).toFixed(1) + "," + cy(AGE[a]).toFixed(1));
+    s += '<polygon class="area" points="' + cx(18) + "," + y0 + " " + pts.join(" ") + " " + cx(45) + "," + y0 + '"/>';
+    s += '<polyline class="line" points="' + pts.join(" ") + '"/>';
+    s += '<line class="you-stem" id="you-stem" x1="0" x2="0" y1="0" y2="' + y0 + '"/>';
+    s += '<circle class="you" id="you" r="8" cx="0" cy="0"/>';
+    s += '<text class="you-lbl" id="you-lbl" x="0" y="0" text-anchor="middle"></text>';
+    $("age-svg").insertAdjacentHTML("beforeend", s);
+  })();
+
+  // Restore saved answers from the link.
   try {
-    var params = new URLSearchParams(location.search);
-    FACTORS.forEach(function (f) {
-      var v = params.get(f.key);
-      if (v && f.options.some(function (o) { return o.v === v; })) $(f.key).value = v;
+    var q = new URLSearchParams(location.search);
+    ["age", "salary"].forEach(function (key) { var v = q.get(key); if (v && !isNaN(v)) $(key).value = v; });
+    Object.keys(CHOICES).forEach(function (key) {
+      var v = q.get(key), el = v && document.getElementById(key + "-" + v);
+      if (el) el.checked = true;
     });
   } catch (e) {}
 
-  function current(f) {
-    var v = $(f.key).value;
-    for (var i = 0; i < f.options.length; i++) if (f.options[i].v === v) return f.options[i];
-    return f.options[0];
+  function choice(key) {
+    var el = document.querySelector('input[name="' + key + '"]:checked');
+    var v = el ? el.value : CHOICES[key].def;
+    return CHOICES[key].options.filter(function (o) { return o.v === v; })[0];
+  }
+  function fill(el) { el.style.setProperty("--p", ((el.value - el.min) / (el.max - el.min) * 100) + "%"); }
+
+  function read() {
+    var age = +$("age").value, sal = +$("salary").value;
+    var r = { age: AGE[age], salary: salaryPts(sal) };
+    Object.keys(CHOICES).forEach(function (key) { r[key] = choice(key).pts; });
+    r.total = FACTORS.reduce(function (s, f) { return s + r[f.key]; }, 0);
+    r.ageYears = age; r.salaryVal = sal;
+    return r;
   }
 
-  function tips() {
-    var out = [];
-    FACTORS.forEach(function (f) {
-      if (f.key === "age") return;
-      var cur = current(f);
-      var better = f.options.filter(function (o) { return o.pts > cur.pts; })
-        .sort(function (x, y) { return x.pts - y.pts; });
-      if (!better.length) return;
-      var next = better[0];
-      out.push({ gain: next.pts - cur.pts, text: f.label + ": " + next.label });
-    });
-    var age = current(FACTORS[0]);
-    var nextAge = AGE[Number(age.v) + 1];
-    if (age.v !== "45" && nextAge !== undefined && nextAge < age.pts) {
-      out.push({ warn: true, gain: age.pts - nextAge, text: "Your next birthday costs " + (age.pts - nextAge) + " points. Lodge or update your ROI before then." });
-    }
-    var gains = out.filter(function (t) { return !t.warn; }).sort(function (x, y) { return y.gain - x.gain; }).slice(0, 3);
-    var warn = out.filter(function (t) { return t.warn; });
-    var html = gains.map(function (t) { return "<li><b>+" + t.gain + "</b> " + t.text + "</li>"; })
-      .concat(warn.map(function (t) { return "<li>" + t.text + "</li>"; }));
-    $("tips").innerHTML = html.length ? html.join("") : "<li>You already have the maximum in every factor you can change.</li>";
-  }
-
-  var shown = 0, raf = null;
-  function animate(to) {
+  var shown = null, raf = null;
+  function countTo(to) {
+    if (shown === null || matchMedia("(prefers-reduced-motion: reduce)").matches) { shown = to; $("total").textContent = to; return; }
     if (raf) cancelAnimationFrame(raf);
     var from = shown, t0 = performance.now();
-    var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) { shown = to; $("total").textContent = to; return; }
     (function step(t) {
-      var p = Math.min((t - t0) / 400, 1), e = p * (2 - p);
+      var p = Math.min((t - t0) / 350, 1), e = 1 - Math.pow(1 - p, 3);
       shown = Math.round(from + (to - from) * e);
       $("total").textContent = shown;
       if (p < 1) raf = requestAnimationFrame(step);
@@ -621,49 +700,102 @@ footer.site p { margin: 0 0 6px; }
   }
 
   function update() {
-    var total = 0;
-    var bars = FACTORS.map(function (f) {
-      var p = current(f).pts;
-      total += p;
-      return "<li><div class=\"row\"><span>" + f.label + "</span><b>" + p + " / " + f.max + "</b></div>" +
-        "<div class=\"bar\"><i style=\"width:" + Math.round(p / f.max * 100) + "%\"></i></div></li>";
-    });
-    $("bars").innerHTML = bars.join("");
-    animate(total);
-    $("gauge").style.strokeDashoffset = 314.16 * (1 - Math.min(total / MAX, 1));
+    var r = read();
+    fill($("age")); fill($("salary"));
 
-    var tier = $("tier"), txt = $("tier-text");
-    if (current(FACTORS[0]).v === "45") {
-      tier.className = "tier t-low"; tier.textContent = "Not eligible";
-      txt.textContent = "You must be under 45 when invited.";
-    } else if (total >= 650) {
-      tier.className = "tier t-high"; tier.textContent = "Highly competitive";
-      txt.textContent = "In the top third of the 950-point scale.";
-    } else if (total >= 450) {
-      tier.className = "tier t-mid"; tier.textContent = "Competitive";
-      txt.textContent = "In the middle of the 950-point scale. Invitations depend on demand in your occupation.";
+    $("age-out").textContent = r.ageYears >= 45 ? "45+" : r.ageYears;
+        $("age-pts").textContent = r.age + " pts";
+    $("salary-out").textContent = r.salaryVal < 80000 ? "Under $80k" : r.salaryVal >= 170000 ? "$170k+" : k(r.salaryVal) + "–" + k(r.salaryVal + 4999);
+    $("salary-note").textContent = r.salaryVal < 80000 ? "or offshore" : "a year";
+    $("salary-pts").textContent = r.salary + " pts";
+    $("age").setAttribute("aria-valuetext", (r.ageYears >= 45 ? "45 or older" : r.ageYears + " years") + ", " + r.age + " points");
+    $("salary").setAttribute("aria-valuetext", $("salary-out").textContent + ", " + r.salary + " points");
+
+    countTo(r.total);
+    $("dock-total").textContent = r.total;
+
+    $("stack").innerHTML = FACTORS.map(function (f) {
+      return '<i style="width:' + (r[f.key] / 950 * 100) + "%;background:var(" + f.color + ')"></i>';
+    }).join("");
+    $("legend").innerHTML = FACTORS.map(function (f) {
+      return '<li class="' + (r[f.key] ? "" : "zero") + '"><span class="dot" style="background:var(' + f.color + ')"></span>' + f.label + "<b>" + r[f.key] + "/" + f.max + "</b></li>";
+    }).join("");
+
+    var badge = $("badge"), sum = $("summary");
+    var eng = choice("english").label.toLowerCase();
+    if (r.ageYears >= 45) {
+      badge.className = "badge out"; badge.textContent = "Not eligible";
+      sum.textContent = "You need to be under 45 when you’re invited, so Victoria can’t nominate you.";
     } else {
-      tier.className = "tier t-low"; tier.textContent = "Lower ranking";
-      txt.textContent = "See the suggestions below to raise your score.";
+      var pct = Math.round(r.total / 950 * 100);
+      badge.className = "badge";
+      badge.textContent = pct >= 68 ? "Strong" : pct >= 47 ? "Competitive" : "Room to grow";
+      sum.textContent = "At " + r.ageYears + " with " + eng + " English" +
+        (r.salary ? " and " + $("salary-out").textContent + " in Victoria" : "") +
+        ", you’d score " + r.total + ", which is " + pct + "% of the maximum.";
     }
-    tips();
+
+    // Tips: next step up in each factor, biggest first.
+    var tips = [];
+    Object.keys(CHOICES).forEach(function (key) {
+      var cur = choice(key), up = CHOICES[key].options.filter(function (o) { return o.pts > cur.pts; }).sort(function (x, y) { return x.pts - y.pts; })[0];
+      if (!up) return;
+      var verb = { english: "Reach " + up.label + " English", experience: "Reach " + up.label + " of experience", qualification: "Finish a " + up.label + (up.v === "phd" ? "" : " degree"), skill: "Nominate a skill level 1 occupation", partner: "Add an eligible partner" }[key];
+      tips.push({ g: up.pts - cur.pts, t: verb });
+    });
+    if (r.ageYears < 45 && r.salaryVal < 170000) {
+      var nxt = Math.max(r.salaryVal + 5000, 80000);
+      tips.push({ g: salaryPts(nxt) - r.salary, t: "Earn " + k(nxt) + " or more in Victoria" });
+    }
+    tips.sort(function (x, y) { return y.g - x.g; });
+    var html = tips.slice(0, 3).map(function (t) { return '<li><span class="gain">+' + t.g + "</span><span>" + t.t + "</span></li>"; });
+    var nextAge = AGE[r.ageYears + 1];
+    if (r.ageYears < 45 && nextAge !== undefined && nextAge < r.age) {
+      html.push('<li class="warn"><span class="gain">−' + (r.age - nextAge) + "</span><span>Your next birthday costs " + (r.age - nextAge) + " points, so lodge before then if you can.</span></li>");
+    }
+    $("tips").innerHTML = html.length ? html.join("") : "<li>You’ve maxed out every factor you can change. Nice work.</li>";
+
+    // Chart marker.
+    var ya = Math.min(r.ageYears, 45), X = cx(ya), Y = cy(AGE[ya]);
+    $("you").setAttribute("cx", X); $("you").setAttribute("cy", Y);
+    $("you-stem").setAttribute("x1", X); $("you-stem").setAttribute("x2", X); $("you-stem").setAttribute("y1", Y);
+    var lbl = $("you-lbl"); lbl.textContent = "You: " + AGE[ya] + " pts";
+    lbl.setAttribute("x", Math.max(CH.l + 40, Math.min(CH.w - CH.r - 40, X))); lbl.setAttribute("y", Math.max(16, Y - 16));
+
+    // Highlight table rows.
+    document.querySelectorAll("tr.is-you").forEach(function (tr) { tr.classList.remove("is-you"); });
+    var mark = function (sel, v) { var tr = document.querySelector(sel + ' tr[data-v="' + v + '"]'); if (tr) tr.classList.add("is-you"); };
+    mark("#age-table", ya);
+    mark("#salary-table", r.salaryVal >= 80000 ? Math.min(r.salaryVal, 170000) : 75000);
+    Object.keys(CHOICES).forEach(function (key) { mark("#" + key + "-table", choice(key).v); });
 
     try {
-      var q = new URLSearchParams();
-      FACTORS.forEach(function (f) { q.set(f.key, $(f.key).value); });
-      history.replaceState(null, "", "?" + q.toString() + location.hash);
+      var p = new URLSearchParams();
+      p.set("age", $("age").value); p.set("salary", $("salary").value);
+      Object.keys(CHOICES).forEach(function (key) { p.set(key, choice(key).v); });
+      history.replaceState(null, "", "?" + p.toString() + location.hash);
     } catch (e) {}
   }
 
+  $("vpt-form").addEventListener("input", update);
+  $("vpt-form").addEventListener("change", update);
+  $("vpt-form").addEventListener("submit", function (e) { e.preventDefault(); });
+
   $("reset").addEventListener("click", function () {
-    FACTORS.forEach(function (f) { $(f.key).value = f.def; });
+    $("age").value = DEFAULTS.age; $("salary").value = DEFAULTS.salary;
+    Object.keys(CHOICES).forEach(function (key) { document.getElementById(key + "-" + CHOICES[key].def).checked = true; });
     update();
   });
   $("share").addEventListener("click", function () {
     var btn = this, done = function () { btn.textContent = "Link copied"; setTimeout(function () { btn.textContent = "Copy link to my score"; }, 1800); };
-    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, function () { prompt("Copy this link:", location.href); });
-    else prompt("Copy this link:", location.href);
+    var fallback = function () { window.prompt("Copy this link:", location.href); };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, fallback); else fallback();
   });
+
+  // Hide the phone dock once the full score card is on screen.
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (es) { $("dock").classList.toggle("hide", es[0].isIntersecting); }, { threshold: 0.25 }).observe($("score"));
+  }
 
   update();
 })();
