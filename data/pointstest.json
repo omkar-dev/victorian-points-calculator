@@ -1,0 +1,86 @@
+{
+  "updated": "2026-10-15",
+  "inForceAt": "2026-10-15",
+  "sources": [
+    {"label": "Home Affairs – Points table for Skilled Independent visa (subclass 189) (last updated 11/06/2026)", "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-table"},
+    {"label": "Home Affairs – Points table for Skilled Nominated visa (subclass 190) (last updated 16/07/2026)", "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190/points-table"},
+    {"label": "Home Affairs – Points table for Skilled Work Regional (Provisional) visa (subclass 491) (last updated 16/07/2026)", "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-work-regional-provisional-491/points-table"},
+    {"label": "Home Affairs – Skilled Independent visa (subclass 189) Points-tested stream (65-point requirement)", "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-tested"},
+    {"label": "Budget Paper No. 2, 2026–27 – Boosting Productivity: better selecting migrants and recognising their skills", "url": "https://budget.gov.au/content/bp2/download/bp2_2026-27.pdf"},
+    {"label": "Home Affairs – Review of the points test discussion paper (April 2024)", "url": "https://www.homeaffairs.gov.au/reports-and-publications/submissions-and-discussion-papers/review-of-the-points-test-discussion-paper"}
+  ],
+  "passMark": 65,
+  "maxEmploymentPoints": 20,
+  "factors": [
+    {"key": "age", "label": "Age", "basis": "at time of invitation", "options": [
+      {"label": "18–24", "points": 25},
+      {"label": "25–32", "points": 30},
+      {"label": "33–39", "points": 25},
+      {"label": "40–44", "points": 15}
+    ]},
+    {"key": "english", "label": "English language skills", "options": [
+      {"label": "Competent English", "points": 0},
+      {"label": "Proficient English", "points": 10},
+      {"label": "Superior English", "points": 20}
+    ]},
+    {"key": "overseasEmployment", "label": "Skilled employment outside Australia (last 10 years)", "options": [
+      {"label": "Less than 3 years", "points": 0},
+      {"label": "3 to less than 5 years", "points": 5},
+      {"label": "5 to less than 8 years", "points": 10},
+      {"label": "8 years or more", "points": 15}
+    ]},
+    {"key": "australianEmployment", "label": "Skilled employment in Australia (last 10 years)", "options": [
+      {"label": "Less than 1 year", "points": 0},
+      {"label": "1 to less than 3 years", "points": 5},
+      {"label": "3 to less than 5 years", "points": 10},
+      {"label": "5 to less than 8 years", "points": 15},
+      {"label": "8 years or more", "points": 20}
+    ]},
+    {"key": "education", "label": "Educational qualifications (highest only)", "options": [
+      {"label": "Doctorate (Australian or recognised overseas)", "points": 20},
+      {"label": "Bachelor degree or higher (Australian or recognised overseas)", "points": 15},
+      {"label": "Diploma or trade qualification from an Australian institution", "points": 10},
+      {"label": "Qualification or award recognised by the assessing authority for the nominated occupation", "points": 10},
+      {"label": "None of the above", "points": 0}
+    ]},
+    {"key": "specialistEducation", "label": "Specialist education qualification (Australian Masters by research or Doctorate in STEM/ICT, at least 2 academic years)", "options": [
+      {"label": "Yes", "points": 10},
+      {"label": "No", "points": 0}
+    ]},
+    {"key": "australianStudy", "label": "Australian study requirement", "options": [
+      {"label": "Yes", "points": 5},
+      {"label": "No", "points": 0}
+    ]},
+    {"key": "professionalYear", "label": "Professional Year in Australia (Accounting, ICT/Computing or Engineering, completed in last 4 years)", "options": [
+      {"label": "Yes", "points": 5},
+      {"label": "No", "points": 0}
+    ]},
+    {"key": "communityLanguage", "label": "Credentialled community language (NAATI)", "options": [
+      {"label": "Yes", "points": 5},
+      {"label": "No", "points": 0}
+    ]},
+    {"key": "regionalStudy", "label": "Study in regional Australia", "options": [
+      {"label": "Yes", "points": 5},
+      {"label": "No", "points": 0}
+    ]},
+    {"key": "partner", "label": "Partner skills", "options": [
+      {"label": "Single, or partner is an Australian citizen or permanent resident", "points": 10},
+      {"label": "Partner is a visa applicant, under 45, competent English, skills assessment in an occupation on the same list", "points": 10},
+      {"label": "Partner is a visa applicant with competent English only", "points": 5},
+      {"label": "Partner is a visa applicant who meets none of the above", "points": 0}
+    ]},
+    {"key": "nomination", "label": "Nomination or sponsorship", "options": [
+      {"label": "None (subclass 189)", "points": 0, "subclass": "189"},
+      {"label": "State or territory nomination (subclass 190)", "points": 5, "subclass": "190"},
+      {"label": "State or territory nomination or eligible family sponsorship (subclass 491)", "points": 15, "subclass": "491"}
+    ]}
+  ],
+  "notes": [
+    "As at 15 October 2026 the points test in force is unchanged. The Home Affairs points tables for subclasses 189, 190 and 491 (last updated June and July 2026) show the same factors and points as before, and the pass mark is still 65.",
+    "Combined overseas and Australian skilled employment points are capped at 20.",
+    "Applicants must be under 45 at the time of invitation. There are no age points from 45.",
+    "Pending reform: the 2026–27 Budget (Budget Paper No. 2, May 2026) says the Government 'will reform the permanent migration points test to better identify migrants who drive productivity and Australia's long-term prosperity' and that it 'will be optimised to select better educated, higher-skilled and younger migrants overall'. No new point values, start date or legislation had been published by Home Affairs as at 15 October 2026.",
+    "Background: the December 2023 Migration Strategy committed to a reformed points test, and Home Affairs released a 'Review of the points test' discussion paper in April 2024. The reform did not take effect in 2024–25 or 2025–26.",
+    "Dates and details reported by migration agents (for example a 1 July 2027 start or a higher pass mark) are not confirmed by any official source and are not included here."
+  ]
+}

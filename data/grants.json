@@ -1,0 +1,163 @@
+{
+  "updated": "2026-10-15",
+  "sources": [
+    {"label": "Home Affairs – Permanent Migration Program planning levels (2024–25 to 2026–27; last updated 21/09/2026)", "url": "https://immi.homeaffairs.gov.au/what-we-do/migration-program-planning-levels"},
+    {"label": "Home Affairs – Migration Program planning levels (archived Dec 2025; 2023–24 to 2025–26 by category)", "url": "https://web.archive.org/web/20251212055632/https://immi.homeaffairs.gov.au/what-we-do/migration-program-planning-levels"},
+    {"label": "Budget Paper No. 2, 2026–27 (Boosting Productivity – better selecting migrants and recognising their skills)", "url": "https://budget.gov.au/content/bp2/download/bp2_2026-27.pdf"},
+    {"label": "Home Affairs – 2024-25 Migration Program Report", "url": "https://www.homeaffairs.gov.au/research-and-stats/files/report-migration-program-2024-25.pdf"},
+    {"label": "Home Affairs – Australia's permanent migration outcome 2024–25 (by citizenship)", "url": "https://www.homeaffairs.gov.au/research-and-stats/files/permanent-migration-2024-25.PDF"}
+  ],
+  "planning": [
+    {
+      "fy": "2026-27",
+      "announced": "2026-05-12",
+      "total": 185000, "skill": 132240, "family": 52460, "special": 300,
+      "streams": [
+        {"name": "Employer Sponsored", "places": 58040},
+        {"name": "Skilled Independent", "places": 21090},
+        {"name": "State/Territory Nominated", "places": 35500},
+        {"name": "Regional", "places": 14110},
+        {"name": "Business Innovation & Investment", "places": null, "note": "No separate category. 20 places sit inside Talent and Innovation."},
+        {"name": "Global Talent", "places": null, "note": "Closed to new applications. Counted inside Talent and Innovation."},
+        {"name": "Distinguished Talent", "places": null, "note": "Closed to new applications. Counted inside Talent and Innovation."},
+        {"name": "Talent and Innovation", "places": 3500, "note": "National Innovation visa plus on-hand Global Talent, Distinguished Talent and BII (20 places)."}
+      ],
+      "family_detail": {"Partner": 41500, "Child": 3500, "Parent": 7060, "Other Family": 400},
+      "notes": ["129,590 places across the Skill and Family streams are allocated to applicants already living in Australia (onshore)."]
+    },
+    {
+      "fy": "2025-26",
+      "total": 185000, "skill": 132200, "family": 52500, "special": 300,
+      "streams": [
+        {"name": "Employer Sponsored", "places": 44000},
+        {"name": "Skilled Independent", "places": 16900},
+        {"name": "State/Territory Nominated", "places": 33000},
+        {"name": "Regional", "places": 33000},
+        {"name": "Business Innovation & Investment", "places": 1000},
+        {"name": "Global Talent", "places": null, "note": "Folded into Talent and Innovation."},
+        {"name": "Distinguished Talent", "places": null, "note": "Folded into Talent and Innovation."},
+        {"name": "Talent and Innovation", "places": 4300, "note": "The current Home Affairs page shows Talent and Innovation as 5,300 (adjusted to include BII 1,000)."}
+      ],
+      "family_detail": {"Partner": 40500, "Child": 3000, "Parent": 8500, "Other Family": 500}
+    },
+    {
+      "fy": "2024-25",
+      "total": 185000, "skill": 132200, "family": 52500, "special": 300,
+      "streams": [
+        {"name": "Employer Sponsored", "places": 44000},
+        {"name": "Skilled Independent", "places": 16900},
+        {"name": "State/Territory Nominated", "places": 33000},
+        {"name": "Regional", "places": 33000},
+        {"name": "Business Innovation & Investment", "places": 1000},
+        {"name": "Global Talent", "places": 4000},
+        {"name": "Distinguished Talent", "places": 300}
+      ],
+      "family_detail": {"Partner": 40500, "Child": 3000, "Parent": 8500, "Other Family": 500}
+    },
+    {
+      "fy": "2023-24",
+      "total": 190000, "skill": 137100, "family": 52500, "special": 400,
+      "streams": [
+        {"name": "Employer Sponsored", "places": 36825},
+        {"name": "Skilled Independent", "places": 30375},
+        {"name": "State/Territory Nominated", "places": 30400},
+        {"name": "Regional", "places": 32300},
+        {"name": "Business Innovation & Investment", "places": 1900},
+        {"name": "Global Talent", "places": 5000},
+        {"name": "Distinguished Talent", "places": 300}
+      ],
+      "family_detail": {"Partner": 40500, "Child": 3000, "Parent": 8500, "Other Family": 500}
+    }
+  ],
+  "outcomes": [
+    {
+      "fy": "2024-25",
+      "total": 185001,
+      "skill": 132148,
+      "family": 52500,
+      "special": 353,
+      "note": "Outcomes are places delivered, including primary and secondary applicants. The report publishes outcomes by visa category, not strictly by subclass, so each row names the category it comes from. The 2025–26 Migration Program Report had not been published as at 15 October 2026.",
+      "bySubclass": [
+        {"subclass": "186/187", "category": "Employer Sponsored", "grants": 44000},
+        {"subclass": "189", "category": "Skilled Independent", "grants": 16900},
+        {"subclass": "190", "category": "State/Territory Nominated", "grants": 33000},
+        {"subclass": "491", "category": "Regional – Skilled Work Regional", "grants": 28069, "note": "25,114 of these involved a state or territory nomination. The rest were family-sponsored."},
+        {"subclass": "494", "category": "Regional – Skilled Employer Sponsored Regional", "grants": 4461},
+        {"subclass": "191/887", "category": "Regional – Skilled Regional", "grants": 418},
+        {"subclass": "188/888", "category": "Business Innovation & Investment", "grants": 1000},
+        {"subclass": "858", "category": "Global Talent (including National Innovation visa)", "grants": 4000},
+        {"subclass": "124/858", "category": "Distinguished Talent", "grants": 300}
+      ],
+      "byState": [
+        {"state": "NSW", "total": 55886, "skill": 38862},
+        {"state": "VIC", "total": 45060, "skill": 29395},
+        {"state": "WA", "total": 22622, "skill": 17936},
+        {"state": "QLD", "total": 21757, "skill": 15000},
+        {"state": "SA", "total": 15720, "skill": 12780},
+        {"state": "ACT", "total": 8215, "skill": 7426},
+        {"state": "TAS", "total": 5897, "skill": 5509},
+        {"state": "NT", "total": 3531, "skill": 3171},
+        {"state": "Not specified", "total": 6313, "skill": 2069}
+      ],
+      "vicByCategory": [
+        {"category": "Employer Sponsored", "grants": 10541},
+        {"category": "State/Territory Nominated", "grants": 9035},
+        {"category": "Skilled Independent", "grants": 5806},
+        {"category": "Regional", "grants": 2572},
+        {"category": "Global Talent", "grants": 1045},
+        {"category": "Business Innovation & Investment", "grants": 307},
+        {"category": "Distinguished Talent", "grants": 89}
+      ]
+    }
+  ],
+  "topOccupations": [
+    {
+      "fy": "2024-25",
+      "scope": "Skill stream, primary applicants (excludes Global Talent)",
+      "rows": [
+        {"anzsco": "2544", "occupation": "Registered Nurses", "grants": 5006},
+        {"anzsco": "2613", "occupation": "Software and Applications Programmers", "grants": 4221},
+        {"anzsco": "3513", "occupation": "Chefs", "grants": 3439},
+        {"anzsco": "2211", "occupation": "Accountants", "grants": 3250},
+        {"anzsco": "2332", "occupation": "Civil Engineering Professionals", "grants": 2689},
+        {"anzsco": "2611", "occupation": "ICT Business and Systems Analysts", "grants": 2161},
+        {"anzsco": "2335", "occupation": "Industrial, Mechanical and Production Engineers", "grants": 2088},
+        {"anzsco": "2411", "occupation": "Early Childhood (Pre-primary School) Teachers", "grants": 1507},
+        {"anzsco": "2339", "occupation": "Other Engineering Professionals", "grants": 1352},
+        {"anzsco": "3212", "occupation": "Motor Mechanics", "grants": 1324}
+      ]
+    },
+    {
+      "fy": "2024-25",
+      "scope": "State/Territory Nominated category (subclass 190), primary applicants",
+      "rows": [
+        {"anzsco": "2613", "occupation": "Software and Applications Programmers", "grants": 1561},
+        {"anzsco": "2211", "occupation": "Accountants", "grants": 1274},
+        {"anzsco": "2611", "occupation": "ICT Business and Systems Analysts", "grants": 1132},
+        {"anzsco": "2332", "occupation": "Civil Engineering Professionals", "grants": 1128},
+        {"anzsco": "2335", "occupation": "Industrial, Mechanical and Production Engineers", "grants": 884},
+        {"anzsco": "2544", "occupation": "Registered Nurses", "grants": 846},
+        {"anzsco": "3513", "occupation": "Chefs", "grants": 636},
+        {"anzsco": "2333", "occupation": "Electrical Engineers", "grants": 540},
+        {"anzsco": "2339", "occupation": "Other Engineering Professionals", "grants": 516},
+        {"anzsco": "2411", "occupation": "Early Childhood (Pre-primary School) Teachers", "grants": 441}
+      ]
+    },
+    {
+      "fy": "2024-25",
+      "scope": "Regional – Skilled Work Regional (subclass 491), primary applicants",
+      "rows": [
+        {"anzsco": "2211", "occupation": "Accountants", "grants": 988},
+        {"anzsco": "2613", "occupation": "Software and Applications Programmers", "grants": 601},
+        {"anzsco": "2335", "occupation": "Industrial, Mechanical and Production Engineers", "grants": 584},
+        {"anzsco": "3513", "occupation": "Chefs", "grants": 502},
+        {"anzsco": "2332", "occupation": "Civil Engineering Professionals", "grants": 463},
+        {"anzsco": "2339", "occupation": "Other Engineering Professionals", "grants": 365},
+        {"anzsco": "3212", "occupation": "Motor Mechanics", "grants": 360},
+        {"anzsco": "2611", "occupation": "ICT Business and Systems Analysts", "grants": 358},
+        {"anzsco": "2231", "occupation": "Human Resource Professionals", "grants": 257},
+        {"anzsco": "2544", "occupation": "Registered Nurses", "grants": 254}
+      ]
+    }
+  ]
+}

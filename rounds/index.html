@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkillSelect Invitation Rounds 2026–27 | 189 &amp; 491 Cut-offs and Trends</title>
+<meta name="description" content="Every SkillSelect invitation round for subclass 189 and 491 family-sponsored: invitations, minimum points by occupation, tie-break dates and how cut-offs have moved between rounds.">
+<link rel="canonical" href="https://vptpoints.com/rounds/">
+<meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1613" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VPT Points">
+<meta property="og:title" content="SkillSelect invitation rounds and cut-offs">
+<meta property="og:description" content="Every 189 and 491 round, minimum points by occupation and how cut-offs moved.">
+<meta property="og:url" content="https://vptpoints.com/rounds/">
+<meta property="og:image" content="https://vptpoints.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<!-- header -->
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../" aria-label="VPT Points home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--leaf)"/><path d="M9 10l7 13 7-13" fill="none" stroke="var(--sun)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      VPT Points
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href=".././" class="vic">VIC Points Test</a>
+      <a href="../skillselect-points/">Points calculator</a>
+      <a href="../189-chances/">189 chances</a>
+      <a href="../rounds/" aria-current="page">Invitation rounds</a>
+      <a href="../occupations/">Occupations</a>
+      <a href="../state-nominations/">State nominations</a>
+      <div class="more">
+        <button class="more-btn" type="button" aria-expanded="false">More</button>
+        <div class="more-list">
+          <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
+          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
+          <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
+          <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+<!-- /header -->
+
+<main id="main">
+  <div class="wrap">
+    <div class="page-hero">
+      <span class="kicker"><i></i>Official round results</span>
+      <h1>Invitation <span class="hl">rounds</span></h1>
+      <p class="lede">Every SkillSelect round for subclass 189 and 491 family-sponsored since July 2023: how many people were invited, the lowest score that got through for each occupation, and how cut-offs moved.</p>
+    </div>
+
+    <section class="block" aria-label="Latest round at a glance"><div class="stats" id="stats"></div></section>
+
+    <section class="block" aria-labelledby="chart-h">
+      <div class="block-head"><div><h2 id="chart-h">Invitations by round</h2><p>Subclass 189 and 491 family-sponsored invitations in each round.</p></div></div>
+      <div class="panel"><div id="round-chart"></div></div>
+    </section>
+
+    <section class="block" aria-labelledby="fy-h">
+      <div class="block-head"><div><h2 id="fy-h">Invitations by program year</h2><p>Subclass 189 invitations across each July–June program year.</p></div></div>
+      <div class="panel"><div id="fy-chart"></div></div>
+    </section>
+
+    <section class="block" aria-labelledby="list-h">
+      <div class="block-head"><div><h2 id="list-h">All rounds</h2><p>Minimum points is the lowest score invited in any occupation in that round. Tie-break is the latest date of effect invited at the cut-off.</p></div></div>
+      <div class="scroll" id="rounds-table"></div>
+    </section>
+
+    <section class="block" aria-labelledby="occ-h">
+      <div class="block-head"><div><h2 id="occ-h">Cut-offs by occupation</h2><p id="occ-note">The lowest score invited for each occupation.</p></div></div>
+      <div class="toolbar">
+        <input class="input" type="search" id="occ-q" placeholder="Search occupation or ANZSCO code" aria-label="Search occupations">
+        <select class="input" id="occ-round" aria-label="Round"></select>
+        <span class="muted small" id="occ-count"></span>
+      </div>
+      <div class="scroll" id="occ-table"></div>
+    </section>
+
+    <section class="block" aria-labelledby="move-h">
+      <div class="block-head"><div><h2 id="move-h">How cut-offs moved</h2><p id="move-note">Occupations whose minimum score changed between the last two rounds that published occupation results.</p></div></div>
+      <div class="grid-2">
+        <div class="panel"><h3 class="sub">Got easier</h3><div id="fallers"></div></div>
+        <div class="panel"><h3 class="sub">Got harder</h3><div id="risers"></div></div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="state-h" id="state-sec" hidden>
+      <div class="block-head"><div><h2 id="state-h">State and territory invitations</h2><p id="state-note"></p></div></div>
+      <div class="scroll" id="state-table"></div>
+    </section>
+
+    <p class="source" id="src"></p>
+<!-- footer -->
+    <footer class="site-foot">
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
+      <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
+    </footer>
+<!-- /footer -->
+  </div>
+</main>
+
+<script src="../assets/site.js"></script>
+<script>
+(function () {
+  "use strict";
+  var V = window.VPT, $ = function (id) { return document.getElementById(id); };
+  V.load("../data/rounds.json").then(function (d) {
+    var rounds = (d.rounds || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    var latest = rounds[0] || {};
+    var fy = d.fyTotals || [];
+    var cur = fy.filter(function (x) { return x.fy === latest.fy; })[0];
+
+    $("stats").innerHTML = [
+      ["Latest round", V.date(latest.date), "Program year " + (latest.fy || "–")],
+      ["189 invitations", V.num(latest.invitations && latest.invitations["189"]), "In the latest round"],
+      ["491 family invitations", V.num(latest.invitations && latest.invitations["491F"]), "In the latest round"],
+      ["Lowest 189 cut-off", latest.minPoints && latest.minPoints["189"] != null ? latest.minPoints["189"] + " pts" : "–", "Across all occupations"],
+      ["Next round", d.nextRound ? V.date(d.nextRound) : "Not announced", "Home Affairs doesn’t publish dates ahead"]
+    ].map(function (s) { return '<div class="stat"><span class="lbl">' + s[0] + '</span><span class="val">' + s[1] + '</span><span class="sub2">' + s[2] + "</span></div>"; }).join("");
+
+    var asc = rounds.slice().reverse();
+    function drawCharts() {
+      V.chart($("round-chart"), {
+        title: "Invitations by round", type: "col", unit: "invitations",
+        labels: asc.map(function (r) { return V.date(r.date.slice(0, 7)); }),
+        tipLabels: asc.map(function (r) { return V.date(r.date); }),
+        series: [
+          { name: "Subclass 189", color: "var(--s1)", values: asc.map(function (r) { return r.invitations ? r.invitations["189"] : null; }) },
+          { name: "Subclass 491 family", color: "var(--s2)", values: asc.map(function (r) { return r.invitations ? r.invitations["491F"] : null; }) }
+        ]
+      });
+      var fyAsc = fy.slice().sort(function (a, b) { return a.fy < b.fy ? -1 : 1; });
+      V.chart($("fy-chart"), {
+        title: "Subclass 189 invitations by program year", type: "col", unit: "invitations", height: 220,
+        labels: fyAsc.map(function (x) { return x.fy; }),
+        series: [{ name: "Subclass 189", color: "var(--leaf)", values: fyAsc.map(function (x) { return x["189"]; }) }]
+      });
+    }
+    drawCharts(); V.onResize(drawCharts);
+
+    V.table($("rounds-table"), [
+      { key: "date", label: "Date", render: function (r) { return V.date(r.date); } },
+      { key: "fy", label: "Year" },
+      { key: "i189", label: "189 invited", num: true },
+      { key: "i491", label: "491F invited", num: true },
+      { key: "m189", label: "189 min pts", num: true },
+      { key: "m491", label: "491F min pts", num: true },
+      { key: "tb", label: "Tie-break (189 / 491F)", nosort: true, render: function (r) { return V.esc(r.tb); } }
+    ], { sortKey: "date", dir: -1 }).render(rounds.map(function (r) {
+      var i = r.invitations || {}, m = r.minPoints || {}, t = r.tieBreak || {};
+      return { date: r.date, fy: r.fy, i189: i["189"], i491: i["491F"], m189: m["189"], m491: m["491F"], tb: (t["189"] || "–") + " / " + (t["491F"] || "–") };
+    }));
+
+    // Per-occupation cut-offs, by round.
+    var occRows = d.byOccupation && d.byOccupation.length ? d.byOccupation : (d.latestByOccupation || []);
+    var roundDates = Array.from(new Set(occRows.map(function (r) { return r.roundDate; }))).sort().reverse();
+    $("occ-round").innerHTML = roundDates.map(function (r) { return '<option value="' + r + '">' + V.date(r) + " round</option>"; }).join("");
+    var occTable = V.table($("occ-table"), [
+      { key: "occupation", label: "Occupation", render: function (r) { return '<a href="../occupations/?code=' + V.esc(r.anzsco) + '">' + V.esc(r.occupation) + "</a>"; } },
+      { key: "anzsco", label: "ANZSCO", render: function (r) { return '<span class="code">' + V.esc(r.anzsco || "–") + "</span>"; } },
+      { key: "subclass", label: "Visa" },
+      { key: "minPoints", label: "Min points", num: true }
+    ], { sortKey: "minPoints", dir: -1, onDraw: function (n) { $("occ-count").textContent = V.plural(n, "occupation"); } });
+    function filterOcc() {
+      var q = $("occ-q").value.trim().toLowerCase(), rd = $("occ-round").value;
+      occTable.render(occRows.filter(function (r) {
+        return r.roundDate === rd && (!q || r.occupation.toLowerCase().indexOf(q) >= 0 || String(r.anzsco || "").indexOf(q) === 0);
+      }));
+    }
+    $("occ-q").addEventListener("input", filterOcc); $("occ-round").addEventListener("change", filterOcc); filterOcc();
+
+    // Movers between the two latest rounds with occupation results (189 only).
+    var r189 = occRows.filter(function (r) { return r.subclass === "189"; });
+    var dates189 = Array.from(new Set(r189.map(function (r) { return r.roundDate; }))).sort().reverse();
+    if (dates189.length >= 2) {
+      var a = {}, b = {};
+      r189.forEach(function (r) { if (r.roundDate === dates189[0]) a[r.occupation] = r.minPoints; if (r.roundDate === dates189[1]) b[r.occupation] = r.minPoints; });
+      var moves = Object.keys(a).filter(function (k) { return b[k] != null && a[k] != null && a[k] !== b[k]; }).map(function (k) { return { label: k, from: b[k], to: a[k], d: a[k] - b[k] }; });
+      var mk = function (rows) {
+        return rows.length ? '<table class="data"><tbody>' + rows.slice(0, 12).map(function (m) {
+          return "<tr><td>" + V.esc(m.label) + '</td><td class="num">' + m.from + " → " + m.to + '</td><td class="num">' + (m.d > 0 ? "+" : "−") + Math.abs(m.d) + "</td></tr>";
+        }).join("") + "</tbody></table>" : '<p class="muted">No changes.</p>';
+      };
+      $("move-note").textContent = "Subclass 189 occupations whose minimum score changed from the " + V.date(dates189[1]) + " round to the " + V.date(dates189[0]) + " round.";
+      $("fallers").innerHTML = mk(moves.filter(function (m) { return m.d < 0; }).sort(function (x, y) { return x.d - y.d; }));
+      $("risers").innerHTML = mk(moves.filter(function (m) { return m.d > 0; }).sort(function (x, y) { return y.d - x.d; }));
+    } else {
+      $("fallers").innerHTML = $("risers").innerHTML = '<p class="muted">Needs two rounds with occupation results.</p>';
+    }
+
+    var si = d.stateInvites || [];
+    if (si.length) {
+      $("state-sec").hidden = false;
+      $("state-note").textContent = "Invitations sent after state or territory nomination" + (si[0].period ? ", " + si[0].period : "") + ". “<5” means fewer than five.";
+      var cell = function (v, lt) { return lt ? "<5" : V.num(v); };
+      V.table($("state-table"), [
+        { key: "state", label: "State" },
+        { key: "s190", label: "190", num: true, render: function (r) { return cell(r.s190, r.lt190); } },
+        { key: "s491", label: "491", num: true, render: function (r) { return cell(r.s491, r.lt491); } }
+      ], { sortKey: "state", dir: 1 }).render(si.map(function (r) {
+        var lt = r.lt5;
+        return { state: r.state, s190: r["190"], s491: r["491"], lt190: r["190"] == null && (lt === true || (lt && lt["190"])), lt491: r["491"] == null && (lt === true || (lt && lt["491"])) };
+      }));
+    }
+    V.sources($("src"), d);
+  }).catch(function (e) { V.fail($("stats"), e); });
+})();
+</script>
+</body>
+</html>

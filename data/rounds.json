@@ -1,0 +1,8980 @@
+{
+ "generated": "2026-10-15",
+ "sources": [
+  {
+   "label": "Home Affairs: SkillSelect invitation rounds",
+   "url": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/invitation-rounds"
+  },
+  {
+   "label": "Home Affairs: previous rounds",
+   "url": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skillselect/previous-rounds"
+  },
+  {
+   "label": "Home Affairs: skilled occupation list",
+   "url": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list"
+  }
+ ],
+ "notes": [
+  "minPoints per round = lowest per-occupation minimum in the official table, ignoring values below the 65-point pass mark.",
+  "tieBreak values are exactly as printed by Home Affairs.",
+  "Per-occupation date of effect and invitation counts are not published."
+ ],
+ "nextRound": null,
+ "rounds": [
+  {
+   "date": "2026-06-04",
+   "fy": "2025-26",
+   "invitations": {
+    "189": 10000,
+    "491F": null
+   },
+   "minPoints": {
+    "189": 65,
+    "491F": null
+   },
+   "tieBreak": {
+    "189": "24/04/2026",
+    "491F": null
+   },
+   "occupationsListed": 139,
+   "note": "Official tie-break (date of effect) month: 189 tie-break 24/04/2026. minPoints = lowest per-occupation minimum score in the official occupation table (139 occupations listed). No 491 Family Sponsored figure listed for this round."
+  },
+  {
+   "date": "2025-11-13",
+   "fy": "2025-26",
+   "invitations": {
+    "189": 10000,
+    "491F": 300
+   },
+   "minPoints": {
+    "189": 65,
+    "491F": 65
+   },
+   "tieBreak": {
+    "189": "11/2025",
+    "491F": "10/2025"
+   },
+   "occupationsListed": 143,
+   "note": "Official tie-break (date of effect) month: 189 tie-break 11/2025; 491F tie-break 10/2025. minPoints = lowest per-occupation minimum score in the official occupation table (143 occupations listed)."
+  },
+  {
+   "date": "2025-08-21",
+   "fy": "2025-26",
+   "invitations": {
+    "189": 6887,
+    "491F": 150
+   },
+   "minPoints": {
+    "189": 65,
+    "491F": 65
+   },
+   "tieBreak": {
+    "189": "08/2025",
+    "491F": "05/2025"
+   },
+   "occupationsListed": 130,
+   "note": "Official tie-break (date of effect) month: 189 tie-break 08/2025; 491F tie-break 05/2025. minPoints = lowest per-occupation minimum score in the official occupation table (130 occupations listed). Excluded from minPoints (below 65 pass mark, as printed): Registered Nurses nec 80/5."
+  },
+  {
+   "date": "2024-11-07",
+   "fy": "2024-25",
+   "invitations": {
+    "189": 15000,
+    "491F": 0
+   },
+   "minPoints": {
+    "189": 65,
+    "491F": null
+   },
+   "tieBreak": {
+    "189": "12/2022",
+    "491F": "N/A"
+   },
+   "occupationsListed": 160,
+   "note": "Official tie-break (date of effect) month: 189 tie-break 12/2022. minPoints = lowest per-occupation minimum score in the official occupation table (160 occupations listed)."
+  },
+  {
+   "date": "2024-09-05",
+   "fy": "2024-25",
+   "invitations": {
+    "189": 7973,
+    "491F": 0
+   },
+   "minPoints": {
+    "189": 65,
+    "491F": null
+   },
+   "tieBreak": {
+    "189": "09/2022",
+    "491F": "N/A"
+   },
+   "occupationsListed": 148,
+   "note": "Official tie-break (date of effect) month: 189 tie-break 09/2022. minPoints = lowest per-occupation minimum score in the official occupation table (148 occupations listed)."
+  },
+  {
+   "date": "2024-06-13",
+   "fy": "2023-24",
+   "invitations": {
+    "189": 5292,
+    "491F": 0
+   },
+   "minPoints": {
+    "189": 65,
+    "491F": null
+   },
+   "tieBreak": {
+    "189": "15/2024",
+    "491F": "N/A"
+   },
+   "occupationsListed": 134,
+   "note": "Official tie-break (date of effect) month: 189 tie-break 15/2024. minPoints = lowest per-occupation minimum score in the official occupation table (134 occupations listed)."
+  },
+  {
+   "date": "2023-12-18",
+   "fy": "2023-24",
+   "invitations": {
+    "189": 8300,
+    "491F": 79
+   },
+   "minPoints": {
+    "189": 65,
+    "491F": 65
+   },
+   "tieBreak": {
+    "189": "11/2023",
+    "491F": "12/2023"
+   },
+   "occupationsListed": 57,
+   "note": "Official tie-break (date of effect) month: 189 tie-break 11/2023; 491F tie-break 12/2023. minPoints = lowest per-occupation minimum score in the official occupation table (57 occupations listed)."
+  }
+ ],
+ "monthly": {
+  "2023-24": {
+   "asOf": "2024-06-13",
+   "189": {
+    "Jul": 0,
+    "Aug": 0,
+    "Sep": 0,
+    "Oct": 0,
+    "Nov": 0,
+    "Dec": 8300,
+    "Jan": null,
+    "Feb": null,
+    "Mar": null,
+    "Apr": null,
+    "May": null,
+    "Jun": 5292
+   },
+   "note": "\"N/A\" months on the official table are stored as null.",
+   "491F": {
+    "Jul": 0,
+    "Aug": 0,
+    "Sep": 0,
+    "Oct": 0,
+    "Nov": 0,
+    "Dec": 79,
+    "Jan": null,
+    "Feb": null,
+    "Mar": null,
+    "Apr": null,
+    "May": null,
+    "Jun": null
+   }
+  },
+  "2024-25": {
+   "asOf": "2024-11-07",
+   "189": {
+    "Jul": 0,
+    "Aug": 0,
+    "Sep": 7973,
+    "Oct": 0,
+    "Nov": 15000,
+    "Dec": 0,
+    "Jan": 0,
+    "Feb": 0,
+    "Mar": 0,
+    "Apr": 0,
+    "May": 0,
+    "Jun": 0
+   },
+   "491F": {
+    "Jul": 0,
+    "Aug": 0,
+    "Sep": 0,
+    "Oct": 0,
+    "Nov": 0,
+    "Dec": 0,
+    "Jan": 0,
+    "Feb": 0,
+    "Mar": 0,
+    "Apr": 0,
+    "May": 0,
+    "Jun": 0
+   }
+  },
+  "2025-26": {
+   "asOf": "2025-11-13",
+   "189": {
+    "Jul": 0,
+    "Aug": 6887,
+    "Sep": 0,
+    "Oct": 0,
+    "Nov": 10000,
+    "Dec": 0,
+    "Jan": 0,
+    "Feb": 0,
+    "Mar": 0,
+    "Apr": 0,
+    "May": 0,
+    "Jun": 0
+   },
+   "491F": {
+    "Jul": 0,
+    "Aug": 150,
+    "Sep": 0,
+    "Oct": 0,
+    "Nov": 300,
+    "Dec": 0,
+    "Jan": 0,
+    "Feb": 0,
+    "Mar": 0,
+    "Apr": 0,
+    "May": 0,
+    "Jun": 0
+   },
+   "note": "Official monthly table last published with the 13 Nov 2025 round; the 4 Jun 2026 round (189: 10,000) is not reflected in it."
+  },
+  "2026-27": {
+   "asOf": "2026-10-14",
+   "189": {
+    "Jul": 0,
+    "Aug": 0,
+    "Sep": 0,
+    "Oct": 0,
+    "Nov": 0,
+    "Dec": 0,
+    "Jan": 0,
+    "Feb": 0,
+    "Mar": 0,
+    "Apr": 0,
+    "May": 0,
+    "Jun": 0
+   },
+   "491F": {
+    "Jul": 0,
+    "Aug": 0,
+    "Sep": 0,
+    "Oct": 0,
+    "Nov": 0,
+    "Dec": 0,
+    "Jan": 0,
+    "Feb": 0,
+    "Mar": 0,
+    "Apr": 0,
+    "May": 0,
+    "Jun": 0
+   }
+  }
+ },
+ "byOccupation": [
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224111",
+   "occupation": "Actuary",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234111",
+   "occupation": "Agricultural Consultant",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234112",
+   "occupation": "Agricultural Scientist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "334112",
+   "occupation": "Airconditioning and Mechanical Services Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "342111",
+   "occupation": "Airconditioning and Refrigeration Mechanic",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "232111",
+   "occupation": "Architect",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "139911",
+   "occupation": "Arts Administrator or Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "321111",
+   "occupation": "Automotive Electrician",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "271111",
+   "occupation": "Barrister",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234514",
+   "occupation": "Biotechnologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "399111",
+   "occupation": "Boat Builder and Repairer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "331111",
+   "occupation": "Bricklayer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "394111",
+   "occupation": "Cabinetmaker",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253312",
+   "occupation": "Cardiologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "331212",
+   "occupation": "Carpenter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "331211",
+   "occupation": "Carpenter and Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "232213",
+   "occupation": "Cartographer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234211",
+   "occupation": "Chemist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "134111",
+   "occupation": "Child Care Centre Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252111",
+   "occupation": "Chiropractor",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "272311",
+   "occupation": "Clinical Psychologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "133111",
+   "occupation": "Construction Project Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "211112",
+   "occupation": "Dancer or Choreographer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253911",
+   "occupation": "Dermatologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253917",
+   "occupation": "Diagnostic and Interventional Radiologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "334113",
+   "occupation": "Drainer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224311",
+   "occupation": "Economist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "312311",
+   "occupation": "Electrical Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "312312",
+   "occupation": "Electrical Engineering Technician",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "341111",
+   "occupation": "Electrician (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "341112",
+   "occupation": "Electrician (Special Class)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "342313",
+   "occupation": "Electronic Equipment Trades Worker",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "342314",
+   "occupation": "Electronic Instrument Trades Worker (General)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "342315",
+   "occupation": "Electronic Instrument Trades Worker (Special Class)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "233411",
+   "occupation": "Electronics Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253912",
+   "occupation": "Emergency Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253315",
+   "occupation": "Endocrinologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "133211",
+   "occupation": "Engineering Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234312",
+   "occupation": "Environmental Consultant",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "139912",
+   "occupation": "Environmental Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234313",
+   "occupation": "Environmental Research Scientist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234399",
+   "occupation": "Environmental Scientists nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "333211",
+   "occupation": "Fibrous Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "323211",
+   "occupation": "Fitter (General)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "323212",
+   "occupation": "Fitter and Turner",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234212",
+   "occupation": "Food Technologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "452411",
+   "occupation": "Footballer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234113",
+   "occupation": "Forester",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "334114",
+   "occupation": "Gasfitter",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253316",
+   "occupation": "Gastroenterologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253111",
+   "occupation": "General Practitioner",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234412",
+   "occupation": "Geophysicist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "333111",
+   "occupation": "Glazier",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234413",
+   "occupation": "Hydrogeologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253317",
+   "occupation": "Intensive Care Specialist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "331213",
+   "occupation": "Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224511",
+   "occupation": "Land Economist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "232112",
+   "occupation": "Landscape Architect",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234511",
+   "occupation": "Life Scientist (General)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234599",
+   "occupation": "Life Scientists nec",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "341113",
+   "occupation": "Lift mechanic",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224711",
+   "occupation": "Management Consultant",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234516",
+   "occupation": "Marine Biologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234611",
+   "occupation": "Medical Laboratory Scientist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251212",
+   "occupation": "Medical Radiation Therapist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "322311",
+   "occupation": "Metal Fabricator",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "323214",
+   "occupation": "Metal Machinist (First Class)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234912",
+   "occupation": "Metallurgist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234913",
+   "occupation": "Meteorologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234517",
+   "occupation": "Microbiologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "233611",
+   "occupation": "Mining Engineer (excluding Petroleum)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "261211",
+   "occupation": "Multimedia Specialist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "211212",
+   "occupation": "Music Director",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "211213",
+   "occupation": "Musician (Instrumental)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234999",
+   "occupation": "Natural and Physical Science Professionals nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251213",
+   "occupation": "Nuclear Medicine Technologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254411",
+   "occupation": "Nurse Practitioner",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253913",
+   "occupation": "Obstetrician and Gynaecologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253914",
+   "occupation": "Ophthalmologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251411",
+   "occupation": "Optometrist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "272313",
+   "occupation": "Organisational Psychologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253514",
+   "occupation": "Orthopaedic Surgeon",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251912",
+   "occupation": "Orthotist or Prosthetist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252112",
+   "occupation": "Osteopath",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "232214",
+   "occupation": "Other Spatial Scientist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253321",
+   "occupation": "Paediatrician",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "324111",
+   "occupation": "Panelbeater",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "233612",
+   "occupation": "Petroleum Engineer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234914",
+   "occupation": "Physicist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "334111",
+   "occupation": "Plumber (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252611",
+   "occupation": "Podiatrist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "134213",
+   "occupation": "Primary Health Organisation Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253411",
+   "occupation": "Psychiatrist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "272399",
+   "occupation": "Psychologists nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254413",
+   "occupation": "Registered Nurse (Child and Family Health)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254414",
+   "occupation": "Registered Nurse (Community Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254416",
+   "occupation": "Registered Nurse (Developmental Disability)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254417",
+   "occupation": "Registered Nurse (Disability and Rehabilitation)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254421",
+   "occupation": "Registered Nurse (Medical Practice)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "334115",
+   "occupation": "Roof Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "322211",
+   "occupation": "Sheetmetal Trades Worker",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "399112",
+   "occupation": "Shipwright",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "271311",
+   "occupation": "Solicitor",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "333212",
+   "occupation": "Solid Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251214",
+   "occupation": "Sonographer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "241599",
+   "occupation": "Special Education Teachers nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253311",
+   "occupation": "Specialist Physician (General Medicine)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253399",
+   "occupation": "Specialist Physicians nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224113",
+   "occupation": "Statistician",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "331112",
+   "occupation": "Stonemason",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253511",
+   "occupation": "Surgeon (General)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "232212",
+   "occupation": "Surveyor",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "263311",
+   "occupation": "Telecommunications Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "263312",
+   "occupation": "Telecommunications Network Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "452316",
+   "occupation": "Tennis Coach",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253324",
+   "occupation": "Thoracic Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253518",
+   "occupation": "Urologist",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224512",
+   "occupation": "Valuer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234711",
+   "occupation": "Veterinarian",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "333411",
+   "occupation": "Wall and Floor Tiler",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "322313",
+   "occupation": "Welder (First Class)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "134214",
+   "occupation": "Welfare Centre Manager",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "224111",
+   "occupation": "Actuary",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234111",
+   "occupation": "Agricultural Consultant",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234112",
+   "occupation": "Agricultural Scientist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334112",
+   "occupation": "Airconditioning and Mechanical Services Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334112",
+   "occupation": "Airconditioning and Mechanical Services Plumber",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "232111",
+   "occupation": "Architect",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "212111",
+   "occupation": "Artistic Director",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "139911",
+   "occupation": "Arts Administrator or Manager",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "321111",
+   "occupation": "Automotive Electrician",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "271111",
+   "occupation": "Barrister",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234513",
+   "occupation": "Biochemist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234514",
+   "occupation": "Biotechnologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "399111",
+   "occupation": "Boat Builder and Repairer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234515",
+   "occupation": "Botanist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331111",
+   "occupation": "Bricklayer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331111",
+   "occupation": "Bricklayer",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "394111",
+   "occupation": "Cabinetmaker",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253312",
+   "occupation": "Cardiologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253312",
+   "occupation": "Cardiologist",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331212",
+   "occupation": "Carpenter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331212",
+   "occupation": "Carpenter",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331211",
+   "occupation": "Carpenter and Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331211",
+   "occupation": "Carpenter and Joiner",
+   "subclass": "491F",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "232213",
+   "occupation": "Cartographer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "233111",
+   "occupation": "Chemical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234211",
+   "occupation": "Chemist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "134111",
+   "occupation": "Child Care Centre Manager",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252111",
+   "occupation": "Chiropractor",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "312211",
+   "occupation": "Civil Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "312212",
+   "occupation": "Civil Engineering Technician",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "272311",
+   "occupation": "Clinical Psychologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "133111",
+   "occupation": "Construction Project Manager",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253911",
+   "occupation": "Dermatologist",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253917",
+   "occupation": "Diagnostic and Interventional Radiologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334113",
+   "occupation": "Drainer",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "224311",
+   "occupation": "Economist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "312311",
+   "occupation": "Electrical Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "312312",
+   "occupation": "Electrical Engineering Technician",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "341111",
+   "occupation": "Electrician (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "341111",
+   "occupation": "Electrician (General)",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "341112",
+   "occupation": "Electrician (Special Class)",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "342313",
+   "occupation": "Electronic Equipment Trades Worker",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "342314",
+   "occupation": "Electronic Instrument Trades Worker (General)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "342315",
+   "occupation": "Electronic Instrument Trades Worker (Special Class)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253912",
+   "occupation": "Emergency Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "133211",
+   "occupation": "Engineering Manager",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234312",
+   "occupation": "Environmental Consultant",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "139912",
+   "occupation": "Environmental Manager",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234313",
+   "occupation": "Environmental Research Scientist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234399",
+   "occupation": "Environmental Scientists nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "333211",
+   "occupation": "Fibrous Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "333211",
+   "occupation": "Fibrous Plasterer",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "323211",
+   "occupation": "Fitter (General)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234212",
+   "occupation": "Food Technologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234113",
+   "occupation": "Forester",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334114",
+   "occupation": "Gasfitter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334114",
+   "occupation": "Gasfitter",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253111",
+   "occupation": "General Practitioner",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253111",
+   "occupation": "General Practitioner",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234412",
+   "occupation": "Geophysicist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "333111",
+   "occupation": "Glazier",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234413",
+   "occupation": "Hydrogeologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253317",
+   "occupation": "Intensive Care Specialist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331213",
+   "occupation": "Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "224511",
+   "occupation": "Land Economist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "232112",
+   "occupation": "Landscape Architect",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234511",
+   "occupation": "Life Scientist (General)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234599",
+   "occupation": "Life Scientists nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "224711",
+   "occupation": "Management Consultant",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234516",
+   "occupation": "Marine Biologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "233112",
+   "occupation": "Materials Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234611",
+   "occupation": "Medical Laboratory Scientist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253314",
+   "occupation": "Medical Oncologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "251212",
+   "occupation": "Medical Radiation Therapist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "322311",
+   "occupation": "Metal Fabricator",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "323214",
+   "occupation": "Metal Machinist (First Class)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234912",
+   "occupation": "Metallurgist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234517",
+   "occupation": "Microbiologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "233611",
+   "occupation": "Mining Engineer (excluding Petroleum)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "321213",
+   "occupation": "Motorcycle Mechanic",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "261211",
+   "occupation": "Multimedia Specialist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "211213",
+   "occupation": "Musician (Instrumental)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234999",
+   "occupation": "Natural and Physical Science Professionals nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253318",
+   "occupation": "Neurologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254411",
+   "occupation": "Nurse Practitioner",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253913",
+   "occupation": "Obstetrician and Gynaecologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253914",
+   "occupation": "Ophthalmologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "251411",
+   "occupation": "Optometrist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "251411",
+   "occupation": "Optometrist",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "272313",
+   "occupation": "Organisational Psychologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253514",
+   "occupation": "Orthopaedic Surgeon",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252112",
+   "occupation": "Osteopath",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "232214",
+   "occupation": "Other Spatial Scientist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253321",
+   "occupation": "Paediatrician",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "332211",
+   "occupation": "Painting Trades Worker",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "332211",
+   "occupation": "Painting Trades Worker",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253915",
+   "occupation": "Pathologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "233612",
+   "occupation": "Petroleum Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234914",
+   "occupation": "Physicist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334111",
+   "occupation": "Plumber (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334111",
+   "occupation": "Plumber (General)",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252611",
+   "occupation": "Podiatrist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "134213",
+   "occupation": "Primary Health Organisation Manager",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253411",
+   "occupation": "Psychiatrist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "272399",
+   "occupation": "Psychologists nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253918",
+   "occupation": "Radiation Oncologist",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254413",
+   "occupation": "Registered Nurse (Child and Family Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254414",
+   "occupation": "Registered Nurse (Community Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254414",
+   "occupation": "Registered Nurse (Community Health)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254416",
+   "occupation": "Registered Nurse (Developmental Disability)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254416",
+   "occupation": "Registered Nurse (Developmental Disability)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254417",
+   "occupation": "Registered Nurse (Disability and Rehabilitation)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254421",
+   "occupation": "Registered Nurse (Medical Practice)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254421",
+   "occupation": "Registered Nurse (Medical Practice)",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334115",
+   "occupation": "Roof Plumber",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "271311",
+   "occupation": "Solicitor",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "333212",
+   "occupation": "Solid Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "333212",
+   "occupation": "Solid Plasterer",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "251214",
+   "occupation": "Sonographer",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241599",
+   "occupation": "Special Education Teachers nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253311",
+   "occupation": "Specialist Physician (General Medicine)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253399",
+   "occupation": "Specialist Physicians nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "224113",
+   "occupation": "Statistician",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331112",
+   "occupation": "Stonemason",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253511",
+   "occupation": "Surgeon (General)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "232212",
+   "occupation": "Surveyor",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "263311",
+   "occupation": "Telecommunications Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "313212",
+   "occupation": "Telecommunications Field Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "263312",
+   "occupation": "Telecommunications Network Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "313213",
+   "occupation": "Telecommunications Network Planner",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "313214",
+   "occupation": "Telecommunications Technical Officer or Technologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "452316",
+   "occupation": "Tennis Coach",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253324",
+   "occupation": "Thoracic Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253518",
+   "occupation": "Urologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "224512",
+   "occupation": "Valuer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253521",
+   "occupation": "Vascular Surgeon",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234711",
+   "occupation": "Veterinarian",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "333411",
+   "occupation": "Wall and Floor Tiler",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "333411",
+   "occupation": "Wall and Floor Tiler",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "322313",
+   "occupation": "Welder (First Class)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "134214",
+   "occupation": "Welfare Centre Manager",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": null,
+   "occupation": "Zoologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "224111",
+   "occupation": "Actuary",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234111",
+   "occupation": "Agricultural Consultant",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234112",
+   "occupation": "Agricultural Scientist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "334112",
+   "occupation": "Airconditioning and Mechanical Services Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "334112",
+   "occupation": "Airconditioning and Mechanical Services Plumber",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "232111",
+   "occupation": "Architect",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "139911",
+   "occupation": "Arts Administrator or Manager",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "271111",
+   "occupation": "Barrister",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234513",
+   "occupation": "Biochemist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234514",
+   "occupation": "Biotechnologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "399111",
+   "occupation": "Boat Builder and Repairer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "331111",
+   "occupation": "Bricklayer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "331111",
+   "occupation": "Bricklayer",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253312",
+   "occupation": "Cardiologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253312",
+   "occupation": "Cardiologist",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "331212",
+   "occupation": "Carpenter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "331211",
+   "occupation": "Carpenter and Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "232213",
+   "occupation": "Cartographer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "233111",
+   "occupation": "Chemical Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234211",
+   "occupation": "Chemist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "134111",
+   "occupation": "Child Care Centre Manager",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "312211",
+   "occupation": "Civil Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "312212",
+   "occupation": "Civil Engineering Technician",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "272311",
+   "occupation": "Clinical Psychologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234911",
+   "occupation": "Conservator",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "133111",
+   "occupation": "Construction Project Manager",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253911",
+   "occupation": "Dermatologist",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253917",
+   "occupation": "Diagnostic and Interventional Radiologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "334113",
+   "occupation": "Drainer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "224311",
+   "occupation": "Economist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "272312",
+   "occupation": "Educational Psychologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "312311",
+   "occupation": "Electrical Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "312312",
+   "occupation": "Electrical Engineering Technician",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "341111",
+   "occupation": "Electrician (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "341111",
+   "occupation": "Electrician (General)",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "341112",
+   "occupation": "Electrician (Special Class)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "342313",
+   "occupation": "Electronic Equipment Trades Worker",
+   "subclass": "189",
+   "minPoints": 110
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "342315",
+   "occupation": "Electronic Instrument Trades Worker (Special Class)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "233411",
+   "occupation": "Electronics Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253912",
+   "occupation": "Emergency Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "133211",
+   "occupation": "Engineering Manager",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234312",
+   "occupation": "Environmental Consultant",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "139912",
+   "occupation": "Environmental Manager",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234313",
+   "occupation": "Environmental Research Scientist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234399",
+   "occupation": "Environmental Scientists nec",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "333211",
+   "occupation": "Fibrous Plasterer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234212",
+   "occupation": "Food Technologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234113",
+   "occupation": "Forester",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "334114",
+   "occupation": "Gasfitter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "334114",
+   "occupation": "Gasfitter",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253316",
+   "occupation": "Gastroenterologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253111",
+   "occupation": "General Practitioner",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234412",
+   "occupation": "Geophysicist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "333111",
+   "occupation": "Glazier",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234413",
+   "occupation": "Hydrogeologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253317",
+   "occupation": "Intensive Care Specialist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "331213",
+   "occupation": "Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "224511",
+   "occupation": "Land Economist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "232112",
+   "occupation": "Landscape Architect",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234511",
+   "occupation": "Life Scientist (General)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234599",
+   "occupation": "Life Scientists nec",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "224711",
+   "occupation": "Management Consultant",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234516",
+   "occupation": "Marine Biologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "233112",
+   "occupation": "Materials Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234611",
+   "occupation": "Medical Laboratory Scientist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "251212",
+   "occupation": "Medical Radiation Therapist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "322311",
+   "occupation": "Metal Fabricator",
+   "subclass": "189",
+   "minPoints": 105
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "323214",
+   "occupation": "Metal Machinist (First Class)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234912",
+   "occupation": "Metallurgist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234913",
+   "occupation": "Meteorologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234517",
+   "occupation": "Microbiologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "233611",
+   "occupation": "Mining Engineer (excluding Petroleum)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "211213",
+   "occupation": "Musician (Instrumental)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234999",
+   "occupation": "Natural and Physical Science Professionals nec",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253318",
+   "occupation": "Neurologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "251213",
+   "occupation": "Nuclear Medicine Technologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254411",
+   "occupation": "Nurse Practitioner",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253913",
+   "occupation": "Obstetrician and Gynaecologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253914",
+   "occupation": "Ophthalmologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "251411",
+   "occupation": "Optometrist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253514",
+   "occupation": "Orthopaedic Surgeon",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "252112",
+   "occupation": "Osteopath",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "232214",
+   "occupation": "Other Spatial Scientist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253516",
+   "occupation": "Paediatric Surgeon",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253321",
+   "occupation": "Paediatrician",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "332211",
+   "occupation": "Painting Trades Worker",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "324111",
+   "occupation": "Panelbeater",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "233612",
+   "occupation": "Petroleum Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234914",
+   "occupation": "Physicist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "334111",
+   "occupation": "Plumber (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "334111",
+   "occupation": "Plumber (General)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "252611",
+   "occupation": "Podiatrist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "134213",
+   "occupation": "Primary Health Organisation Manager",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253411",
+   "occupation": "Psychiatrist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "272399",
+   "occupation": "Psychologists nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254413",
+   "occupation": "Registered Nurse (Child and Family Health)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254414",
+   "occupation": "Registered Nurse (Community Health)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254416",
+   "occupation": "Registered Nurse (Developmental Disability)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254417",
+   "occupation": "Registered Nurse (Disability and Rehabilitation)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254421",
+   "occupation": "Registered Nurse (Medical Practice)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "491F",
+   "minPoints": 5,
+   "note": "Below 65 pass mark as printed on the official page; likely a source error."
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "334115",
+   "occupation": "Roof Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "271311",
+   "occupation": "Solicitor",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "333212",
+   "occupation": "Solid Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "251214",
+   "occupation": "Sonographer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253311",
+   "occupation": "Specialist Physician (General Medicine)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253399",
+   "occupation": "Specialist Physicians nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "224113",
+   "occupation": "Statistician",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "331112",
+   "occupation": "Stonemason",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "232212",
+   "occupation": "Surveyor",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "452316",
+   "occupation": "Tennis Coach",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253324",
+   "occupation": "Thoracic Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "242111",
+   "occupation": "University Lecturer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "242111",
+   "occupation": "University Lecturer",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253518",
+   "occupation": "Urologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "224512",
+   "occupation": "Valuer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234711",
+   "occupation": "Veterinarian",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "333411",
+   "occupation": "Wall and Floor Tiler",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "333411",
+   "occupation": "Wall and Floor Tiler",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "322313",
+   "occupation": "Welder (First Class)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": null,
+   "occupation": "Zoologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "221111",
+   "occupation": "Accountant (General)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "224111",
+   "occupation": "Actuary",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233911",
+   "occupation": "Aeronautical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234111",
+   "occupation": "Agricultural Consultant",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233912",
+   "occupation": "Agricultural Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234112",
+   "occupation": "Agricultural Scientist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "334112",
+   "occupation": "Airconditioning and Mechanical Services Plumber",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261311",
+   "occupation": "Analyst Programmer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "232111",
+   "occupation": "Architect",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "139911",
+   "occupation": "Arts Administrator or Manager",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234513",
+   "occupation": "Biochemist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233913",
+   "occupation": "Biomedical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234514",
+   "occupation": "Biotechnologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "399111",
+   "occupation": "Boat Builder and Repairer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "331111",
+   "occupation": "Bricklayer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "394111",
+   "occupation": "Cabinetmaker",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253512",
+   "occupation": "Cardiothoracic Surgeon",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "331212",
+   "occupation": "Carpenter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "331211",
+   "occupation": "Carpenter and Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "351311",
+   "occupation": "Chef",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233111",
+   "occupation": "Chemical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234211",
+   "occupation": "Chemist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "134111",
+   "occupation": "Child Care Centre Manager",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "252111",
+   "occupation": "Chiropractor",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233211",
+   "occupation": "Civil Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "312211",
+   "occupation": "Civil Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "312212",
+   "occupation": "Civil Engineering Technician",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "272311",
+   "occupation": "Clinical Psychologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "263111",
+   "occupation": "Computer Network and Systems Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "133111",
+   "occupation": "Construction Project Manager",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "211112",
+   "occupation": "Dancer or Choreographer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253911",
+   "occupation": "Dermatologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261312",
+   "occupation": "Developer Programmer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253917",
+   "occupation": "Diagnostic and Interventional Radiologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "321212",
+   "occupation": "Diesel Motor Mechanic",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "224311",
+   "occupation": "Economist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "272312",
+   "occupation": "Educational psychologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233311",
+   "occupation": "Electrical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "312311",
+   "occupation": "Electrical Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "312312",
+   "occupation": "Electrical Engineering Technician",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "341111",
+   "occupation": "Electrician (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "342315",
+   "occupation": "Electronic Instrument Trades Worker (Special Class)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233411",
+   "occupation": "Electronics Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253912",
+   "occupation": "Emergency Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "133211",
+   "occupation": "Engineering Manager",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233999",
+   "occupation": "Engineering Professionals nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233914",
+   "occupation": "Engineering Technologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234312",
+   "occupation": "Environmental Consultant",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233915",
+   "occupation": "Environmental Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "139912",
+   "occupation": "Environmental Manager",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234313",
+   "occupation": "Environmental Research Scientist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234399",
+   "occupation": "Environmental Scientists nec",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "221213",
+   "occupation": "External Auditor",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "333211",
+   "occupation": "Fibrous Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234212",
+   "occupation": "Food Technologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234113",
+   "occupation": "Forester",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253111",
+   "occupation": "General Practitioner",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234412",
+   "occupation": "Geophysicist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233212",
+   "occupation": "Geotechnical Engineer",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234413",
+   "occupation": "Hydrogeologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261111",
+   "occupation": "ICT Business Analyst",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "262112",
+   "occupation": "ICT Security Specialist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233511",
+   "occupation": "Industrial Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253317",
+   "occupation": "Intensive Care Specialist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "221214",
+   "occupation": "Internal Auditor",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "232112",
+   "occupation": "Landscape Architect",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234511",
+   "occupation": "Life Scientist (General)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234599",
+   "occupation": "Life Scientists nec",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "341113",
+   "occupation": "Lift Mechanic",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "221112",
+   "occupation": "Management Accountant",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "224711",
+   "occupation": "Management Consultant",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234516",
+   "occupation": "Marine Biologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233112",
+   "occupation": "Materials Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233512",
+   "occupation": "Mechanical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234611",
+   "occupation": "Medical Laboratory Scientist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "251212",
+   "occupation": "Medical Radiation Therapist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "322311",
+   "occupation": "Metal Fabricator",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "323214",
+   "occupation": "Metal Machinist (First Class)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234912",
+   "occupation": "Metallurgist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234913",
+   "occupation": "Meteorologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234517",
+   "occupation": "Microbiologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233611",
+   "occupation": "Mining Engineer (excluding Petroleum)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "321211",
+   "occupation": "Motor Mechanic (General)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261211",
+   "occupation": "Multimedia Specialist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "211212",
+   "occupation": "Music Director",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "211213",
+   "occupation": "Musician (Instrumental)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234999",
+   "occupation": "Natural and Physical Science Professionals nec",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233916",
+   "occupation": "Naval Architect",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253318",
+   "occupation": "Neurologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "251213",
+   "occupation": "Nuclear Medicine Technologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254411",
+   "occupation": "Nurse Practitioner",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "134212",
+   "occupation": "Nursing Clinical Director",
+   "subclass": "189",
+   "minPoints": 115
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253913",
+   "occupation": "Obstetrician and Gynaecologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "251411",
+   "occupation": "Optometrist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253514",
+   "occupation": "Orthopaedic Surgeon",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "251912",
+   "occupation": "Orthotist or Prosthetist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "252112",
+   "occupation": "Osteopath",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "232214",
+   "occupation": "Other Spatial Scientist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253321",
+   "occupation": "Paediatrician",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "332211",
+   "occupation": "Painting Trades Worker",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253915",
+   "occupation": "Pathologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233612",
+   "occupation": "Petroleum Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234914",
+   "occupation": "Physicist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "334111",
+   "occupation": "Plumber (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "252611",
+   "occupation": "Podiatrist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "134213",
+   "occupation": "Primary Health Organisation Manager",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233513",
+   "occupation": "Production or Plant Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253411",
+   "occupation": "Psychiatrist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "272399",
+   "occupation": "Psychologists nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233213",
+   "occupation": "Quantity Surveyor",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254413",
+   "occupation": "Registered Nurse (Child and Family Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254414",
+   "occupation": "Registered Nurse (Community Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254416",
+   "occupation": "Registered Nurse (Developmental Disability)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254417",
+   "occupation": "Registered Nurse (Disability and Rehabilitation)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254421",
+   "occupation": "Registered Nurse (Medical Practice)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "322211",
+   "occupation": "Sheetmetal Trades Worker",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261399",
+   "occupation": "Software and Applications Programmers nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261313",
+   "occupation": "Software Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "271311",
+   "occupation": "Solicitor",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "333212",
+   "occupation": "Solid Plasterer",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "251214",
+   "occupation": "Sonographer",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "241599",
+   "occupation": "Special Education Teachers nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253311",
+   "occupation": "Specialist Physician (General Medicine)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253399",
+   "occupation": "Specialist Physicians nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "224113",
+   "occupation": "Statistician",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233214",
+   "occupation": "Structural Engineer",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "232212",
+   "occupation": "Surveyor",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261112",
+   "occupation": "Systems Analyst",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "221113",
+   "occupation": "Taxation Accountant",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "263311",
+   "occupation": "Telecommunications Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "313212",
+   "occupation": "Telecommunications Field Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "263312",
+   "occupation": "Telecommunications Network Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "313213",
+   "occupation": "Telecommunications Network Planner",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "313214",
+   "occupation": "Telecommunications Technical Officer or Technologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253324",
+   "occupation": "Thoracic Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233215",
+   "occupation": "Transport Engineer",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "242111",
+   "occupation": "University Lecturer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "224512",
+   "occupation": "Valuer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "234711",
+   "occupation": "Veterinarian",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "333411",
+   "occupation": "Wall and Floor Tiler",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "322313",
+   "occupation": "Welder (First Class)",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": null,
+   "occupation": "Zoologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "221111",
+   "occupation": "Accountant (General)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "224111",
+   "occupation": "Actuary",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233911",
+   "occupation": "Aeronautical Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234111",
+   "occupation": "Agricultural Consultant",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233912",
+   "occupation": "Agricultural Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234112",
+   "occupation": "Agricultural Scientist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "334112",
+   "occupation": "Airconditioning and Mechanical Services Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "261311",
+   "occupation": "Analyst Programmer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "232111",
+   "occupation": "Architect",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234513",
+   "occupation": "Biochemist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233913",
+   "occupation": "Biomedical Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234514",
+   "occupation": "Biotechnologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "331111",
+   "occupation": "Bricklayer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "394111",
+   "occupation": "Cabinetmaker",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253312",
+   "occupation": "Cardiologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253512",
+   "occupation": "Cardiothoracic Surgeon",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "331212",
+   "occupation": "Carpenter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "331211",
+   "occupation": "Carpenter and Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "351311",
+   "occupation": "Chef",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233111",
+   "occupation": "Chemical Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234211",
+   "occupation": "Chemist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "134111",
+   "occupation": "Child Care Centre Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "252111",
+   "occupation": "Chiropractor",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233211",
+   "occupation": "Civil Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "312211",
+   "occupation": "Civil Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "312212",
+   "occupation": "Civil Engineering Technician",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "272311",
+   "occupation": "Clinical Psychologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "263111",
+   "occupation": "Computer Network and Systems Engineer",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "133111",
+   "occupation": "Construction Project Manager",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "261312",
+   "occupation": "Developer Programmer",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253917",
+   "occupation": "Diagnostic and Interventional Radiologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "321212",
+   "occupation": "Diesel Motor Mechanic",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "334113",
+   "occupation": "Drainer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "224311",
+   "occupation": "Economist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233311",
+   "occupation": "Electrical Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "341111",
+   "occupation": "Electrician (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "341112",
+   "occupation": "Electrician (Special Class)",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233411",
+   "occupation": "Electronics Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253912",
+   "occupation": "Emergency Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "133211",
+   "occupation": "Engineering Manager",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233999",
+   "occupation": "Engineering Professionals nec",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233914",
+   "occupation": "Engineering Technologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234312",
+   "occupation": "Environmental Consultant",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233915",
+   "occupation": "Environmental Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "139912",
+   "occupation": "Environmental Manager",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234313",
+   "occupation": "Environmental Research Scientist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "221213",
+   "occupation": "External Auditor",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "333211",
+   "occupation": "Fibrous Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234212",
+   "occupation": "Food Technologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "334114",
+   "occupation": "Gasfitter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253316",
+   "occupation": "Gastroenterologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253111",
+   "occupation": "General Practitioner",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234412",
+   "occupation": "Geophysicist",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233212",
+   "occupation": "Geotechnical Engineer",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "333111",
+   "occupation": "Glazier",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "261111",
+   "occupation": "ICT Business Analyst",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "262112",
+   "occupation": "ICT Security Specialist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233511",
+   "occupation": "Industrial Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253317",
+   "occupation": "Intensive Care Specialist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "221214",
+   "occupation": "Internal Auditor",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "331213",
+   "occupation": "Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "232112",
+   "occupation": "Landscape Architect",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234511",
+   "occupation": "Life Scientist (General)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234599",
+   "occupation": "Life Scientists nec",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "341113",
+   "occupation": "Lift Mechanic",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "221112",
+   "occupation": "Management Accountant",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "224711",
+   "occupation": "Management Consultant",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234516",
+   "occupation": "Marine Biologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233112",
+   "occupation": "Materials Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233512",
+   "occupation": "Mechanical Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234611",
+   "occupation": "Medical Laboratory Scientist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "322311",
+   "occupation": "Metal Fabricator",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234517",
+   "occupation": "Microbiologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233611",
+   "occupation": "Mining Engineer (excluding Petroleum)",
+   "subclass": "189",
+   "minPoints": 105
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "321211",
+   "occupation": "Motor Mechanic (General)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "261211",
+   "occupation": "Multimedia Specialist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233916",
+   "occupation": "Naval Architect",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "251213",
+   "occupation": "Nuclear Medicine Technologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254411",
+   "occupation": "Nurse Practitioner",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "134212",
+   "occupation": "Nursing Clinical Director",
+   "subclass": "189",
+   "minPoints": 115
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253913",
+   "occupation": "Obstetrician and Gynaecologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253914",
+   "occupation": "Ophthalmologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "251411",
+   "occupation": "Optometrist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "251912",
+   "occupation": "Orthotist or Prosthetist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "232214",
+   "occupation": "Other Spatial Scientist",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253321",
+   "occupation": "Paediatrician",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "332211",
+   "occupation": "Painting Trades Worker",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253915",
+   "occupation": "Pathologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233612",
+   "occupation": "Petroleum Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234914",
+   "occupation": "Physicist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "334111",
+   "occupation": "Plumber (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "252611",
+   "occupation": "Podiatrist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "134213",
+   "occupation": "Primary Health Organisation Manager",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233513",
+   "occupation": "Production or Plant Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253411",
+   "occupation": "Psychiatrist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "272399",
+   "occupation": "Psychologists nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233213",
+   "occupation": "Quantity Surveyor",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254413",
+   "occupation": "Registered Nurse (Child and Family Health)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254414",
+   "occupation": "Registered Nurse (Community Health)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254417",
+   "occupation": "Registered Nurse (Disability and Rehabilitation)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254421",
+   "occupation": "Registered Nurse (Medical Practice)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "334115",
+   "occupation": "Roof Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "322211",
+   "occupation": "Sheetmetal Trades Worker",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "399112",
+   "occupation": "Shipwright",
+   "subclass": "189",
+   "minPoints": 105
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "261399",
+   "occupation": "Software and Applications Programmers nec",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "261313",
+   "occupation": "Software Engineer",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "271311",
+   "occupation": "Solicitor",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "333212",
+   "occupation": "Solid Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "251214",
+   "occupation": "Sonographer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "241599",
+   "occupation": "Special Education Teachers nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253311",
+   "occupation": "Specialist Physician (General Medicine)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253399",
+   "occupation": "Specialist Physicians nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "224113",
+   "occupation": "Statistician",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "331112",
+   "occupation": "Stonemason",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233214",
+   "occupation": "Structural Engineer",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253511",
+   "occupation": "Surgeon (General)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "232212",
+   "occupation": "Surveyor",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "261112",
+   "occupation": "Systems Analyst",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "221113",
+   "occupation": "Taxation Accountant",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "263311",
+   "occupation": "Telecommunications Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "313212",
+   "occupation": "Telecommunications Field Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "263312",
+   "occupation": "Telecommunications Network Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "233215",
+   "occupation": "Transport Engineer",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "242111",
+   "occupation": "University Lecturer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "253518",
+   "occupation": "Urologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "224512",
+   "occupation": "Valuer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "234711",
+   "occupation": "Veterinarian",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "333411",
+   "occupation": "Wall and Floor Tiler",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": "322313",
+   "occupation": "Welder (First Class)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2024-09-05",
+   "anzsco": null,
+   "occupation": "Zoologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "221111",
+   "occupation": "Accountant (General)",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "224111",
+   "occupation": "Actuary",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233911",
+   "occupation": "Aeronautical Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234111",
+   "occupation": "Agricultural Consultant",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233912",
+   "occupation": "Agricultural Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234112",
+   "occupation": "Agricultural Scientist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "334112",
+   "occupation": "Airconditioning and Mechanical Services Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "261311",
+   "occupation": "Analyst Programmer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "232111",
+   "occupation": "Architect",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233913",
+   "occupation": "Biomedical Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234514",
+   "occupation": "Biotechnologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "331111",
+   "occupation": "Bricklayer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "394111",
+   "occupation": "Cabinetmaker",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "331212",
+   "occupation": "Carpenter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "331211",
+   "occupation": "Carpenter and Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "351311",
+   "occupation": "Chef",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233111",
+   "occupation": "Chemical Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234211",
+   "occupation": "Chemist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "134111",
+   "occupation": "Child Care Centre Manager",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "252111",
+   "occupation": "Chiropractor",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233211",
+   "occupation": "Civil Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "312211",
+   "occupation": "Civil Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "312212",
+   "occupation": "Civil Engineering Technician",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "272311",
+   "occupation": "Clinical Psychologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "263111",
+   "occupation": "Computer Network and Systems Engineer",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "133111",
+   "occupation": "Construction Project Manager",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "211112",
+   "occupation": "Dancer or Choreographer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "261312",
+   "occupation": "Developer Programmer",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253917",
+   "occupation": "Diagnostic and Interventional Radiologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "334113",
+   "occupation": "Drainer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "224311",
+   "occupation": "Economist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233311",
+   "occupation": "Electrical Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "341111",
+   "occupation": "Electrician (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "341112",
+   "occupation": "Electrician (Special Class)",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233411",
+   "occupation": "Electronics Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253912",
+   "occupation": "Emergency Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253315",
+   "occupation": "Endocrinologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "133211",
+   "occupation": "Engineering Manager",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233999",
+   "occupation": "Engineering Professionals nec",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233914",
+   "occupation": "Engineering Technologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234312",
+   "occupation": "Environmental Consultant",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233915",
+   "occupation": "Environmental Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234313",
+   "occupation": "Environmental Research Scientist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "221213",
+   "occupation": "External Auditor",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "333211",
+   "occupation": "Fibrous Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234212",
+   "occupation": "Food Technologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234113",
+   "occupation": "Forester",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "334114",
+   "occupation": "Gasfitter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253111",
+   "occupation": "General Practitioner",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234412",
+   "occupation": "Geophysicist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233212",
+   "occupation": "Geotechnical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "333111",
+   "occupation": "Glazier",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "261111",
+   "occupation": "ICT Business Analyst",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "262112",
+   "occupation": "ICT Security Specialist",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233511",
+   "occupation": "Industrial Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "221214",
+   "occupation": "Internal Auditor",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "331213",
+   "occupation": "Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "224511",
+   "occupation": "Land Economist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "232112",
+   "occupation": "Landscape Architect",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234511",
+   "occupation": "Life Scientist (General)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": null,
+   "occupation": "Life Scientist nec",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "341113",
+   "occupation": "Lift Mechanic",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "221112",
+   "occupation": "Management Accountant",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "224711",
+   "occupation": "Management Consultant",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234516",
+   "occupation": "Marine Biologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233112",
+   "occupation": "Materials Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233512",
+   "occupation": "Mechanical Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234611",
+   "occupation": "Medical Laboratory Scientist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253314",
+   "occupation": "Medical Oncologist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "322311",
+   "occupation": "Metal Fabricator",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234912",
+   "occupation": "Metallurgist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234517",
+   "occupation": "Microbiologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233611",
+   "occupation": "Mining Engineer (excluding Petroleum)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "321211",
+   "occupation": "Motor Mechanic (General)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "261211",
+   "occupation": "Multimedia Specialist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233916",
+   "occupation": "Naval Architect",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253913",
+   "occupation": "Obstetrician and Gynaecologist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "232214",
+   "occupation": "Other Spatial Scientist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253321",
+   "occupation": "Paediatrician",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "332211",
+   "occupation": "Painting Trades Worker",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253915",
+   "occupation": "Pathologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233612",
+   "occupation": "Petroleum Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234914",
+   "occupation": "Physicist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "334111",
+   "occupation": "Plumber (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233513",
+   "occupation": "Production or Plant Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253411",
+   "occupation": "Psychiatrist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": null,
+   "occupation": "Psychologist nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233213",
+   "occupation": "Quantity Surveyor",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254413",
+   "occupation": "Registered Nurse (Child and Family Health)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254414",
+   "occupation": "Registered Nurse (Community Health)",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254421",
+   "occupation": "Registered Nurse (Medical Practice)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "334115",
+   "occupation": "Roof Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "322211",
+   "occupation": "Sheetmetal Trades Worker",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "399112",
+   "occupation": "Shipwright",
+   "subclass": "189",
+   "minPoints": 105
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "261399",
+   "occupation": "Software and Applications Programmers nec",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "261313",
+   "occupation": "Software Engineer",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "271311",
+   "occupation": "Solicitor",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "333212",
+   "occupation": "Solid Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "253311",
+   "occupation": "Specialist Physician (General Medicine)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "224113",
+   "occupation": "Statistician",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "331112",
+   "occupation": "Stonemason",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233214",
+   "occupation": "Structural Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "232212",
+   "occupation": "Surveyor",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "261112",
+   "occupation": "Systems Analyst",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "221113",
+   "occupation": "Taxation Accountant",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "263311",
+   "occupation": "Telecommunications Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "313212",
+   "occupation": "Telecommunications Field Engineer",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "263312",
+   "occupation": "Telecommunications Network Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "313213",
+   "occupation": "Telecommunications Network Planner",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "233215",
+   "occupation": "Transport Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "242111",
+   "occupation": "University Lecturer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "224512",
+   "occupation": "Valuer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "234711",
+   "occupation": "Veterinarian",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "333411",
+   "occupation": "Wall and Floor Tiler",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": "322313",
+   "occupation": "Welder (First Class)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": null,
+   "occupation": "Zoologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "134111",
+   "occupation": "Child Care Centre Manager",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "252111",
+   "occupation": "Chiropractor",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253313",
+   "occupation": "Clinical Haematologist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "272311",
+   "occupation": "Clinical Psychologist",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "272311",
+   "occupation": "Clinical Psychologist",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253911",
+   "occupation": "Dermatologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253917",
+   "occupation": "Diagnostic and Interventional Radiologist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "272312",
+   "occupation": "Educational Psychologist",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253912",
+   "occupation": "Emergency Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253315",
+   "occupation": "Endocrinologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253111",
+   "occupation": "General Practitioner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253317",
+   "occupation": "Intensive Care Specialist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "234611",
+   "occupation": "Medical Laboratory Scientist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "234611",
+   "occupation": "Medical Laboratory Scientist",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253314",
+   "occupation": "Medical Oncologist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "251212",
+   "occupation": "Medical Radiation Therapist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253513",
+   "occupation": "Neurosurgeon",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "251213",
+   "occupation": "Nuclear Medicine Technologist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254411",
+   "occupation": "Nurse Practitioner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253913",
+   "occupation": "Obstetrician and Gynaecologist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253914",
+   "occupation": "Ophthalmologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "251411",
+   "occupation": "Optometrist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253514",
+   "occupation": "Orthopaedic Surgeon",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "251912",
+   "occupation": "Orthotist or Prosthetist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "252112",
+   "occupation": "Osteopath",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253321",
+   "occupation": "Paediatrician",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253915",
+   "occupation": "Pathologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253517",
+   "occupation": "Plastic and Reconstructive Surgeon",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "252611",
+   "occupation": "Podiatrist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253411",
+   "occupation": "Psychiatrist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "272399",
+   "occupation": "Psychologists nec",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "272399",
+   "occupation": "Psychologists nec",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254413",
+   "occupation": "Registered Nurse (Child and Family Health)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254414",
+   "occupation": "Registered Nurse (Community Health)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254416",
+   "occupation": "Registered Nurse (Developmental Disability)",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254417",
+   "occupation": "Registered Nurse (Disability and Rehabilitation)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254417",
+   "occupation": "Registered Nurse (Disability and Rehabilitation)",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254421",
+   "occupation": "Registered Nurse (Medical Practice)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "251214",
+   "occupation": "Sonographer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "241599",
+   "occupation": "Special Education Teachers nec",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253311",
+   "occupation": "Specialist Physician (General Medicine)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253399",
+   "occupation": "Specialist Physicians nec",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253511",
+   "occupation": "Surgeon (General)",
+   "subclass": "189",
+   "minPoints": 80
+  }
+ ],
+ "latestByOccupation": [
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "221111",
+   "occupation": "Accountant (General)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224111",
+   "occupation": "Actuary",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233911",
+   "occupation": "Aeronautical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234111",
+   "occupation": "Agricultural Consultant",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233912",
+   "occupation": "Agricultural Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234112",
+   "occupation": "Agricultural Scientist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "334112",
+   "occupation": "Airconditioning and Mechanical Services Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334112",
+   "occupation": "Airconditioning and Mechanical Services Plumber",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "342111",
+   "occupation": "Airconditioning and Refrigeration Mechanic",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261311",
+   "occupation": "Analyst Programmer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "232111",
+   "occupation": "Architect",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "212111",
+   "occupation": "Artistic Director",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "139911",
+   "occupation": "Arts Administrator or Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252711",
+   "occupation": "Audiologist",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "321111",
+   "occupation": "Automotive Electrician",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "271111",
+   "occupation": "Barrister",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234513",
+   "occupation": "Biochemist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233913",
+   "occupation": "Biomedical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234514",
+   "occupation": "Biotechnologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "399111",
+   "occupation": "Boat Builder and Repairer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "234515",
+   "occupation": "Botanist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "331111",
+   "occupation": "Bricklayer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331111",
+   "occupation": "Bricklayer",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "394111",
+   "occupation": "Cabinetmaker",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253312",
+   "occupation": "Cardiologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253312",
+   "occupation": "Cardiologist",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "253512",
+   "occupation": "Cardiothoracic Surgeon",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "331212",
+   "occupation": "Carpenter",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331212",
+   "occupation": "Carpenter",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "331211",
+   "occupation": "Carpenter and Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "331211",
+   "occupation": "Carpenter and Joiner",
+   "subclass": "491F",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "232213",
+   "occupation": "Cartographer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "351311",
+   "occupation": "Chef",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "233111",
+   "occupation": "Chemical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234211",
+   "occupation": "Chemist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "134111",
+   "occupation": "Child Care Centre Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252111",
+   "occupation": "Chiropractor",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233211",
+   "occupation": "Civil Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "312211",
+   "occupation": "Civil Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "312212",
+   "occupation": "Civil Engineering Technician",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253313",
+   "occupation": "Clinical Haematologist",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "272311",
+   "occupation": "Clinical Psychologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "272311",
+   "occupation": "Clinical Psychologist",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "263111",
+   "occupation": "Computer Network and Systems Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "234911",
+   "occupation": "Conservator",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "133111",
+   "occupation": "Construction Project Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "211112",
+   "occupation": "Dancer or Choreographer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253911",
+   "occupation": "Dermatologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261312",
+   "occupation": "Developer Programmer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253917",
+   "occupation": "Diagnostic and Interventional Radiologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "321212",
+   "occupation": "Diesel Motor Mechanic",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "334113",
+   "occupation": "Drainer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241111",
+   "occupation": "Early Childhood (Pre-primary School) Teacher",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224311",
+   "occupation": "Economist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "272312",
+   "occupation": "Educational Psychologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233311",
+   "occupation": "Electrical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "312311",
+   "occupation": "Electrical Engineering Draftsperson",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "312312",
+   "occupation": "Electrical Engineering Technician",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "341111",
+   "occupation": "Electrician (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "341111",
+   "occupation": "Electrician (General)",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "341112",
+   "occupation": "Electrician (Special Class)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "342313",
+   "occupation": "Electronic Equipment Trades Worker",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "342314",
+   "occupation": "Electronic Instrument Trades Worker (General)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "342315",
+   "occupation": "Electronic Instrument Trades Worker (Special Class)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "233411",
+   "occupation": "Electronics Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253912",
+   "occupation": "Emergency Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253315",
+   "occupation": "Endocrinologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "133211",
+   "occupation": "Engineering Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233999",
+   "occupation": "Engineering Professionals nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233914",
+   "occupation": "Engineering Technologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234312",
+   "occupation": "Environmental Consultant",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233915",
+   "occupation": "Environmental Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "139912",
+   "occupation": "Environmental Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234313",
+   "occupation": "Environmental Research Scientist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234399",
+   "occupation": "Environmental Scientists nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "221213",
+   "occupation": "External Auditor",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "333211",
+   "occupation": "Fibrous Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "333211",
+   "occupation": "Fibrous Plasterer",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "323211",
+   "occupation": "Fitter (General)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "323212",
+   "occupation": "Fitter and Turner",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234212",
+   "occupation": "Food Technologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "452411",
+   "occupation": "Footballer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234113",
+   "occupation": "Forester",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "334114",
+   "occupation": "Gasfitter",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334114",
+   "occupation": "Gasfitter",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253316",
+   "occupation": "Gastroenterologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253111",
+   "occupation": "General Practitioner",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253111",
+   "occupation": "General Practitioner",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234412",
+   "occupation": "Geophysicist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233212",
+   "occupation": "Geotechnical Engineer",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "333111",
+   "occupation": "Glazier",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234413",
+   "occupation": "Hydrogeologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261111",
+   "occupation": "ICT Business Analyst",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "262112",
+   "occupation": "ICT Security Specialist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233511",
+   "occupation": "Industrial Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253317",
+   "occupation": "Intensive Care Specialist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "221214",
+   "occupation": "Internal Auditor",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "331213",
+   "occupation": "Joiner",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224511",
+   "occupation": "Land Economist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "232112",
+   "occupation": "Landscape Architect",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234511",
+   "occupation": "Life Scientist (General)",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": null,
+   "occupation": "Life Scientist nec",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234599",
+   "occupation": "Life Scientists nec",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "341113",
+   "occupation": "Lift mechanic",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "221112",
+   "occupation": "Management Accountant",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224711",
+   "occupation": "Management Consultant",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234516",
+   "occupation": "Marine Biologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "233112",
+   "occupation": "Materials Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233512",
+   "occupation": "Mechanical Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "251211",
+   "occupation": "Medical Diagnostic Radiographer",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234611",
+   "occupation": "Medical Laboratory Scientist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "234611",
+   "occupation": "Medical Laboratory Scientist",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253314",
+   "occupation": "Medical Oncologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253999",
+   "occupation": "Medical Practitioners nec",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251212",
+   "occupation": "Medical Radiation Therapist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "322311",
+   "occupation": "Metal Fabricator",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "323214",
+   "occupation": "Metal Machinist (First Class)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234912",
+   "occupation": "Metallurgist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234913",
+   "occupation": "Meteorologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234517",
+   "occupation": "Microbiologist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254111",
+   "occupation": "Midwife",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "233611",
+   "occupation": "Mining Engineer (excluding Petroleum)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "321211",
+   "occupation": "Motor Mechanic (General)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "321213",
+   "occupation": "Motorcycle Mechanic",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "261211",
+   "occupation": "Multimedia Specialist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "211212",
+   "occupation": "Music Director",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "211213",
+   "occupation": "Musician (Instrumental)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234999",
+   "occupation": "Natural and Physical Science Professionals nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233916",
+   "occupation": "Naval Architect",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253318",
+   "occupation": "Neurologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253513",
+   "occupation": "Neurosurgeon",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251213",
+   "occupation": "Nuclear Medicine Technologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254411",
+   "occupation": "Nurse Practitioner",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "134212",
+   "occupation": "Nursing Clinical Director",
+   "subclass": "189",
+   "minPoints": 115
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253913",
+   "occupation": "Obstetrician and Gynaecologist",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253914",
+   "occupation": "Ophthalmologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251411",
+   "occupation": "Optometrist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "251411",
+   "occupation": "Optometrist",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "272313",
+   "occupation": "Organisational Psychologist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253514",
+   "occupation": "Orthopaedic Surgeon",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251912",
+   "occupation": "Orthotist or Prosthetist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252112",
+   "occupation": "Osteopath",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "232214",
+   "occupation": "Other Spatial Scientist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "253516",
+   "occupation": "Paediatric Surgeon",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253321",
+   "occupation": "Paediatrician",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "332211",
+   "occupation": "Painting Trades Worker",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "332211",
+   "occupation": "Painting Trades Worker",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "324111",
+   "occupation": "Panelbeater",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253915",
+   "occupation": "Pathologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "233612",
+   "occupation": "Petroleum Engineer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234914",
+   "occupation": "Physicist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252511",
+   "occupation": "Physiotherapist",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "253517",
+   "occupation": "Plastic and Reconstructive Surgeon",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "334111",
+   "occupation": "Plumber (General)",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "334111",
+   "occupation": "Plumber (General)",
+   "subclass": "491F",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252611",
+   "occupation": "Podiatrist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "134213",
+   "occupation": "Primary Health Organisation Manager",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233513",
+   "occupation": "Production or Plant Engineer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253411",
+   "occupation": "Psychiatrist",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-06-13",
+   "anzsco": null,
+   "occupation": "Psychologist nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "272399",
+   "occupation": "Psychologists nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "272399",
+   "occupation": "Psychologists nec",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233213",
+   "occupation": "Quantity Surveyor",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253918",
+   "occupation": "Radiation Oncologist",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254412",
+   "occupation": "Registered Nurse (Aged Care)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254413",
+   "occupation": "Registered Nurse (Child and Family Health)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254414",
+   "occupation": "Registered Nurse (Community Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254414",
+   "occupation": "Registered Nurse (Community Health)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254415",
+   "occupation": "Registered Nurse (Critical Care and Emergency)",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254416",
+   "occupation": "Registered Nurse (Developmental Disability)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254416",
+   "occupation": "Registered Nurse (Developmental Disability)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254417",
+   "occupation": "Registered Nurse (Disability and Rehabilitation)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2023-12-18",
+   "anzsco": "254417",
+   "occupation": "Registered Nurse (Disability and Rehabilitation)",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254421",
+   "occupation": "Registered Nurse (Medical Practice)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254421",
+   "occupation": "Registered Nurse (Medical Practice)",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254418",
+   "occupation": "Registered Nurse (Medical)",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254422",
+   "occupation": "Registered Nurse (Mental Health)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254425",
+   "occupation": "Registered Nurse (Paediatrics)",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254423",
+   "occupation": "Registered Nurse (Perioperative)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254424",
+   "occupation": "Registered Nurse (Surgical)",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "254499",
+   "occupation": "Registered Nurses nec",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "334115",
+   "occupation": "Roof Plumber",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241411",
+   "occupation": "Secondary School Teacher",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "322211",
+   "occupation": "Sheetmetal Trades Worker",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "399112",
+   "occupation": "Shipwright",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "272511",
+   "occupation": "Social Worker",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261399",
+   "occupation": "Software and Applications Programmers nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261313",
+   "occupation": "Software Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "271311",
+   "occupation": "Solicitor",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "333212",
+   "occupation": "Solid Plasterer",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "333212",
+   "occupation": "Solid Plasterer",
+   "subclass": "491F",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "251214",
+   "occupation": "Sonographer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "241599",
+   "occupation": "Special Education Teachers nec",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "241511",
+   "occupation": "Special Needs Teacher",
+   "subclass": "491F",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253311",
+   "occupation": "Specialist Physician (General Medicine)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253399",
+   "occupation": "Specialist Physicians nec",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "252712",
+   "occupation": "Speech Pathologist",
+   "subclass": "491F",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224113",
+   "occupation": "Statistician",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "331112",
+   "occupation": "Stonemason",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233214",
+   "occupation": "Structural Engineer",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253511",
+   "occupation": "Surgeon (General)",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "232212",
+   "occupation": "Surveyor",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "261112",
+   "occupation": "Systems Analyst",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "221113",
+   "occupation": "Taxation Accountant",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "263311",
+   "occupation": "Telecommunications Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "313212",
+   "occupation": "Telecommunications Field Engineer",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "263312",
+   "occupation": "Telecommunications Network Engineer",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "313213",
+   "occupation": "Telecommunications Network Planner",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "313214",
+   "occupation": "Telecommunications Technical Officer or Technologist",
+   "subclass": "189",
+   "minPoints": 90
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "452316",
+   "occupation": "Tennis Coach",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253324",
+   "occupation": "Thoracic Medicine Specialist",
+   "subclass": "189",
+   "minPoints": 95
+  },
+  {
+   "roundDate": "2024-11-07",
+   "anzsco": "233215",
+   "occupation": "Transport Engineer",
+   "subclass": "189",
+   "minPoints": 70
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "242111",
+   "occupation": "University Lecturer",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-08-21",
+   "anzsco": "242111",
+   "occupation": "University Lecturer",
+   "subclass": "491F",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "253518",
+   "occupation": "Urologist",
+   "subclass": "189",
+   "minPoints": 100
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "224512",
+   "occupation": "Valuer",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "253521",
+   "occupation": "Vascular Surgeon",
+   "subclass": "189",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "234711",
+   "occupation": "Veterinarian",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "333411",
+   "occupation": "Wall and Floor Tiler",
+   "subclass": "189",
+   "minPoints": 65
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": "333411",
+   "occupation": "Wall and Floor Tiler",
+   "subclass": "491F",
+   "minPoints": 75
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "322313",
+   "occupation": "Welder (First Class)",
+   "subclass": "189",
+   "minPoints": 80
+  },
+  {
+   "roundDate": "2026-06-04",
+   "anzsco": "134214",
+   "occupation": "Welfare Centre Manager",
+   "subclass": "189",
+   "minPoints": 85
+  },
+  {
+   "roundDate": "2025-11-13",
+   "anzsco": null,
+   "occupation": "Zoologist",
+   "subclass": "189",
+   "minPoints": 85
+  }
+ ],
+ "stateInvites": [
+  {
+   "state": "ACT",
+   "period": "from 1 July 2026 to 31 August 2026",
+   "lt5": {
+    "190": true,
+    "491": true
+   },
+   "190": null,
+   "491": null
+  },
+  {
+   "state": "NSW",
+   "period": "from 1 July 2026 to 31 August 2026",
+   "lt5": {},
+   "190": 11,
+   "491": 0
+  },
+  {
+   "state": "NT",
+   "period": "from 1 July 2026 to 31 August 2026",
+   "lt5": {},
+   "190": 91,
+   "491": 25
+  },
+  {
+   "state": "Qld",
+   "period": "from 1 July 2026 to 31 August 2026",
+   "lt5": {
+    "491": true
+   },
+   "190": 6,
+   "491": null
+  },
+  {
+   "state": "SA",
+   "period": "from 1 July 2026 to 31 August 2026",
+   "lt5": {},
+   "190": 0,
+   "491": 0
+  },
+  {
+   "state": "Tas",
+   "period": "from 1 July 2026 to 31 August 2026",
+   "lt5": {},
+   "190": 206,
+   "491": 55
+  },
+  {
+   "state": "Vic",
+   "period": "from 1 July 2026 to 31 August 2026",
+   "lt5": {},
+   "190": 0,
+   "491": 0
+  },
+  {
+   "state": "WA",
+   "period": "from 1 July 2026 to 31 August 2026",
+   "lt5": {},
+   "190": 17,
+   "491": 120
+  }
+ ],
+ "updated": "2026-10-15",
+ "fyTotals": [
+  {
+   "fy": "2023-24",
+   "189": 13592,
+   "491F": 79
+  },
+  {
+   "fy": "2024-25",
+   "189": 22973,
+   "491F": 0
+  },
+  {
+   "fy": "2025-26",
+   "189": 26887,
+   "491F": 450
+  },
+  {
+   "fy": "2026-27",
+   "189": 0,
+   "491F": 0
+  }
+ ]
+}

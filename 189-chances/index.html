@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>189 Chances Checker | Compare Your Points With the Latest Cut-off</title>
+<meta name="description" content="Check your subclass 189 chances. Enter your occupation, points and date of effect to compare them with the latest official cut-off, past rounds, the EOI pool and your occupation’s ceiling.">
+<link rel="canonical" href="https://vptpoints.com/189-chances/">
+<meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1613" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VPT Points">
+<meta property="og:title" content="189 chances checker">
+<meta property="og:description" content="Your points against the latest 189 cut-off for your occupation, the EOI pool and the ceiling.">
+<meta property="og:url" content="https://vptpoints.com/189-chances/">
+<meta property="og:image" content="https://vptpoints.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.verdict { display: grid; gap: 8px; padding: 22px 24px; border-radius: 20px; }
+.verdict .tag { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.verdict h2 { font-size: clamp(26px, 3.6vw, 38px); margin: 0; }
+.verdict p { margin: 0; max-width: 70ch; }
+.verdict.good { background: var(--leaf-soft); }
+.verdict.mid { background: var(--sun-soft); }
+.verdict.bad { background: var(--warn-soft); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<!-- header -->
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../" aria-label="VPT Points home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--leaf)"/><path d="M9 10l7 13 7-13" fill="none" stroke="var(--sun)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      VPT Points
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href=".././" class="vic">VIC Points Test</a>
+      <a href="../skillselect-points/">Points calculator</a>
+      <a href="../189-chances/" aria-current="page">189 chances</a>
+      <a href="../rounds/">Invitation rounds</a>
+      <a href="../occupations/">Occupations</a>
+      <a href="../state-nominations/">State nominations</a>
+      <div class="more">
+        <button class="more-btn" type="button" aria-expanded="false">More</button>
+        <div class="more-list">
+          <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
+          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
+          <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
+          <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+<!-- /header -->
+
+<main id="main">
+  <div class="wrap">
+    <div class="page-hero">
+      <span class="kicker"><i></i>Subclass 189 · official round results</span>
+      <h1>Check your <span class="hl">189 chances</span></h1>
+      <p class="lede">Compare your points with the lowest score invited for your occupation in recent SkillSelect rounds. You’ll also see how many EOIs sit at or above your score, and how much of your occupation’s ceiling is left.</p>
+    </div>
+
+    <section class="block" aria-label="Your details">
+      <form class="panel" id="f">
+        <div class="fields">
+          <label class="field wide"><span>Occupation</span><input class="input" id="occ" list="occ-list" placeholder="Start typing, e.g. Registered Nurse or 254499" autocomplete="off" required><datalist id="occ-list"></datalist></label>
+          <label class="field"><span>Your 189 points</span><input class="input" id="pts" type="number" min="65" max="140" step="5" inputmode="numeric" placeholder="e.g. 85" required></label>
+          <label class="field"><span>Date of effect <small>(optional)</small></span><input class="input" id="doe" type="date"></label>
+        </div>
+        <p class="small muted" style="margin:12px 0 0">Not sure of your points? <a href="../skillselect-points/">Work them out first</a>.</p>
+      </form>
+    </section>
+
+    <div id="out" aria-live="polite"></div>
+
+    <section class="block" aria-labelledby="how-h">
+      <h2 id="how-h">How this works</h2>
+      <div class="faq">
+        <details open><summary>Where do the cut-offs come from?</summary><p>Home Affairs publishes the minimum score invited for each occupation after every round. We use the official tables from July 2023 onwards. Cut-offs depend on how many places each round has, so the next round can be higher or lower.</p></details>
+        <details><summary>What happens at the cut-off score?</summary><p>When there are more EOIs at the cut-off score than places, SkillSelect invites the earliest dates of effect first. Home Affairs now publishes one tie-break date per round, not one per occupation, so we can’t say exactly where you’d fall.</p></details>
+        <details><summary>Why are EOI numbers so high?</summary><p>The EOI pool counts EOIs, not people. Many people lodge several EOIs or select several visas, and some EOIs are never withdrawn. Treat the pool as a sense of competition, not a queue.</p></details>
+      </div>
+    </section>
+    <p class="source" id="src"></p>
+<!-- footer -->
+    <footer class="site-foot">
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
+      <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
+    </footer>
+<!-- /footer -->
+  </div>
+</main>
+
+<script src="../assets/site.js"></script>
+<script>
+(function () {
+  "use strict";
+  var V = window.VPT, $ = function (id) { return document.getElementById(id); }, D;
+
+  // Keep the link in step with the answers, but only once input pauses: Safari
+  // refuses more than 100 replaceState calls per 10 seconds, and a slider drag
+  // fires dozens a second. flushUrl() applies a pending update straight away.
+  var urlTimer = null, pendingUrl = null;
+  function setUrl(u) {
+    pendingUrl = u; clearTimeout(urlTimer);
+    urlTimer = setTimeout(flushUrl, 250);
+  }
+  function flushUrl() {
+    clearTimeout(urlTimer);
+    if (pendingUrl == null) return;
+    try { history.replaceState(null, "", pendingUrl); } catch (e) {}
+    pendingUrl = null;
+  }
+  window.addEventListener("pagehide", flushUrl);
+  function stat(l, v, s) { return '<div class="stat"><span class="lbl">' + l + '</span><span class="val">' + v + '</span><span class="sub2">' + s + "</span></div>"; }
+
+  function run() {
+    var o = V.findOcc(D, $("occ").value), pts = +$("pts").value, doe = $("doe").value, out = $("out");
+    try {
+      var p = new URLSearchParams();
+      if (o) p.set("occ", o.anzsco); if (pts) p.set("points", pts); if (doe) p.set("doe", doe);
+      setUrl("?" + p.toString());
+    } catch (e) {}
+    if (!o || !pts) { out.innerHTML = $("occ").value && !o ? '<section class="block"><div class="panel empty">Pick an occupation from the list.</div></section>' : ""; return; }
+    if (o.visas.indexOf("189") < 0) {
+      out.innerHTML = '<section class="block"><div class="verdict bad"><span class="tag">Not eligible for 189</span><h2>' + V.esc(o.name) + ' isn’t on the 189 list</h2><p>Subclass 189 needs an occupation on the MLTSSL. This one is eligible for: ' + (o.visas.join(", ") || "no current skilled visa") + '. Look at state nomination instead. <a href="../state-nominations/">See state nominations</a>.</p></div></section>';
+      return;
+    }
+    var c = o.cutoff, h = o.history.filter(function (x) { return x.subclass === "189" && x.minPoints >= 65; });
+    var latestRound = D.rounds.rounds.filter(function (r) { return r.date === D.latestRound; })[0] || {};
+    var cls, tag, head, body;
+    if (!c) {
+      cls = "bad"; tag = "Unlikely right now"; head = "Not invited since July 2023";
+      body = V.esc(o.name) + " hasn’t appeared in any 189 round since July 2023. Even very high scores haven’t been invited in this occupation recently, so state nomination may be a better path.";
+    } else {
+      var gap = pts - c.minPoints, stale = c.roundDate !== D.latestRound;
+      if (gap > 0) { cls = "good"; tag = "Above the last cut-off"; head = gap + " points above the last cut-off"; body = "The lowest score invited for " + V.esc(o.name) + " was " + c.minPoints + " in the " + V.date(c.roundDate) + " round. At " + pts + " you would have been invited in that round."; }
+      else if (gap === 0) { cls = "mid"; tag = "Right on the cut-off"; head = "Exactly on the last cut-off"; body = "The lowest score invited for " + V.esc(o.name) + " was " + c.minPoints + " in the " + V.date(c.roundDate) + " round. At the cut-off, earlier dates of effect go first. The tie-break for that round was " + V.esc((latestRound.tieBreak || {})["189"] || "not published") + "."; }
+      else { cls = "bad"; tag = "Below the last cut-off"; head = -gap + " points below the last cut-off"; body = "The lowest score invited for " + V.esc(o.name) + " was " + c.minPoints + " in the " + V.date(c.roundDate) + " round. You’d need " + (-gap) + " more points to have been invited then."; }
+      if (stale) body += " This occupation wasn’t in the latest round (" + V.date(D.latestRound) + "), so treat this as a weaker signal.";
+    }
+    var lo = h.length ? Math.min.apply(null, h.map(function (x) { return x.minPoints; })) : null, hi = h.length ? Math.max.apply(null, h.map(function (x) { return x.minPoints; })) : null;
+
+    var bp = (D.eoi.byPoints || []).filter(function (x) { return x.subclass === "189"; }).sort(function (a, b) { return a.points - b.points; });
+    var atOrAbove = 0, hidden = 0;
+    bp.forEach(function (x) { if (x.points >= pts) { if (x.submitted == null) hidden++; else atOrAbove += x.submitted; } });
+    var e = o.eoi || {}, ce = o.ceiling, fy = (D.rounds.fyTotals || []).slice(-1)[0];
+    var waited = doe ? V.daysBetween(doe, V.today()) : null;
+
+    out.innerHTML = '<section class="block"><div class="verdict ' + cls + '"><span class="tag">' + tag + "</span><h2>" + head + "</h2><p>" + body + "</p></div></section>" +
+      '<section class="block" aria-label="Your numbers"><div class="stats">' +
+      stat("Latest cut-off", c ? c.minPoints + " pts" : "–", c ? V.date(c.roundDate) : "No invitations since Jul 2023") +
+      stat("Cut-off range", h.length ? (lo === hi ? lo : lo + "–" + hi) + " pts" : "–", h.length + " round" + (h.length === 1 ? "" : "s") + " with invitations") +
+      stat("189 EOIs at " + pts + "+", V.num(atOrAbove) + (hidden ? "+" : ""), "All occupations, as at " + V.date(D.eoi.asAt)) +
+      stat("189 EOIs in your occupation", V.num(e.submitted189), "All points levels") +
+      stat("Ceiling left for 189", V.left(ce), ce ? "of " + V.num(ce.ceiling) + " · " + D.ceilYear : "No ceiling listed") +
+      (waited != null ? stat("Waiting so far", waited < 0 ? "–" : waited + " days", "Since your date of effect") : "") +
+      "</div>" + (fy ? '<p class="small muted" style="margin-top:12px">' + fy.fy + " program year so far: " + V.num(fy["189"]) + " subclass 189 invitations. Cut-offs tend to be higher when rounds are small.</p>" : "") + "</section>" +
+      '<section class="block"><div class="grid-2">' +
+      '<div class="panel"><h3 class="sub">' + V.esc(o.name) + ": 189 cut-off by round</h3><div id='hist'></div></div>" +
+      '<div class="panel"><h3 class="sub">189 EOI pool by points</h3><p class="small muted" style="margin:0 0 8px">Your score is in yellow. Counts under 20 are hidden by Home Affairs.</p><div id="pool"></div></div>' +
+      '</div><div class="actions" style="margin-top:16px"><a class="btn" style="text-decoration:none" href="../occupations/?code=' + o.anzsco + '">Occupation details</a><a class="btn" style="text-decoration:none" href="../my-journey/?occ=' + encodeURIComponent(o.name) + "&points=" + pts + (doe ? "&doe=" + doe : "") + '">Track in My journey</a></div></section>';
+
+    function draw() {
+      if (!$("hist")) return;
+      if (h.length) V.chart($("hist"), { title: "Cut-off by round", type: "line", height: 220, yMin: 60, unit: "points",
+        labels: h.map(function (x) { return V.date(x.roundDate.slice(0, 7)); }), tipLabels: h.map(function (x) { return V.date(x.roundDate); }),
+        series: [{ name: "Minimum points", color: "var(--leaf)", values: h.map(function (x) { return x.minPoints; }) }] });
+      else $("hist").innerHTML = '<p class="muted">No 189 invitations since July 2023.</p>';
+      var shown = bp.filter(function (x) { return x.points >= 60; });
+      V.chart($("pool"), { title: "189 EOIs by points", type: "col", height: 220, unit: "EOIs",
+        labels: shown.map(function (x) { return String(x.points); }), tipLabels: shown.map(function (x) { return x.points + " points"; }),
+        highlight: shown.map(function (x) { return x.points; }).indexOf(Math.floor(pts / 5) * 5),
+        series: [{ name: "EOIs", color: "var(--leaf)", values: shown.map(function (x) { return x.submitted; }) }] });
+    }
+    draw(); V.onResize(draw);
+  }
+
+  V.occData("../").then(function (data) {
+    D = data;
+    $("occ-list").innerHTML = D.list.filter(function (o) { return o.visas.indexOf("189") >= 0; })
+      .sort(function (a, b) { return a.name.localeCompare(b.name); })
+      .map(function (o) { return '<option value="' + V.esc(o.name + " (" + o.anzsco + ")") + '"></option>'; }).join("");
+    var q = new URLSearchParams(location.search);
+    var o = V.findOcc(D, q.get("occ"));
+    if (o) $("occ").value = o.name + " (" + o.anzsco + ")"; else if (q.get("occ")) $("occ").value = q.get("occ");
+    if (q.get("points")) $("pts").value = q.get("points");
+    if (q.get("doe")) $("doe").value = q.get("doe");
+    $("f").addEventListener("input", run);
+    $("f").addEventListener("submit", function (e) { e.preventDefault(); run(); });
+    run();
+    $("src").innerHTML = "Sources: Home Affairs invitation rounds, the SkillSelect EOI dashboard (as at " + V.date(D.eoi.asAt) + ") and occupation ceilings (" + D.ceilYear + ", released under FOI). This is a comparison with past rounds, not a prediction.";
+  }).catch(function (e) { V.fail($("out"), e); });
+})();
+</script>
+</body>
+</html>

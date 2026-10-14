@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Migration Program Planning Levels &amp; Visa Grants | 189, 190, 491, 186</title>
+<meta name="description" content="Australia’s permanent Migration Program by year: planning levels for each skilled stream, and visa grants by subclass and occupation, from official Home Affairs figures.">
+<link rel="canonical" href="https://vptpoints.com/visa-grants/">
+<meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1613" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VPT Points">
+<meta property="og:title" content="Migration Program places and visa grants">
+<meta property="og:description" content="Planning levels by stream and grants by visa and occupation.">
+<meta property="og:url" content="https://vptpoints.com/visa-grants/">
+<meta property="og:image" content="https://vptpoints.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<!-- header -->
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../" aria-label="VPT Points home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--leaf)"/><path d="M9 10l7 13 7-13" fill="none" stroke="var(--sun)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      VPT Points
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href=".././" class="vic">VIC Points Test</a>
+      <a href="../skillselect-points/">Points calculator</a>
+      <a href="../189-chances/">189 chances</a>
+      <a href="../rounds/">Invitation rounds</a>
+      <a href="../occupations/">Occupations</a>
+      <a href="../state-nominations/">State nominations</a>
+      <div class="more">
+        <button class="more-btn is-current" type="button" aria-expanded="false">More</button>
+        <div class="more-list">
+          <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
+          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
+          <a href="../visa-grants/" aria-current="page">Visa grants<small>Program places and grants by visa</small></a>
+          <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+<!-- /header -->
+
+<main id="main">
+  <div class="wrap">
+    <div class="page-hero">
+      <span class="kicker"><i></i>Permanent Migration Program</span>
+      <h1>Visa <span class="hl">grants</span> and places</h1>
+      <p class="lede">The government sets how many permanent places each stream gets every program year. State nomination (190) and regional (491) places come from these totals, so they decide how many invitations states can send.</p>
+    </div>
+
+    <section class="block" aria-label="Headline numbers"><div class="stats" id="stats"></div></section>
+
+    <section class="block" aria-labelledby="plan-h">
+      <div class="block-head"><div><h2 id="plan-h">Skill stream places by year</h2><p>Planning levels for each skill stream. Highlighted: the streams that 189, 190 and 491 draw from.</p></div></div>
+      <div class="scroll" id="plan" style="max-height:none"></div>
+    </section>
+
+    <section class="block" aria-labelledby="trend-h">
+      <div class="block-head"><div><h2 id="trend-h">Places over time</h2><p>Planning levels for the three points-tested streams.</p></div></div>
+      <div class="panel"><div id="trend"></div></div>
+    </section>
+
+    <section class="block" aria-labelledby="out-h" id="out-sec" hidden>
+      <div class="block-head"><div><h2 id="out-h">Grants by visa</h2><p id="out-note"></p></div></div>
+      <div class="grid-2"><div class="panel"><div id="out-bars"></div></div><div class="scroll" id="out-table" style="max-height:none"></div></div>
+    </section>
+
+    <section class="block" aria-labelledby="top-h" id="top-sec" hidden>
+      <div class="block-head"><div><h2 id="top-h">Most granted occupations</h2><p id="top-note"></p></div><div class="seg" role="group" aria-label="Visa" id="top-seg"></div></div>
+      <div class="panel"><div id="top"></div></div>
+    </section>
+
+    <div class="note-box" id="notes" style="margin-top:40px" hidden></div>
+    <p class="source" id="src"></p>
+<!-- footer -->
+    <footer class="site-foot">
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
+      <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
+    </footer>
+<!-- /footer -->
+  </div>
+</main>
+
+<script src="../assets/site.js"></script>
+<script>
+(function () {
+  "use strict";
+  var V = window.VPT, $ = function (id) { return document.getElementById(id); };
+  var KEY = /independent|state|regional/i;
+  V.load("../data/grants.json").then(function (d) {
+    var plan = (d.planning || []).slice().sort(function (a, b) { return a.fy < b.fy ? -1 : 1; }), last = plan[plan.length - 1] || {};
+    var stream = function (p, re) { var s = (p.streams || []).filter(function (x) { return re.test(x.name); })[0]; return s ? s.places : null; };
+    $("stats").innerHTML = [
+      [last.fy + " total places", V.num(last.total), "Permanent Migration Program"],
+      ["Skill stream", V.num(last.skill), last.total ? Math.round(last.skill / last.total * 100) + "% of the program" : ""],
+      ["State nominated (190)", V.num(stream(last, /state/i)), last.fy + " planning level"],
+      ["Regional (491 & 494)", V.num(stream(last, /regional/i)), last.fy + " planning level"],
+      ["Skilled independent (189)", V.num(stream(last, /independent/i)), last.fy + " planning level"]
+    ].map(function (s) { return '<div class="stat"><span class="lbl">' + V.esc(s[0]) + '</span><span class="val">' + s[1] + '</span><span class="sub2">' + V.esc(s[2]) + "</span></div>"; }).join("");
+
+    var names = [];
+    plan.forEach(function (p) { (p.streams || []).forEach(function (s) { if (names.indexOf(s.name) < 0) names.push(s.name); }); });
+    var head = '<table class="data"><thead><tr><th scope="col">Stream</th>' + plan.map(function (p) { return '<th scope="col" class="num">' + p.fy + "</th>"; }).join("") + "</tr></thead><tbody>";
+    var body = names.map(function (n) {
+      var b = KEY.test(n);
+      return "<tr><td>" + (b ? "<b>" + V.esc(n) + "</b>" : V.esc(n)) + "</td>" + plan.map(function (p) { var s = (p.streams || []).filter(function (x) { return x.name === n; })[0]; return '<td class="num">' + V.num(s ? s.places : null) + "</td>"; }).join("") + "</tr>";
+    }).join("");
+    var foot = ["skill", "family", "total"].map(function (k) { return "<tr><td>" + (k === "skill" ? "Skill stream total" : k === "family" ? "Family stream" : "<b>Whole program</b>") + "</td>" + plan.map(function (p) { return '<td class="num">' + V.num(p[k]) + "</td>"; }).join("") + "</tr>"; }).join("");
+    $("plan").innerHTML = head + body + foot + "</tbody></table>";
+
+    function draw() {
+      V.chart($("trend"), { title: "Points-tested places by year", type: "line", height: 260, unit: "places",
+        labels: plan.map(function (p) { return p.fy; }),
+        series: [
+          { name: "Skilled independent (189)", color: "var(--s1)", values: plan.map(function (p) { return stream(p, /independent/i); }) },
+          { name: "State nominated (190)", color: "var(--s2)", values: plan.map(function (p) { return stream(p, /state/i); }) },
+          { name: "Regional (491 & 494)", color: "var(--s3)", values: plan.map(function (p) { return stream(p, /regional/i); }) }
+        ] });
+    }
+    draw(); V.onResize(draw);
+
+    var out = (d.outcomes || []).slice().sort(function (a, b) { return a.fy < b.fy ? 1 : -1; })[0];
+    if (out && out.bySubclass && out.bySubclass.length) {
+      $("out-sec").hidden = false;
+      $("out-note").textContent = out.fy + " grants by visa subclass" + (out.total ? ", out of " + V.num(out.total) + " permanent places delivered" : "") + ".";
+      var rows = out.bySubclass.filter(function (x) { return x.grants != null; }).sort(function (a, b) { return b.grants - a.grants; });
+      V.hbars($("out-bars"), rows.map(function (x) { return { label: x.subclass + " · " + x.category, value: x.grants }; }));
+      V.table($("out-table"), [{ key: "subclass", label: "Subclass" }, { key: "category", label: "Category" }, { key: "grants", label: "Grants", num: true }], { sortKey: "grants", dir: -1 }).render(out.bySubclass);
+    }
+    var tops = (d.topOccupations || []).filter(function (t) { return t.rows && t.rows.length; });
+    if (tops.length) {
+      $("top-sec").hidden = false;
+      var short = function (t) { return /190/.test(t.scope) ? "190" : /491/.test(t.scope) ? "491" : "All skilled"; };
+      $("top-seg").innerHTML = tops.map(function (t, i) { return '<button type="button" data-i="' + i + '" aria-pressed="' + (i === 0) + '">' + short(t) + "</button>"; }).join("");
+      var showTop = function (i) {
+        var t = tops[i];
+        $("top-note").textContent = "Grants by occupation group, " + t.fy + (t.scope ? ": " + t.scope : "") + ".";
+        V.hbars($("top"), t.rows.slice(0, 15).map(function (x) { return { label: x.occupation, value: x.grants }; }));
+      };
+      $("top-seg").addEventListener("click", function (e) {
+        var b = e.target.closest("button"); if (!b) return;
+        this.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        showTop(+b.getAttribute("data-i"));
+      });
+      showTop(0);
+    }
+    if (d.notes && d.notes.length) { $("notes").hidden = false; $("notes").innerHTML = "<strong>About this data.</strong> " + d.notes.map(V.esc).join(" "); }
+    V.sources($("src"), d);
+  }).catch(function (e) { V.fail($("stats"), e); });
+})();
+</script>
+</body>
+</html>

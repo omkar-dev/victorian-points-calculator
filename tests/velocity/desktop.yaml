@@ -1,0 +1,301 @@
+# End-to-end tests for vptpoints.com with Velocity's web platform (Chrome over CDP).
+# Serve the site first:   python3 tests/velocity/serve.py
+# Then run:               velocity run tests/velocity/desktop.yaml
+appId: "http://localhost:8765/"
+config:
+  platform: web
+  web:
+    width: 1280
+    height: 900
+    headless: true
+    chromePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    # The site uses CSS scroll-behavior: smooth. Velocity needs its web
+    # scrollIntoView/scrollBy to pass behavior:'instant', or a tap below the
+    # fold can land while the page is still scrolling (crates/velocity-web,
+    # selector.rs actionability_js and driver.rs swipe).
+  sync:
+    timeoutMs: 6000
+  artifacts:
+    screenshots: always
+
+tests:
+  # ── VIC Points Test (home) ──────────────────────────────
+  - name: "VPT: loads with the default score"
+    steps:
+      - goto: "http://localhost:8765/"
+      - assertText: { selector: { css: "h1" }, expected: "Victorian Points Test calculator" }
+      - assertText: { selector: { css: "#total" }, expected: "560" }
+      - assertVisible: { css: ".site-nav a.vic[aria-current='page']" }
+      - screenshot: "vpt-home"
+
+  - name: "VPT: choosing Superior English adds 100"
+    steps:
+      - goto: "http://localhost:8765/"
+      - tap: { css: "label[for='english-superior']" }
+      - assertText: { selector: { css: "#total" }, expected: "660" }
+
+  - name: "VPT: answers restore from the link"
+    steps:
+      - goto: "http://localhost:8765/?age=40&salary=120000&english=superior&experience=8&qualification=phd&skill=1&partner=yes"
+      - assertText: { selector: { css: "#total" }, expected: "707" }
+      - assertVisible: { css: "#age-table tr.is-you" }
+
+  - name: "VPT: tools section links to the other pages"
+    steps:
+      - goto: "http://localhost:8765/"
+      - scrollUntilVisible: { selector: { css: "#more-tools a.tool[href='skillselect-points/']" }, direction: down, maxScrolls: 20 }
+      - tap: { css: "#more-tools a.tool[href='skillselect-points/']" }
+      - assertText: { selector: { css: "#score-lbl" }, expected: "Subclass 189 points" }
+
+  - name: "Nav: More menu opens and navigates"
+    steps:
+      - goto: "http://localhost:8765/"
+      - assertNotVisible: { css: ".more-list" }
+      - tap: { css: ".more-btn" }
+      - assertVisible: { css: ".more-list a[href='eoi-pool/']" }
+      - tap: { css: ".more-list a[href='eoi-pool/']" }
+      - assertVisible: { css: ".more-btn.is-current" }
+      - assertVisible: { css: "#pts-chart svg" }
+
+  # ── SkillSelect points calculator ───────────────────────
+  - name: "Points: default answers give 55 and a shortfall"
+    steps:
+      - goto: "http://localhost:8765/skillselect-points/"
+      - assertText: { selector: { css: "#total" }, expected: "55" }
+      - assertText: { selector: { css: "#badge" }, expected: "10 short" }
+
+  - name: "Points: English, 491 and Professional Year add up"
+    steps:
+      - goto: "http://localhost:8765/skillselect-points/"
+      - tap: { css: "label[for='english-superior']" }
+      - assertText: { selector: { css: "#total" }, expected: "75" }
+      - assertText: { selector: { css: "#badge" }, expected: "Can lodge" }
+      - tap: { css: "#visa-tiles button[data-v='491']" }
+      - assertText: { selector: { css: "#total" }, expected: "90" }
+      - assertText: { selector: { css: "#score-lbl" }, expected: "Subclass 491 points" }
+      - tap: { css: "label[for='x-py']" }
+      - assertText: { selector: { css: "#total" }, expected: "95" }
+
+  - name: "Points: experience is capped at 20"
+    steps:
+      - goto: "http://localhost:8765/skillselect-points/"
+      - assertNotVisible: { css: "#cap-note" }
+      - tap: { css: "label[for='overseas-8']" }
+      - tap: { css: "label[for='aus-8']" }
+      - assertVisible: { css: "#cap-note" }
+      - assertText: { selector: { css: "#total" }, expected: "75" }
+
+  - name: "Points: age 45 is not eligible"
+    steps:
+      - goto: "http://localhost:8765/skillselect-points/?age=45"
+      - assertText: { selector: { css: "#badge" }, expected: "Age limit" }
+      - assertText: { selector: { css: "#age-pts" }, expected: "Not eligible" }
+
+  - name: "Points: chances button carries the points"
+    steps:
+      - goto: "http://localhost:8765/skillselect-points/?english=superior"
+      - tap: { css: "#chances" }
+      - assertVisible: { css: "#pts" }
+      - assertVisible: { css: "h1" }
+
+  # ── 189 chances ─────────────────────────────────────────
+  - name: "Chances: above the cut-off"
+    steps:
+      - goto: "http://localhost:8765/189-chances/?occ=254499&points=85"
+      - assertText: { selector: { css: ".verdict h2" }, expected: "10 points above the last cut-off" }
+      - assertVisible: { css: "#hist svg" }
+      - assertVisible: { css: "#pool svg" }
+      - screenshot: "chances-above"
+
+  - name: "Chances: changing points updates the verdict"
+    steps:
+      - goto: "http://localhost:8765/189-chances/?occ=254499&points=85"
+      - clearText: { css: "#pts" }
+      - inputText: { selector: { css: "#pts" }, text: "70" }
+      - assertText: { selector: { css: ".verdict h2" }, expected: "5 points below the last cut-off" }
+
+  - name: "Chances: exactly on an old cut-off"
+    steps:
+      - goto: "http://localhost:8765/189-chances/?occ=261313&points=95"
+      - assertText: { selector: { css: ".verdict h2" }, expected: "Exactly on the last cut-off" }
+      - assertVisible: { textContains: "wasn’t in the latest round" }
+
+  - name: "Chances: occupation not on the 189 list"
+    steps:
+      - goto: "http://localhost:8765/189-chances/?occ=141999&points=90"
+      - assertVisible: { textContains: "isn’t on the 189 list" }
+
+  - name: "Chances: typing an occupation by name"
+    steps:
+      - goto: "http://localhost:8765/189-chances/"
+      - inputText: { selector: { css: "#occ" }, text: "Civil Engineer (233211)" }
+      - inputText: { selector: { css: "#pts" }, text: "100" }
+      - assertVisible: { css: ".verdict.good" }
+
+  # ── Invitation rounds ───────────────────────────────────
+  - name: "Rounds: stats, charts and table"
+    steps:
+      - goto: "http://localhost:8765/rounds/"
+      - assertVisible: { textContains: "4 Jun 2026" }
+      - assertVisible: { css: "#round-chart svg" }
+      - assertVisible: { css: "#fy-chart svg" }
+      - assertVisible: { text: "18 Dec 2023" }
+      - screenshot: "rounds"
+
+  - name: "Rounds: occupation search filters the cut-offs"
+    steps:
+      - goto: "http://localhost:8765/rounds/"
+      - scrollUntilVisible: { selector: { css: "#occ-q" }, direction: down, maxScrolls: 20 }
+      - inputText: { selector: { css: "#occ-q" }, text: "Actuary" }
+      - assertText: { selector: { css: "#occ-count" }, expected: "1 occupation" }
+
+  - name: "Rounds: sorting a column"
+    steps:
+      - goto: "http://localhost:8765/rounds/"
+      - scrollUntilVisible: { selector: { css: "#rounds-table th button[data-k='i189']" }, direction: down, maxScrolls: 20 }
+      - tap: { css: "#rounds-table th button[data-k='i189']" }
+      - assertVisible: { css: "#rounds-table th[aria-sort='descending'] button[data-k='i189']" }
+      - assertText: { selector: { css: "#rounds-table tbody tr:first-child td:first-child" }, expected: "7 Nov 2024" }
+
+  # ── Occupations ─────────────────────────────────────────
+  - name: "Occupations: search by code and open detail"
+    steps:
+      - goto: "http://localhost:8765/occupations/"
+      - inputText: { selector: { css: "#q" }, text: "261313" }
+      - assertText: { selector: { css: "#count" }, expected: "1 occupation" }
+      - tap: { css: "a[data-open='261313']" }
+      - assertText: { selector: { css: "#detail h2" }, expected: "Software Engineer" }
+      - assertVisible: { css: "#hist svg" }
+      - screenshot: "occupation-detail"
+
+  - name: "Occupations: filters narrow the list"
+    steps:
+      - goto: "http://localhost:8765/occupations/?q=nurse"
+      - assertVisible: { text: "Registered Nurse (Aged Care)" }
+      - assertNotVisible: { text: "Software Engineer" }
+
+  - name: "Occupations: save to compare"
+    steps:
+      - goto: "http://localhost:8765/occupations/?code=261313"
+      - launchApp: { appId: "http://localhost:8765/occupations/?code=261313", clearState: true }
+      - tap: { css: "#detail .star" }
+      - assertVisible: { css: "#detail .star[aria-pressed='true']" }
+      - tap: { css: "#compare-link" }
+      - assertVisible: { css: ".cmp a[href='../occupations/?code=261313']" }
+
+  # ── Compare ─────────────────────────────────────────────
+  - name: "Compare: two occupations side by side, then remove one"
+    steps:
+      - goto: "http://localhost:8765/compare/?codes=261313,233211"
+      - assertVisible: { css: ".cmp a[href='../occupations/?code=261313']" }
+      - assertVisible: { css: ".cmp a[href='../occupations/?code=233211']" }
+      - assertVisible: { css: "#chart svg" }
+      - screenshot: "compare"
+      - tap: { css: "[data-rm='233211']" }
+      - assertNotVisible: { css: ".cmp a[href='../occupations/?code=233211']" }
+
+  - name: "Compare: add by typing"
+    steps:
+      - goto: "http://localhost:8765/compare/?codes=261313"
+      - inputText: { selector: { css: "#occ" }, text: "Registered Nurses nec (254499)" }
+      - tap: { css: "#add button[type='submit']" }
+      - assertVisible: { css: ".cmp a[href='../occupations/?code=254499']" }
+
+  - name: "Compare: unknown occupation shows a message"
+    steps:
+      - goto: "http://localhost:8765/compare/"
+      - inputText: { selector: { css: "#occ" }, text: "Wizard" }
+      - tap: { css: "#add button[type='submit']" }
+      - assertText: { selector: { css: "#msg" }, expected: "Pick an occupation from the list." }
+
+  # ── My journey ──────────────────────────────────────────
+  - name: "Journey: add a scenario"
+    steps:
+      # The chances page hands occupation, points and date of effect over in the link.
+      # (Velocity's inputText can't type into <input type="date">, so the date comes from there.)
+      - goto: "http://localhost:8765/189-chances/?occ=254499&points=80&doe=2026-02-01"
+      - launchApp: { appId: "http://localhost:8765/189-chances/?occ=254499&points=80&doe=2026-02-01", clearState: true }
+      - tap: { css: "a[href*='my-journey/?occ=']" }
+      - assertVisible: { textContains: "No scenarios yet" }
+      - inputText: { selector: { css: "#n-name" }, text: "Nurse 190 VIC" }
+      - tap: { css: "#new-form button[type='submit']" }
+      - assertText: { selector: { css: ".jcard h3" }, expected: "Nurse 190 VIC" }
+      - screenshot: "journey"
+
+  - name: "Journey: cancelling delete keeps the scenario"
+    dependsOn: ["Journey: add a scenario"]
+    steps:
+      - goto: "http://localhost:8765/my-journey/"
+      - assertText: { selector: { css: ".jcard h3" }, expected: "Nurse 190 VIC" }
+      - tap: { css: "[data-act='delete']" }
+      - assertText: { selector: { css: ".jcard h3" }, expected: "Nurse 190 VIC" }
+
+  # ── EOI pool ────────────────────────────────────────────
+  - name: "EOI: totals, charts and visa switch"
+    steps:
+      - goto: "http://localhost:8765/eoi-pool/"
+      - assertVisible: { textContains: "as at 30 Sep 2026" }
+      - assertVisible: { css: "#pts-chart svg" }
+      - assertVisible: { css: "#hist svg" }
+      - tap: { css: "#seg-occ button[data-v='491']" }
+      - assertVisible: { css: "#seg-occ button[data-v='491'][aria-pressed='true']" }
+      - screenshot: "eoi"
+
+  - name: "EOI: occupation search"
+    steps:
+      - goto: "http://localhost:8765/eoi-pool/"
+      - scrollUntilVisible: { selector: { css: "#q" }, direction: down, maxScrolls: 25 }
+      - inputText: { selector: { css: "#q" }, text: "261313" }
+      - assertVisible: { css: "#table a[href='../occupations/?code=261313']" }
+
+  # ── Ceilings ────────────────────────────────────────────
+  - name: "Ceilings: search a group"
+    steps:
+      - goto: "http://localhost:8765/occupation-ceilings/"
+      - assertVisible: { textContains: "2025-26" }
+      - scrollUntilVisible: { selector: { css: "#q" }, direction: down, maxScrolls: 20 }
+      - inputText: { selector: { css: "#q" }, text: "2544" }
+      - assertText: { selector: { css: "#count" }, expected: "1 group" }
+      - assertVisible: { textContains: "13,929" }
+
+  # ── State nominations ───────────────────────────────────
+  - name: "States: Victoria first and year switch"
+    steps:
+      - goto: "http://localhost:8765/state-nominations/"
+      - assertText: { selector: { css: "#vic-h" }, expected: "Victoria’s skilled nomination program" }
+      - assertText: { selector: { css: "#alloc-table tbody tr:first-child td:first-child" }, expected: "Victoria" }
+      - scrollUntilVisible: { selector: { css: "#seg button[data-fy='2024-25']" }, direction: down, maxScrolls: 20 }
+      - tap: { css: "#seg button[data-fy='2024-25']" }
+      - assertText: { selector: { css: "#alloc-table tbody tr:first-child td:last-child" }, expected: "5,000" }
+      - screenshot: "states"
+
+  # ── Visa grants ─────────────────────────────────────────
+  - name: "Grants: planning table and occupation switch"
+    steps:
+      - goto: "http://localhost:8765/visa-grants/"
+      - assertVisible: { textContains: "185,000" }
+      - assertVisible: { css: "#trend svg" }
+      - scrollUntilVisible: { selector: { css: "#top-seg button[data-i='1']" }, direction: down, maxScrolls: 25 }
+      - tap: { css: "#top-seg button[data-i='1']" }
+      - assertVisible: { textContains: "State/Territory Nominated category" }
+
+  # ── Every page: data loads, footer disclaimer present ──
+  - name: "All pages load their data"
+    steps:
+      - goto: "http://localhost:8765/rounds/"
+      - assertNotVisible: { textContains: "couldn’t be loaded" }
+      - goto: "http://localhost:8765/occupations/"
+      - assertNotVisible: { textContains: "couldn’t be loaded" }
+      - goto: "http://localhost:8765/compare/"
+      - assertNotVisible: { textContains: "couldn’t be loaded" }
+      - goto: "http://localhost:8765/eoi-pool/"
+      - assertNotVisible: { textContains: "couldn’t be loaded" }
+      - goto: "http://localhost:8765/occupation-ceilings/"
+      - assertNotVisible: { textContains: "couldn’t be loaded" }
+      - goto: "http://localhost:8765/state-nominations/"
+      - assertNotVisible: { textContains: "couldn’t be loaded" }
+      - goto: "http://localhost:8765/visa-grants/"
+      - assertNotVisible: { textContains: "couldn’t be loaded" }
+      - goto: "http://localhost:8765/189-chances/?occ=254499&points=85"
+      - assertNotVisible: { textContains: "couldn’t be loaded" }
+      - assertVisible: { css: "footer.site-foot" }

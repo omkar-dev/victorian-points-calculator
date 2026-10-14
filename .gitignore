@@ -1,2 +1,4 @@
 interactive_visual_im_*.html
 .DS_Store
+.velocity/
+velocity-results/

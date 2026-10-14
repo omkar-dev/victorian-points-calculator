@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skilled Occupation Search | ANZSCO, Lists, 189 Cut-offs &amp; EOIs</title>
+<meta name="description" content="Search every occupation on Australia’s skilled occupation lists by name or ANZSCO code. See eligible visas, the assessing authority, 189 cut-off history, EOIs waiting and the occupation ceiling.">
+<link rel="canonical" href="https://vptpoints.com/occupations/">
+<meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1613" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VPT Points">
+<meta property="og:title" content="Skilled occupation search">
+<meta property="og:description" content="Lists, visas, assessors, 189 cut-offs, EOIs and ceilings for every skilled occupation.">
+<meta property="og:url" content="https://vptpoints.com/occupations/">
+<meta property="og:image" content="https://vptpoints.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.detail { display: grid; gap: 18px; }
+.detail-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: start; }
+.detail-head h2 { font-size: clamp(26px, 3.4vw, 38px); margin: 0 0 6px; }
+.star { all: unset; cursor: pointer; font-size: 18px; color: var(--muted); padding: 2px 6px; border-radius: 8px; }
+.star[aria-pressed="true"] { color: var(--sun); }
+.star:focus-visible { outline: 3px solid var(--sun); }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; font-size: 15px; margin: 0; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<!-- header -->
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../" aria-label="VPT Points home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--leaf)"/><path d="M9 10l7 13 7-13" fill="none" stroke="var(--sun)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      VPT Points
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href=".././" class="vic">VIC Points Test</a>
+      <a href="../skillselect-points/">Points calculator</a>
+      <a href="../189-chances/">189 chances</a>
+      <a href="../rounds/">Invitation rounds</a>
+      <a href="../occupations/" aria-current="page">Occupations</a>
+      <a href="../state-nominations/">State nominations</a>
+      <div class="more">
+        <button class="more-btn" type="button" aria-expanded="false">More</button>
+        <div class="more-list">
+          <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
+          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
+          <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
+          <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+<!-- /header -->
+
+<main id="main">
+  <div class="wrap">
+    <div class="page-hero">
+      <span class="kicker"><i></i>Official skilled occupation list</span>
+      <h1>Occupation <span class="hl">search</span></h1>
+      <p class="lede">Find your occupation by name or ANZSCO code. You’ll see which visas it’s eligible for, who assesses it, its recent 189 cut-offs, how many EOIs are waiting and its ceiling.</p>
+    </div>
+
+    <section class="block" id="detail-sec" hidden aria-live="polite"><div class="panel detail" id="detail"></div></section>
+
+    <section class="block" aria-labelledby="list-h">
+      <div class="block-head"><div><h2 id="list-h">All occupations</h2><p>Select ☆ to save up to four occupations to compare.</p></div><a class="btn" href="../compare/" style="text-decoration:none" id="compare-link">Compare saved</a></div>
+      <div class="toolbar">
+        <input class="input" type="search" id="q" placeholder="Search by name or ANZSCO code" aria-label="Search occupations" autocomplete="off">
+        <select class="input" id="f-visa" aria-label="Visa"><option value="">Any visa</option><option value="189">189</option><option value="190">190</option><option value="491">491</option><option value="186">186</option><option value="482">482</option></select>
+        <select class="input" id="f-list" aria-label="List"><option value="">Any list</option><option>MLTSSL</option><option>STSOL</option><option>ROL</option><option>CSOL</option></select>
+        <span class="muted small" id="count"></span>
+      </div>
+      <div class="scroll" id="table"></div>
+      <p class="source" id="src"></p>
+    </section>
+<!-- footer -->
+    <footer class="site-foot">
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
+      <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
+    </footer>
+<!-- /footer -->
+  </div>
+</main>
+
+<script src="../assets/site.js"></script>
+<script>
+(function () {
+  "use strict";
+  var V = window.VPT, $ = function (id) { return document.getElementById(id); }, D, redrawHist = null;
+  V.onResize(function () { if (redrawHist && !$("detail-sec").hidden) redrawHist(); });
+
+  function pills(a, cls) { return (a || []).map(function (x) { return '<span class="pill' + (cls ? " " + cls : "") + '">' + V.esc(x) + "</span>"; }).join(""); }
+  function star(o) { var on = V.saved.has(o.anzsco); return '<button type="button" class="star" data-save="' + o.anzsco + '" aria-pressed="' + on + '" aria-label="' + (on ? "Remove from" : "Save to") + " compare: " + V.esc(o.name) + '">' + (on ? "★" : "☆") + "</button>"; }
+
+  function detail(o) {
+    var sec = $("detail-sec");
+    if (!o) { sec.hidden = true; return; }
+    sec.hidden = false;
+    var e = o.eoi || {}, c = o.ceiling, h189 = o.history.filter(function (h) { return h.subclass === "189"; });
+    var inLatest = o.cutoff && o.cutoff.roundDate === D.latestRound;
+    $("detail").innerHTML =
+      '<div class="detail-head"><div><span class="crumbs">ANZSCO <span class="code">' + V.esc(o.anzsco) + "</span>" + (o.aka.length ? " · also listed as " + V.esc(o.aka.join(", ")) : "") + "</span>" +
+      "<h2>" + V.esc(o.name) + "</h2><div>" + pills(o.lists) + pills(o.visas.map(function (v) { return "Subclass " + v; }), "sun") + "</div></div>" +
+      '<div class="actions">' + star(o) + (o.visas.indexOf("189") >= 0 ? '<a class="btn primary" style="text-decoration:none" href="../189-chances/?occ=' + o.anzsco + '">Check my 189 chances</a>' : "") + '<button class="btn" type="button" id="close">Close</button></div></div>' +
+      '<div class="stats">' +
+      stat("Latest 189 cut-off", o.cutoff ? o.cutoff.minPoints + " pts" : "Not invited", o.cutoff ? V.date(o.cutoff.roundDate) + " round" + (inLatest ? "" : " (not in the latest round)") : "In rounds since July 2023") +
+      stat("EOIs waiting · 189", V.num(e.submitted189), "190: " + V.num(e.submitted190) + " · 491: " + V.num(e.submitted491)) +
+      stat("Ceiling " + (D.ceilYear || ""), c ? V.num(c.ceiling) : "–", c ? V.esc(c.name) + " (" + c.unitGroup + ")" : "Unit group not in the ceiling table") +
+      stat("Left for 189", V.left(c), "After 2024–25 grants") +
+      "</div>" +
+      '<div class="grid-2"><div><h3 class="sub">189 cut-off by round</h3><div id="hist"></div></div>' +
+      '<div><h3 class="sub">Details</h3><dl class="kv"><dt>Assessing authority</dt><dd>' + V.esc(o.assessor || "None listed") + "</dd><dt>Skill level</dt><dd>" + (o.skillLevel || "–") +
+      "</dd><dt>Unit group</dt><dd>" + V.esc(o.unitGroup || "–") + "</dd><dt>Caveats</dt><dd>" + (o.caveats ? "Yes, check the caveats for 190/491/186/482" : "None") + "</dd></dl></div></div>";
+    function drawHist() {
+      if (!h189.length) { $("hist").innerHTML = '<p class="muted">This occupation hasn’t been invited in a 189 round since July 2023.</p>'; return; }
+      V.chart($("hist"), { title: "189 cut-off by round", type: "line", height: 200, yMin: 60, unit: "points",
+        labels: h189.map(function (h) { return V.date(h.roundDate.slice(0, 7)); }), tipLabels: h189.map(function (h) { return V.date(h.roundDate); }),
+        series: [{ name: "Minimum points", color: "var(--leaf)", values: h189.map(function (h) { return h.minPoints >= 65 ? h.minPoints : null; }) }] });
+    }
+    drawHist(); redrawHist = drawHist;
+    $("close").onclick = function () { history.replaceState(null, "", location.pathname); detail(null); };
+    document.title = o.name + " (" + o.anzsco + ") | Occupation search";
+  }
+  function stat(l, v, s) { return '<div class="stat"><span class="lbl">' + l + '</span><span class="val">' + v + '</span><span class="sub2">' + s + "</span></div>"; }
+
+  V.occData("../").then(function (data) {
+    D = data;
+    var t = V.table($("table"), [
+      { key: "s", label: "", nosort: true, render: star },
+      { key: "name", label: "Occupation", render: function (o) { return '<a href="?code=' + o.anzsco + '" data-open="' + o.anzsco + '">' + V.esc(o.name) + "</a>"; } },
+      { key: "anzsco", label: "ANZSCO", render: function (o) { return '<span class="code">' + o.anzsco + "</span>"; } },
+      { key: "lists", label: "Lists", nosort: true, render: function (o) { return pills(o.lists); } },
+      { key: "assessor", label: "Assessor" },
+      { key: "cut", label: "189 cut-off", num: true },
+      { key: "pool", label: "189 EOIs", num: true }
+    ], { sortKey: "name", dir: 1, limit: 300, onDraw: function (n, s) { $("count").textContent = V.plural(n, "occupation") + (s < n ? ", showing " + s : ""); } });
+    D.list.forEach(function (o) { o.cut = o.cutoff ? o.cutoff.minPoints : null; o.pool = o.eoi ? o.eoi.submitted189 : null; });
+    function filter() {
+      var q = $("q").value.trim().toLowerCase(), v = $("f-visa").value, l = $("f-list").value;
+      t.render(D.list.filter(function (o) {
+        return (!v || o.visas.indexOf(v) >= 0) && (!l || o.lists.indexOf(l) >= 0) &&
+          (!q || o.name.toLowerCase().indexOf(q) >= 0 || o.anzsco.indexOf(q) === 0 || o.aka.join(" ").toLowerCase().indexOf(q) >= 0);
+      }));
+    }
+    ["q", "f-visa", "f-list"].forEach(function (id) { $(id).addEventListener("input", filter); });
+    document.addEventListener("click", function (e) {
+      var s = e.target.closest("[data-save]");
+      if (s) { V.saved.toggle(s.getAttribute("data-save")); filter(); var o = D.by[s.getAttribute("data-save")]; if (!$("detail-sec").hidden) detail(D.by[new URLSearchParams(location.search).get("code")]); return; }
+      var a = e.target.closest("[data-open]");
+      if (a) { e.preventDefault(); var code = a.getAttribute("data-open"); history.replaceState(null, "", "?code=" + code); detail(D.by[code]); window.scrollTo({ top: $("detail-sec").offsetTop - 12, behavior: "smooth" }); }
+    });
+    var q = new URLSearchParams(location.search);
+    if (q.get("q")) $("q").value = q.get("q");
+    filter();
+    if (q.get("code")) detail(V.findOcc(D, q.get("code")));
+    V.sources($("src"), D.occ);
+  }).catch(function (e) { V.fail($("table"), e); });
+})();
+</script>
+</body>
+</html>

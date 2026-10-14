@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>State Nomination Allocations 2026–27 | 190 &amp; 491 Places by State</title>
+<meta name="description" content="Subclass 190 and 491 nomination places for every Australian state and territory, starting with Victoria: allocations by program year, nominations so far, and how each state selects candidates.">
+<link rel="canonical" href="https://vptpoints.com/state-nominations/">
+<meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1613" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VPT Points">
+<meta property="og:title" content="State nomination allocations (190 & 491)">
+<meta property="og:description" content="190 and 491 places for every state, starting with Victoria.">
+<meta property="og:url" content="https://vptpoints.com/state-nominations/">
+<meta property="og:image" content="https://vptpoints.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.vic-card { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px; }
+@media (max-width: 860px) { .vic-card { grid-template-columns: 1fr; } }
+.vic-card h2 { font-size: clamp(26px, 3.4vw, 36px); margin: 4px 0 10px; }
+.vic-card p { margin: 0 0 12px; }
+.dates { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px; }
+.dates li { display: grid; grid-template-columns: 96px 1fr; gap: 10px; }
+.dates b { font-family: var(--mono); font-weight: 500; font-size: 13px; color: var(--leaf); padding-top: 2px; }
+.state-card h3 { margin: 0 0 6px; font-size: 19px; display: flex; justify-content: space-between; gap: 8px; }
+.state-card p { margin: 0 0 8px; color: var(--muted); font-size: 15px; }
+.state-card .nums { font-family: var(--mono); font-size: 13px; color: var(--muted); font-weight: 500; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<!-- header -->
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../" aria-label="VPT Points home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--leaf)"/><path d="M9 10l7 13 7-13" fill="none" stroke="var(--sun)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      VPT Points
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href=".././" class="vic">VIC Points Test</a>
+      <a href="../skillselect-points/">Points calculator</a>
+      <a href="../189-chances/">189 chances</a>
+      <a href="../rounds/">Invitation rounds</a>
+      <a href="../occupations/">Occupations</a>
+      <a href="../state-nominations/" aria-current="page">State nominations</a>
+      <div class="more">
+        <button class="more-btn" type="button" aria-expanded="false">More</button>
+        <div class="more-list">
+          <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
+          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
+          <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
+          <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+<!-- /header -->
+
+<main id="main">
+  <div class="wrap">
+    <div class="page-hero">
+      <span class="kicker"><i></i>Subclass 190 and 491</span>
+      <h1>State <span class="hl">nominations</span></h1>
+      <p class="lede">Each state and territory gets a set number of 190 and 491 nomination places every program year, and each picks candidates its own way. Victoria comes first here, because it’s the one this site is built around.</p>
+    </div>
+
+    <section class="block" aria-labelledby="vic-h">
+      <div class="panel vic-card">
+        <div>
+          <span class="eyebrow">Victoria</span>
+          <h2 id="vic-h">Victoria’s skilled nomination program</h2>
+          <div id="vic-summary"></div>
+          <div class="actions"><a class="btn primary" href="../" style="text-decoration:none">Calculate my VPT score</a><span id="vic-links" class="actions"></span></div>
+        </div>
+        <div>
+          <div class="stats" id="vic-stats" style="margin-bottom:16px"></div>
+          <h3 class="sub">Key dates</h3>
+          <ul class="dates" id="vic-dates"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="alloc-h">
+      <div class="block-head"><div><h2 id="alloc-h">Allocations by state</h2><p id="alloc-note">Nomination places each state and territory can use in the program year.</p></div>
+        <div class="seg" role="group" aria-label="Program year" id="seg"></div></div>
+      <div class="grid-2">
+        <div class="scroll" id="alloc-table" style="max-height:none"></div>
+        <div class="panel"><h3 class="sub">Total places</h3><div id="alloc-bars"></div></div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="sofar-h" id="sofar-sec" hidden>
+      <div class="block-head"><div><h2 id="sofar-h">Nominations so far</h2><p id="sofar-note"></p></div></div>
+      <div class="scroll" id="sofar" style="max-height:none"></div>
+    </section>
+
+    <section class="block" aria-labelledby="how-h">
+      <div class="block-head"><div><h2 id="how-h">How each state selects</h2><p>Every state runs its own process. Always check the official page before you apply.</p></div></div>
+      <div class="grid-2" id="states"></div>
+    </section>
+    <p class="source" id="src"></p>
+<!-- footer -->
+    <footer class="site-foot">
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
+      <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
+    </footer>
+<!-- /footer -->
+  </div>
+</main>
+
+<script src="../assets/site.js"></script>
+<script>
+(function () {
+  "use strict";
+  var V = window.VPT, $ = function (id) { return document.getElementById(id); };
+  var NAMES = { VIC: "Victoria", NSW: "New South Wales", QLD: "Queensland", SA: "South Australia", WA: "Western Australia", TAS: "Tasmania", ACT: "Australian Capital Territory", NT: "Northern Territory" };
+  var ORDER = ["VIC", "NSW", "QLD", "SA", "WA", "TAS", "ACT", "NT"];
+  var norm = function (s) { return String(s || "").toUpperCase().replace(/^QLD$|^QUEENSLAND$/, "QLD").replace(/^TASMANIA$/, "TAS"); };
+  var byOrder = function (a, b) { return ORDER.indexOf(norm(a.state)) - ORDER.indexOf(norm(b.state)); };
+
+  Promise.all([V.load("../data/states.json"), V.load("../data/rounds.json")]).then(function (r) {
+    var d = r[0], rounds = r[1], vic = d.vic || {};
+    var years = (d.allocations || []).slice().sort(function (a, b) { return a.fy < b.fy ? 1 : -1; });
+    var pub = years.filter(function (y) { return y.published !== false && (y.states || []).some(function (s) { return s["190"] != null || s["491"] != null; }); });
+    var fy = (pub[0] || years[0] || {}).fy;
+
+    // Victoria first.
+    // Group the summary's sentences into short paragraphs.
+    var sents = String(vic.program || "").match(/[^.!?]+(?:[.!?]+(?=\s|$)|$)/g) || [], paras = [];
+    for (var i = 0; i < sents.length; i += 3) paras.push(sents.slice(i, i + 3).join("").trim());
+    $("vic-summary").innerHTML = paras.filter(Boolean).map(function (p) { return "<p>" + V.esc(p) + "</p>"; }).join("");
+    $("vic-links").innerHTML = (vic.links || []).slice(0, 3).map(function (l) { return '<a class="btn" style="text-decoration:none" rel="noopener" href="' + V.esc(l.url) + '">' + V.esc(l.label) + "</a>"; }).join("");
+    $("vic-dates").innerHTML = (vic.keyDates || []).map(function (k) { return "<li><b>" + V.esc(V.date(k.date, true)) + "</b><span>" + V.esc(k.event) + "</span></li>"; }).join("") || '<li class="muted">No dates announced.</li>';
+    var vicStats = years.map(function (y) {
+      var s = (y.states || []).filter(function (x) { return norm(x.state) === "VIC"; })[0];
+      return s && (s["190"] != null || s["491"] != null) ? '<div class="stat"><span class="lbl">' + y.fy + '</span><span class="val">' + V.num((s["190"] || 0) + (s["491"] || 0)) + '</span><span class="sub2">190: ' + V.num(s["190"]) + " · 491: " + V.num(s["491"]) + "</span></div>" : "";
+    }).filter(Boolean).slice(0, 2);
+    $("vic-stats").innerHTML = vicStats.join("") || '<div class="stat"><span class="lbl">Victoria’s places</span><span class="val">Not yet published</span></div>';
+
+    // Allocations.
+    $("seg").innerHTML = years.map(function (y) { return '<button type="button" data-fy="' + y.fy + '" aria-pressed="' + (y.fy === fy) + '">' + y.fy + "</button>"; }).join("");
+    function drawAlloc() {
+      var y = years.filter(function (x) { return x.fy === fy; })[0] || { states: [] };
+      var rows = (y.states || []).slice().sort(byOrder).map(function (s) {
+        var t = s["190"] == null && s["491"] == null ? null : (s["190"] || 0) + (s["491"] || 0);
+        return { state: norm(s.state), name: NAMES[norm(s.state)] || s.state, s190: s["190"], s491: s["491"], total: t };
+      });
+      var pubCount = rows.filter(function (x) { return x.total != null; }).length;
+      $("alloc-note").textContent = fy + ": " + (pubCount === rows.length ? "all states have published." : pubCount + " of " + rows.length + " states have published so far. Blanks are not yet announced.") + (y.note ? " " + y.note : "");
+      V.table($("alloc-table"), [
+        { key: "name", label: "State", render: function (x) { return (x.state === "VIC" ? "<b>" : "") + V.esc(x.name) + (x.state === "VIC" ? "</b>" : ""); } },
+        { key: "s190", label: "190", num: true }, { key: "s491", label: "491", num: true }, { key: "total", label: "Total", num: true }
+      ], { sortKey: null }).render(rows);
+      V.hbars($("alloc-bars"), rows.filter(function (x) { return x.total != null; }).sort(function (a, b) { return b.total - a.total; }).map(function (x) { return { label: x.name, value: x.total }; }));
+      if (!pubCount) $("alloc-bars").innerHTML = '<p class="muted">Not published yet.</p>';
+    }
+    $("seg").addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      fy = b.getAttribute("data-fy");
+      this.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      drawAlloc();
+    });
+    drawAlloc();
+
+    // Nominations so far this program year, from the invitation rounds page.
+    var si = rounds.stateInvites || [];
+    if (si.length) {
+      $("sofar-sec").hidden = false;
+      $("sofar-note").textContent = "EOIs nominated by each state " + (si[0].period || "") + ", as published by Home Affairs. “<5” means fewer than five.";
+      var cell = function (s, k) { return s[k] == null ? (s.lt5 && s.lt5[k] ? "<5" : "–") : V.num(s[k]); };
+      V.table($("sofar"), [
+        { key: "name", label: "State" },
+        { key: "a", label: "190", num: true, render: function (s) { return cell(s, "190"); } },
+        { key: "b", label: "491", num: true, render: function (s) { return cell(s, "491"); } }
+      ], { sortKey: null }).render(si.slice().sort(byOrder).map(function (s) { return Object.assign({ name: NAMES[norm(s.state)] || s.state, a: s["190"], b: s["491"] }, s); }));
+    }
+
+    $("states").innerHTML = (d.statesInfo || []).slice().sort(byOrder).map(function (s) {
+      var st = norm(s.state);
+      return '<div class="panel state-card"><h3>' + V.esc(NAMES[st] || s.state) + '<span class="pill">' + V.esc(st) + "</span></h3><p>" + V.esc(s.summary) + "</p>" +
+        (s.url ? '<a href="' + V.esc(s.url) + '" rel="noopener">Official ' + V.esc(st) + " page →</a>" : "") + "</div>";
+    }).join("");
+    V.sources($("src"), d);
+  }).catch(function (e) { V.fail($("alloc-table"), e); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+# Phone-width checks for vptpoints.com (390 × 844, an iPhone-sized viewport).
+# Serve the site first:   python3 tests/velocity/serve.py
+# Then run:               velocity run tests/velocity/mobile.yaml
+appId: "http://localhost:8765/"
+config:
+  platform: web
+  web:
+    width: 390
+    height: 844
+    headless: true
+    chromePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    # The site uses CSS scroll-behavior: smooth. Velocity needs its web
+    # scrollIntoView/scrollBy to pass behavior:'instant', or a tap below the
+    # fold can land while the page is still scrolling (crates/velocity-web,
+    # selector.rs actionability_js and driver.rs swipe).
+  sync:
+    timeoutMs: 6000
+  artifacts:
+    screenshots: always
+
+tests:
+  - name: "Phone: menu button replaces the nav"
+    steps:
+      - goto: "http://localhost:8765/"
+      - assertVisible: { css: ".nav-toggle" }
+      - assertNotVisible: { css: ".site-nav" }
+      - tap: { css: ".nav-toggle" }
+      - assertVisible: { css: ".site-nav.open" }
+      - assertVisible: { css: ".site-nav a[href='visa-grants/']" }
+      - screenshot: "phone-menu"
+      - tap: { css: ".site-nav a[href='rounds/']" }
+      - assertVisible: { css: "#round-chart svg" }
+
+  - name: "Phone: VPT score dock shows and links to the card"
+    steps:
+      - goto: "http://localhost:8765/"
+      - assertVisible: { css: "#dock" }
+      - assertText: { selector: { css: "#dock-total" }, expected: "560" }
+      - tap: { css: "label[for='english-superior']" }
+      - assertText: { selector: { css: "#dock-total" }, expected: "660" }
+      - screenshot: "phone-vpt"
+
+  - name: "Phone: points calculator dock follows the visa"
+    steps:
+      - goto: "http://localhost:8765/skillselect-points/?visa=190"
+      - assertText: { selector: { css: "#dock-total" }, expected: "60" }
+      - assertText: { selector: { css: "#dock-visa" }, expected: "pts · 190" }
+
+  - name: "Phone: chances page"
+    steps:
+      - goto: "http://localhost:8765/189-chances/?occ=254499&points=85"
+      - assertText: { selector: { css: ".verdict h2" }, expected: "10 points above the last cut-off" }
+      - screenshot: "phone-chances"
+
+  - name: "Phone: occupation detail"
+    steps:
+      - goto: "http://localhost:8765/occupations/?code=261313"
+      - assertText: { selector: { css: "#detail h2" }, expected: "Software Engineer" }
+      - screenshot: "phone-occupation"
+
+  - name: "Phone: compare table scrolls inside its box"
+    steps:
+      - goto: "http://localhost:8765/compare/?codes=261313,233211,254499"
+      - assertVisible: { css: ".cmp" }
+      - screenshot: "phone-compare"
+
+  - name: "Phone: states and grants"
+    steps:
+      - goto: "http://localhost:8765/state-nominations/"
+      - assertVisible: { css: "#vic-h" }
+      - screenshot: "phone-states"
+      - goto: "http://localhost:8765/visa-grants/"
+      - assertVisible: { css: "#trend svg" }
+      - screenshot: "phone-grants"
+
+  - name: "Phone: EOI, ceilings, journey"
+    steps:
+      - goto: "http://localhost:8765/eoi-pool/"
+      - assertVisible: { css: "#pts-chart svg" }
+      - screenshot: "phone-eoi"
+      - goto: "http://localhost:8765/occupation-ceilings/"
+      - assertVisible: { css: "#top .hbar" }
+      - screenshot: "phone-ceilings"
+      - goto: "http://localhost:8765/my-journey/"
+      - assertVisible: { css: "#new-form" }
+      - screenshot: "phone-journey"

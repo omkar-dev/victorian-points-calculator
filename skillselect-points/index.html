@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkillSelect Points Calculator 2026–27 | Subclass 189, 190 &amp; 491</title>
+<meta name="description" content="Free SkillSelect points calculator for the subclass 189, 190 and 491 skilled visas. Add up age, English, experience, education, partner and nomination points and check them against the 65-point pass mark.">
+<link rel="canonical" href="https://vptpoints.com/skillselect-points/">
+<meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1613" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VPT Points">
+<meta property="og:title" content="SkillSelect Points Calculator (189, 190, 491)">
+<meta property="og:description" content="Add up your federal skilled migration points and see where you stand against the 65-point pass mark.">
+<meta property="og:url" content="https://vptpoints.com/skillselect-points/">
+<meta property="og:image" content="https://vptpoints.com/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.visa-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.visa-tiles button { font: inherit; text-align: left; cursor: pointer; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--paper); color: var(--ink); display: grid; gap: 2px; }
+.visa-tiles button[aria-pressed="true"] { border-color: var(--ink); }
+.visa-tiles b { font-family: var(--display); font-size: 24px; font-variant-numeric: tabular-nums; }
+.visa-tiles small { font-size: 12.5px; color: var(--muted); }
+.cap-note { font-size: 13.5px; color: var(--warn); margin: 0; }
+</style>
+</head>
+<body>
+<a class="skip" href="#calculator">Skip to the calculator</a>
+<!-- header -->
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../" aria-label="VPT Points home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--leaf)"/><path d="M9 10l7 13 7-13" fill="none" stroke="var(--sun)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      VPT Points
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href=".././" class="vic">VIC Points Test</a>
+      <a href="../skillselect-points/" aria-current="page">Points calculator</a>
+      <a href="../189-chances/">189 chances</a>
+      <a href="../rounds/">Invitation rounds</a>
+      <a href="../occupations/">Occupations</a>
+      <a href="../state-nominations/">State nominations</a>
+      <div class="more">
+        <button class="more-btn" type="button" aria-expanded="false">More</button>
+        <div class="more-list">
+          <a href="../compare/">Compare occupations<small>Side by side, up to four</small></a>
+          <a href="../my-journey/">My journey<small>Track your EOI from lodgement</small></a>
+          <a href="../eoi-pool/">EOI pool<small>Who is waiting, by points and occupation</small></a>
+          <a href="../visa-grants/">Visa grants<small>Program places and grants by visa</small></a>
+          <a href="../occupation-ceilings/">Occupation ceilings<small>Caps on 189 and 491 family invitations</small></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+<!-- /header -->
+
+<main id="main">
+  <div class="wrap">
+    <div class="page-hero">
+      <span class="kicker"><i></i>Federal points test · 189, 190 and 491</span>
+      <h1>SkillSelect <span class="hl">points</span> calculator</h1>
+      <p class="lede">You need at least 65 points to lodge an Expression of Interest. Answer the questions below to see your points for each visa, including the nomination points a state adds.</p>
+    </div>
+
+    <p class="callout" style="margin-top:20px;max-width:860px"><strong>A points test reform is coming, but isn’t in force yet.</strong> The 2026–27 Budget says the test will be changed to favour better educated, higher-skilled and younger applicants. No new points or start date had been published as at 15 October 2026, so this calculator uses the current official tables.</p>
+
+    <section id="calculator" aria-labelledby="calc-h" style="padding-top:0">
+      <h2 id="calc-h" class="sr-only">Work out your SkillSelect points</h2>
+      <div class="calc">
+        <form class="form" id="pts-form" aria-label="Your details">
+          <div class="q">
+            <div class="q-head"><label class="q-title" for="age">How old are you?</label><span class="q-pts" id="age-pts">30 pts</span></div>
+            <p class="q-help">Your age on the day you’re invited to apply. You must be under 45.</p>
+            <div class="slider">
+              <div class="slider-read"><output id="age-out" for="age">29</output><span id="age-note">years old</span></div>
+              <input type="range" id="age" min="18" max="45" step="1" value="29" aria-describedby="age-note">
+              <div class="scale" aria-hidden="true"><span>18</span><span>25</span><span>33</span><span>40</span><span>45+</span></div>
+            </div>
+          </div>
+
+          <fieldset class="q">
+            <legend>How good is your English?</legend>
+            <p class="q-help">From IELTS, PTE Academic, TOEFL iBT, OET or Cambridge C1 Advanced. The IELTS score shown is for each of the four parts.</p>
+            <div class="chips grow" data-key="english"></div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Skilled work outside Australia</legend>
+            <p class="q-help">Years in your nominated or a closely related occupation in the last 10 years, as your skills assessment counts them.</p>
+            <div class="chips" data-key="overseas"></div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Skilled work in Australia</legend>
+            <p class="q-help">Years in your nominated or a closely related occupation in the last 10 years.</p>
+            <div class="chips" data-key="aus"></div>
+            <p class="cap-note" id="cap-note" hidden></p>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>What’s your highest qualification?</legend>
+            <p class="q-help">An Australian qualification, or an overseas one your assessing authority recognises at that level.</p>
+            <div class="chips grow" data-key="education"></div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>Do any of these apply to you?</legend>
+            <p class="q-help">Pick all that apply.</p>
+            <div class="chips" data-key="extras"></div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend>What about your partner?</legend>
+            <p class="q-help">“Skilled partner” means they’re under 45, have Competent English, and have a positive skills assessment in an occupation on the same list as yours.</p>
+            <div class="chips grow" data-key="partner" style="--cols:2"></div>
+          </fieldset>
+        </form>
+
+        <aside class="score" id="score" aria-labelledby="score-h">
+          <div class="score-top">
+            <h2 id="score-h" class="sr-only">Your SkillSelect points</h2>
+            <div class="lbl" id="score-lbl">Subclass 189 points</div>
+            <div class="big" aria-live="polite"><strong id="total">0</strong><span>pts</span></div>
+            <span class="badge" id="badge">Eligible</span>
+            <p class="summary" id="summary"></p>
+          </div>
+          <div class="score-body">
+            <div class="visa-tiles" id="visa-tiles" role="group" aria-label="Choose a visa"></div>
+            <div>
+              <div class="stack" id="stack" role="img" aria-label="How your points are made up"></div>
+              <ul class="legend" id="legend"></ul>
+            </div>
+            <div>
+              <h3 class="sub">Where you can gain the most</h3>
+              <ul class="tips" id="tips"></ul>
+            </div>
+            <div class="actions">
+              <a class="btn primary" id="chances" href="../189-chances/" style="text-decoration:none">Check my 189 chances</a>
+              <button type="button" class="btn" id="share">Copy link</button>
+              <button type="button" class="btn" id="reset">Start over</button>
+            </div>
+            <p class="private">Everything stays in your browser. Your answers are saved in the link.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  <a class="dock" id="dock" href="#score" aria-label="See your points breakdown">
+    <span><strong id="dock-total">0</strong><small id="dock-visa">pts · 189</small></span>
+    <em>See breakdown</em>
+  </a>
+
+  <div class="wrap">
+    <section id="tables" aria-labelledby="tables-h">
+      <div class="sec-head">
+        <span class="eyebrow">Reference</span>
+        <h2 id="tables-h">SkillSelect points tables</h2>
+        <p>The points the calculator uses. Your answers are highlighted. Check the official points table on the Home Affairs website before you lodge.</p>
+      </div>
+      <div class="tables" id="ref-tables"></div>
+      <p class="source">Source: <a href="https://immi.homeaffairs.gov.au/help-support/tools/points-calculator" rel="noopener">Home Affairs points table</a> for subclasses 189, 190 and 491.</p>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-h">
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-h">Questions about SkillSelect points</h2>
+      </div>
+      <div class="faq">
+        <details open><summary>What is the pass mark?</summary><p>65 points. That’s the minimum to lodge an EOI. Invitation cut-offs are usually much higher for popular occupations, so the pass mark is rarely enough on its own for subclass 189.</p></details>
+        <details><summary>How do nomination points work?</summary><p>Subclass 190 adds 5 points when a state or territory nominates you. Subclass 491 adds 15 points for state nomination or for sponsorship by an eligible relative in a designated regional area. You can include these points when you work out whether you reach 65.</p></details>
+        <details><summary>Why is my experience capped at 20?</summary><p>Overseas and Australian skilled employment together can’t add more than 20 points, however many years you have.</p></details>
+        <details><summary>Is this the same as the Victorian Points Test?</summary><p>No. This is the federal test every 189, 190 and 491 applicant needs. Victoria ranks its 190 and 491 candidates with its own test scored out of 950. You can <a href="../">calculate your VPT score</a> too.</p></details>
+      </div>
+    </section>
+<!-- footer -->
+    <footer class="site-foot">
+      <p class="foot-links"><a href=".././">VIC Points Test</a> · <a href="../skillselect-points/">Points calculator</a> · <a href="../189-chances/">189 chances</a> · <a href="../rounds/">Invitation rounds</a> · <a href="../occupations/">Occupations</a> · <a href="../state-nominations/">State nominations</a> · <a href="../compare/">Compare occupations</a> · <a href="../my-journey/">My journey</a> · <a href="../eoi-pool/">EOI pool</a> · <a href="../visa-grants/">Visa grants</a> · <a href="../occupation-ceilings/">Occupation ceilings</a></p>
+      <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
+      <p>Updated 15 October 2026 · Your answers stay in your browser.</p>
+    </footer>
+<!-- /footer -->
+  </div>
+</main>
+
+<script src="../assets/site.js"></script>
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+
+  // Keep the link in step with the answers, but only once input pauses: Safari
+  // refuses more than 100 replaceState calls per 10 seconds, and a slider drag
+  // fires dozens a second. flushUrl() applies a pending update straight away.
+  var urlTimer = null, pendingUrl = null;
+  function setUrl(u) {
+    pendingUrl = u; clearTimeout(urlTimer);
+    urlTimer = setTimeout(flushUrl, 250);
+  }
+  function flushUrl() {
+    clearTimeout(urlTimer);
+    if (pendingUrl == null) return;
+    try { history.replaceState(null, "", pendingUrl); } catch (e) {}
+    pendingUrl = null;
+  }
+  window.addEventListener("pagehide", flushUrl);
+
+  function agePts(a) { return a >= 45 ? null : a <= 24 ? 25 : a <= 32 ? 30 : a <= 39 ? 25 : 15; }
+
+  var CHOICES = {
+    english: { def: "competent", options: [
+      { v: "competent", label: "Competent", sub: "IELTS 6 · 0 pts", pts: 0 },
+      { v: "proficient", label: "Proficient", sub: "IELTS 7 · 10 pts", pts: 10 },
+      { v: "superior", label: "Superior", sub: "IELTS 8 · 20 pts", pts: 20 } ] },
+    overseas: { def: "0", options: [
+      { v: "0", label: "Under 3 years", pts: 0 }, { v: "3", label: "3–4 years", pts: 5 },
+      { v: "5", label: "5–7 years", pts: 10 }, { v: "8", label: "8–10 years", pts: 15 } ] },
+    aus: { def: "0", options: [
+      { v: "0", label: "Under 1 year", pts: 0 }, { v: "1", label: "1–2 years", pts: 5 },
+      { v: "3", label: "3–4 years", pts: 10 }, { v: "5", label: "5–7 years", pts: 15 }, { v: "8", label: "8–10 years", pts: 20 } ] },
+    education: { def: "bachelor", options: [
+      { v: "none", label: "None of these", pts: 0 },
+      { v: "diploma", label: "Diploma, trade or recognised award", sub: "10 pts", pts: 10 },
+      { v: "bachelor", label: "Bachelor’s or Master’s", sub: "15 pts", pts: 15 },
+      { v: "phd", label: "Doctorate", sub: "20 pts", pts: 20 } ] },
+    partner: { def: "single", options: [
+      { v: "single", label: "Single, or partner is a citizen or PR", sub: "10 pts", pts: 10 },
+      { v: "skilled", label: "Skilled partner", sub: "10 pts", pts: 10 },
+      { v: "english", label: "Partner has Competent English only", sub: "5 pts", pts: 5 },
+      { v: "none", label: "Partner meets none of these", sub: "0 pts", pts: 0 } ] }
+  };
+  var EXTRAS = [
+    { v: "study", label: "Australian study requirement", sub: "2+ years of study in Australia · 5 pts", pts: 5 },
+    { v: "specialist", label: "Specialist education", sub: "Australian research Master’s or PhD in STEM · 10 pts", pts: 10 },
+    { v: "py", label: "Professional Year", sub: "Completed in Australia · 5 pts", pts: 5 },
+    { v: "ccl", label: "Community language", sub: "NAATI CCL credential · 5 pts", pts: 5 },
+    { v: "regional", label: "Regional study", sub: "Studied in regional Australia · 5 pts", pts: 5 }
+  ];
+  var VISAS = [
+    { v: "189", label: "189", sub: "Independent", bonus: 0 },
+    { v: "190", label: "190", sub: "+5 nominated", bonus: 5 },
+    { v: "491", label: "491", sub: "+15 regional", bonus: 15 }
+  ];
+  var FACTORS = [
+    { k: "age", label: "Age", c: "var(--f1)" }, { k: "english", label: "English", c: "var(--f2)" },
+    { k: "work", label: "Experience", c: "var(--f3)" }, { k: "education", label: "Education", c: "var(--f4)" },
+    { k: "extras", label: "Bonus points", c: "var(--f5)" }, { k: "partner", label: "Partner", c: "var(--f6)" },
+    { k: "nomination", label: "Nomination", c: "var(--f7)" }
+  ];
+  var visa = "189";
+
+  // Build the chip groups.
+  Object.keys(CHOICES).forEach(function (key) {
+    var c = CHOICES[key], box = document.querySelector('.chips[data-key="' + key + '"]');
+    box.style.setProperty("--count", c.options.length);
+    box.innerHTML = c.options.map(function (o) {
+      var id = key + "-" + o.v;
+      return '<label class="chip" for="' + id + '"><input type="radio" name="' + key + '" id="' + id + '" value="' + o.v + '"' + (o.v === c.def ? " checked" : "") + "><span>" + o.label + "<small>" + (o.sub || o.pts + " pts") + "</small></span></label>";
+    }).join("");
+  });
+  document.querySelector('.chips[data-key="extras"]').innerHTML = EXTRAS.map(function (o) {
+    return '<label class="chip" for="x-' + o.v + '"><input type="checkbox" name="extras" id="x-' + o.v + '" value="' + o.v + '"><span>' + o.label + "<small>" + o.sub + "</small></span></label>";
+  }).join("");
+
+  function choice(key) {
+    var el = document.querySelector('input[name="' + key + '"]:checked');
+    var v = el ? el.value : CHOICES[key].def;
+    return CHOICES[key].options.filter(function (o) { return o.v === v; })[0];
+  }
+  function extras() { return EXTRAS.filter(function (o) { return $("x-" + o.v).checked; }); }
+
+  // Restore answers from the link.
+  try {
+    var q = new URLSearchParams(location.search);
+    if (q.get("age")) $("age").value = Math.min(45, Math.max(18, +q.get("age") || 29));
+    Object.keys(CHOICES).forEach(function (key) { var el = $(key + "-" + q.get(key)); if (el) el.checked = true; });
+    (q.get("extras") || "").split(",").forEach(function (v) { var el = $("x-" + v); if (el) el.checked = true; });
+    if (/^(189|190|491)$/.test(q.get("visa"))) visa = q.get("visa");
+  } catch (e) {}
+
+  function compute() {
+    var age = +$("age").value, ap = agePts(age);
+    var o = choice("overseas").pts, a = choice("aus").pts, work = Math.min(20, o + a);
+    var r = { age: ap || 0, english: choice("english").pts, work: work, workRaw: o + a, education: choice("education").pts,
+      extras: extras().reduce(function (s, x) { return s + x.pts; }, 0), partner: choice("partner").pts, tooOld: ap === null };
+    r.base = r.age + r.english + r.work + r.education + r.extras + r.partner;
+    return r;
+  }
+
+  function tipsFor(r, total) {
+    var t = [], eng = choice("english").v;
+    if (r.tooOld) return ['<li class="warn"><span class="gain">45+</span><span>You need to be under 45 when you’re invited to apply for 189, 190 or 491.</span></li>'];
+    if (eng !== "superior") t.push([eng === "competent" ? 20 : 10, "Retake your English test. Proficient adds 10 and Superior adds 20. For most people this is the fastest gain."]);
+    if (!$("x-py").checked) t.push([5, "Complete a Professional Year in accounting, ICT or engineering."]);
+    if (!$("x-ccl").checked) t.push([5, "Pass the NAATI Credentialed Community Language test."]);
+    if (choice("partner").v === "none") t.push([5, "If your partner gets Competent English, that’s 5 points. A skills assessment as well makes it 10."]);
+    else if (choice("partner").v === "english") t.push([5, "A positive skills assessment for your partner lifts their points from 5 to 10."]);
+    if (r.workRaw < 20) t.push(["+5", "More skilled work moves you up a band. Overseas and Australian work together max out at 20."]);
+    var age = +$("age").value;
+    if (age === 32 || age === 39) t.push(["−5", "Your age points drop at your next birthday. Try to get your invitation before then."]);
+    return t.slice(0, 4).map(function (x) {
+      var warn = typeof x[0] === "string" && x[0][0] === "−";
+      return '<li' + (warn ? ' class="warn"' : "") + '><span class="gain">' + (typeof x[0] === "number" ? "+" + x[0] : x[0]) + "</span><span>" + x[1] + "</span></li>";
+    }).join("") || "<li>You’ve claimed everything you can. Nice work.</li>";
+  }
+
+  function update() {
+    var age = +$("age").value, r = compute();
+    $("age-out").textContent = age >= 45 ? "45+" : age;
+    $("age-pts").textContent = r.tooOld ? "Not eligible" : r.age + " pts";
+    $("age").style.setProperty("--p", ((age - 18) / 27 * 100) + "%");
+    $("cap-note").hidden = r.workRaw <= 20;
+    $("cap-note").textContent = "Your experience adds up to " + r.workRaw + ", but the combined cap is 20 points.";
+
+    var bonus = VISAS.filter(function (x) { return x.v === visa; })[0].bonus, total = r.tooOld ? 0 : r.base + bonus;
+    r.nomination = bonus;
+    $("total").textContent = total; $("dock-total").textContent = total; $("dock-visa").textContent = "pts · " + visa;
+    $("score-lbl").textContent = "Subclass " + visa + " points";
+    var badge = $("badge");
+    if (r.tooOld) { badge.textContent = "Age limit"; badge.className = "badge out"; }
+    else if (total >= 65) { badge.textContent = "Can lodge"; badge.className = "badge"; }
+    else { badge.textContent = (65 - total) + " short"; badge.className = "badge out"; }
+    $("summary").textContent = r.tooOld ? "You need to be under 45 for these visas."
+      : total >= 65 ? "You meet the 65-point pass mark for subclass " + visa + ". Your rank in the invitation queue depends on your occupation’s cut-off."
+      : "You need " + (65 - total) + " more points to lodge a subclass " + visa + " EOI.";
+
+    $("visa-tiles").innerHTML = VISAS.map(function (x) {
+      return '<button type="button" data-v="' + x.v + '" aria-pressed="' + (x.v === visa) + '"><small>Subclass ' + x.label + '</small><b>' + (r.tooOld ? "–" : r.base + x.bonus) + "</b><small>" + x.sub + "</small></button>";
+    }).join("");
+
+    var max = Math.max(total, 65);
+    $("stack").innerHTML = FACTORS.map(function (f) { return r[f.k] ? '<i style="width:' + (r[f.k] / max * 100) + "%;background:" + f.c + '"></i>' : ""; }).join("");
+    $("legend").innerHTML = FACTORS.map(function (f) {
+      return '<li class="' + (r[f.k] ? "" : "zero") + '"><span class="dot" style="background:' + f.c + '"></span>' + f.label + "<b>" + r[f.k] + "</b></li>";
+    }).join("");
+    $("tips").innerHTML = tipsFor(r, total);
+    $("chances").href = "../189-chances/?points=" + (r.tooOld ? "" : r.base);
+
+    // Highlight table rows.
+    document.querySelectorAll("tr.is-you").forEach(function (tr) { tr.classList.remove("is-you"); });
+    var mark = function (k, v) { var tr = document.querySelector('#ref-tables tr[data-k="' + k + '"][data-v="' + v + '"]'); if (tr) tr.classList.add("is-you"); };
+    mark("age", age <= 24 ? "18" : age <= 32 ? "25" : age <= 39 ? "33" : age <= 44 ? "40" : "45");
+    Object.keys(CHOICES).forEach(function (k) { mark(k, choice(k).v); });
+    extras().forEach(function (x) { mark("extras", x.v); });
+
+    try {
+      var p = new URLSearchParams();
+      p.set("age", age); Object.keys(CHOICES).forEach(function (k) { p.set(k, choice(k).v); });
+      var ex = extras().map(function (x) { return x.v; }).join(","); if (ex) p.set("extras", ex);
+      p.set("visa", visa);
+      setUrl("?" + p.toString());
+    } catch (e) {}
+  }
+
+  // Reference tables.
+  (function () {
+    var t = function (title, key, rows) {
+      return "<h3>" + title + '</h3><table><thead><tr><th scope="col">' + (key === "age" ? "Age" : "Option") + '</th><th scope="col">Points</th></tr></thead><tbody>' +
+        rows.map(function (r) { return '<tr data-k="' + key + '" data-v="' + r.v + '"><td>' + r.label + "</td><td>" + r.pts + "</td></tr>"; }).join("") + "</tbody></table>";
+    };
+    var ages = [{ v: "18", label: "18–24", pts: 25 }, { v: "25", label: "25–32", pts: 30 }, { v: "33", label: "33–39", pts: 25 }, { v: "40", label: "40–44", pts: 15 }, { v: "45", label: "45 and over", pts: "Not eligible" }];
+    var opt = function (k) { return CHOICES[k].options; };
+    $("ref-tables").innerHTML =
+      '<div class="tbl">' + t("Age", "age", ages) + t("English", "english", opt("english").map(function (o) { return { v: o.v, label: o.label, pts: o.pts }; })) + "</div>" +
+      '<div class="tbl">' + t("Work outside Australia", "overseas", opt("overseas")) + t("Work in Australia", "aus", opt("aus")) + '<p class="small muted" style="margin:10px 20px 0">Combined cap: 20 points.</p></div>' +
+      '<div class="tbl">' + t("Education", "education", opt("education")) + t("Bonus points", "extras", EXTRAS) + t("Partner", "partner", opt("partner")) +
+      t("Nomination", "visa", [{ v: "190", label: "State nomination (190)", pts: 5 }, { v: "491", label: "Regional nomination or family sponsor (491)", pts: 15 }]) + "</div>";
+  })();
+
+  $("pts-form").addEventListener("input", update);
+  $("pts-form").addEventListener("change", update);
+  $("pts-form").addEventListener("submit", function (e) { e.preventDefault(); });
+  $("visa-tiles").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) { visa = b.getAttribute("data-v"); update(); } });
+  $("reset").addEventListener("click", function () {
+    $("age").value = 29; visa = "189";
+    Object.keys(CHOICES).forEach(function (k) { $(k + "-" + CHOICES[k].def).checked = true; });
+    EXTRAS.forEach(function (x) { $("x-" + x.v).checked = false; });
+    update();
+  });
+  $("share").addEventListener("click", function () {
+    flushUrl();
+    var btn = this, done = function () { btn.textContent = "Link copied"; setTimeout(function () { btn.textContent = "Copy link"; }, 1800); };
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, function () { window.prompt("Copy this link:", location.href); });
+    else window.prompt("Copy this link:", location.href);
+  });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (es) { $("dock").classList.toggle("hide", es[0].isIntersecting); }, { threshold: 0.25 }).observe($("score"));
+  }
+  update();
+})();
+</script>
+</body>
+</html>
