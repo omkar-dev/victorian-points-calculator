@@ -269,20 +269,6 @@ main > section, .section { padding-block: 72px 0; }
 h2 { font-size: clamp(30px, 4.2vw, 46px); line-height: 1.06; font-weight: 800; margin: 0; }
 .sec-head p { margin: 0; color: var(--muted); font-size: 18px; max-width: 62ch; }
 
-.age-chart { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 24px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 28px; align-items: center; }
-@media (max-width: 820px) { .age-chart { grid-template-columns: 1fr; padding: 18px 14px; } }
-.age-chart svg { width: 100%; height: auto; display: block; overflow: visible; }
-.age-chart .axis { fill: var(--muted); font: 500 11px var(--mono); }
-.age-chart .grid { stroke: var(--line); stroke-width: 1; }
-.age-chart .area { fill: var(--leaf-soft); }
-.age-chart .line { fill: none; stroke: var(--leaf); stroke-width: 3; stroke-linejoin: round; }
-.age-chart .you { fill: var(--sun); stroke: var(--card); stroke-width: 3; transition: cx .3s, cy .3s; }
-.age-chart .you-lbl { fill: var(--ink); font: 700 13px var(--body); }
-.age-chart .you-stem { stroke: var(--sun); stroke-width: 2; stroke-dasharray: 3 3; }
-.callouts { display: grid; gap: 18px; }
-.callouts div { display: grid; gap: 2px; }
-.callouts strong { font-family: var(--display); font-size: 34px; font-weight: 800; line-height: 1; }
-.callouts span { color: var(--muted); font-size: 15px; }
 
 .changes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
 @media (max-width: 820px) { .changes { grid-template-columns: 1fr; } }
@@ -462,17 +448,6 @@ footer { padding-block: 40px 120px; font-size: 14px; color: var(--muted); displa
         <p>Victoria scores Registrations of Interest more finely for 2026–27. Age is now scored for each year, and salary in $5,000 steps. Calculators that still use the old five-year age bands can be out by more than 100 points.</p>
       </div>
 
-      <div class="age-chart">
-        <svg id="age-svg" viewBox="0 0 560 280" role="img" aria-labelledby="age-svg-t">
-          <title id="age-svg-t">VPT age points by age, from 265 at 18 to 300 at ages 20 to 29, down to 16 at 44 and 0 from 45</title>
-        </svg>
-        <div class="callouts">
-          <div><strong>300</strong><span>points at every age from 20 to 29</span></div>
-          <div><strong>−14 to −16</strong><span>points for each birthday from 30 to 40</span></div>
-          <div><strong>−30</strong><span>points for each birthday from 41 to 44</span></div>
-        </div>
-      </div>
-
       <div class="changes">
         <div class="change"><span class="tag">Age</span><h3>Points for each year</h3><p>Ages 20–29 still get the full 300. After that you lose points every year, down to 136 at 40 and 16 at 44.</p></div>
         <div class="change"><span class="tag">Salary</span><h3>19 bands of $5,000</h3><p>Each $5,000 step adds about 8 points. You start at 8 points at $80,000 and reach the full 150 at $170,000.</p></div>
@@ -638,27 +613,6 @@ footer { padding-block: 40px 120px; font-size: 14px; color: var(--muted); displa
     }).join("") + '<tr data-v="75000"><td>Under $80,000 or offshore</td><td>0</td></tr>';
   })();
 
-  // Age chart, drawn to one scale.
-  var CH = { w: 560, h: 280, l: 40, r: 16, t: 30, b: 30 };
-  function cx(age) { return CH.l + (age - 18) / (45 - 18) * (CH.w - CH.l - CH.r); }
-  function cy(p) { return CH.t + (1 - p / 300) * (CH.h - CH.t - CH.b); }
-  (function () {
-    var s = "", y0 = cy(0);
-    [0, 100, 200, 300].forEach(function (p) {
-      s += '<line class="grid" x1="' + CH.l + '" x2="' + (CH.w - CH.r) + '" y1="' + cy(p) + '" y2="' + cy(p) + '"/>';
-      s += '<text class="axis" x="' + (CH.l - 8) + '" y="' + (cy(p) + 4) + '" text-anchor="end">' + p + "</text>";
-    });
-    [18, 20, 25, 30, 35, 40, 45].forEach(function (a) {
-      s += '<text class="axis" x="' + cx(a) + '" y="' + (CH.h - 8) + '" text-anchor="middle">' + (a === 45 ? "45+" : a) + "</text>";
-    });
-    var pts = []; for (var a = 18; a <= 45; a++) pts.push(cx(a).toFixed(1) + "," + cy(AGE[a]).toFixed(1));
-    s += '<polygon class="area" points="' + cx(18) + "," + y0 + " " + pts.join(" ") + " " + cx(45) + "," + y0 + '"/>';
-    s += '<polyline class="line" points="' + pts.join(" ") + '"/>';
-    s += '<line class="you-stem" id="you-stem" x1="0" x2="0" y1="0" y2="' + y0 + '"/>';
-    s += '<circle class="you" id="you" r="8" cx="0" cy="0"/>';
-    s += '<text class="you-lbl" id="you-lbl" x="0" y="0" text-anchor="middle"></text>';
-    $("age-svg").insertAdjacentHTML("beforeend", s);
-  })();
 
   // Restore saved answers from the link.
   try {
@@ -755,12 +709,7 @@ footer { padding-block: 40px 120px; font-size: 14px; color: var(--muted); displa
     }
     $("tips").innerHTML = html.length ? html.join("") : "<li>You’ve maxed out every factor you can change. Nice work.</li>";
 
-    // Chart marker.
-    var ya = Math.min(r.ageYears, 45), X = cx(ya), Y = cy(AGE[ya]);
-    $("you").setAttribute("cx", X); $("you").setAttribute("cy", Y);
-    $("you-stem").setAttribute("x1", X); $("you-stem").setAttribute("x2", X); $("you-stem").setAttribute("y1", Y);
-    var lbl = $("you-lbl"); lbl.textContent = "You: " + AGE[ya] + " pts";
-    lbl.setAttribute("x", Math.max(CH.l + 40, Math.min(CH.w - CH.r - 40, X))); lbl.setAttribute("y", Math.max(16, Y - 16));
+    var ya = Math.min(r.ageYears, 45);
 
     // Highlight table rows.
     document.querySelectorAll("tr.is-you").forEach(function (tr) { tr.classList.remove("is-you"); });
