@@ -72,7 +72,26 @@ def privacy_google():
     return "<!-- privacy-google -->" + ("\n      " + "\n      ".join(parts) + "\n" if parts else "") + "<!-- /privacy-google -->"
 
 
+# Light/dark switch. Inline in <head> so a saved choice applies before first paint
+# (no flash), and self-contained so it also works on 404.html, which loads no site.js.
+# Without a saved choice the page follows the system setting.
+THEME = """<!-- theme -->
+<script>(function(){var d=document.documentElement,k="vpt:theme",c={light:"#1d5a44",dark:"#0b0b0c"};
+function sys(){return matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+function cur(){return d.dataset.theme||sys()}
+function paint(){var t=cur();document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){if(d.dataset.theme)m.content=c[t]});
+document.querySelectorAll(".theme-btn").forEach(function(b){b.setAttribute("aria-pressed",String(t==="dark"))})}
+try{var s=localStorage.getItem(k);if(s==="light"||s==="dark")d.dataset.theme=s}catch(e){}
+document.addEventListener("DOMContentLoaded",paint);
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".theme-btn");if(!b)return;
+var n=cur()==="dark"?"light":"dark";d.dataset.theme=n;try{localStorage.setItem(k,n)}catch(e){}paint()})})();</script>
+<!-- /theme -->"""
+
+
 def stamp_head(text, page):
+    if "<!-- theme -->" not in text:
+        text = text.replace("</head>", "<!-- theme --><!-- /theme -->\n</head>", 1)
+    text = stamp(text, "theme", THEME)
     if "<!-- analytics -->" not in text:
         text = text.replace("</head>", "<!-- analytics --><!-- /analytics -->\n</head>", 1)
     return stamp(text, "analytics", analytics(page))
@@ -95,10 +114,9 @@ def header(page, current=None):
 <div class="wrap">
   <header class="top">
     <a class="brand" href="{pre or './'}" aria-label="VPT Points home">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--leaf)"/><path d="M9 10l7 13 7-13" fill="none" stroke="var(--sun)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--leaf)"/><path d="M9 10l7 13 7-13" fill="none" stroke="var(--card)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       VPT Points
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
       {prim}
       <div class="more">
@@ -108,6 +126,13 @@ def header(page, current=None):
         </div>
       </div>
     </nav>
+    <div class="top-end">
+      <button class="theme-btn" type="button" aria-pressed="false" aria-label="Dark theme" title="Switch light or dark theme">
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
   </header>
 </div>
 <!-- /header -->"""

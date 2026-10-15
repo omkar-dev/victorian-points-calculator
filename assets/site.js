@@ -223,7 +223,7 @@
         s.values.forEach(function (v, i) {
           if (v == null) return;
           var bx = x(i) - (bw * k + 2 * (k - 1)) / 2 + si * (bw + 2), top = y(v), base = y(lo), h = Math.max(base - top, 1), r = Math.min(4, h, bw / 2);
-          svg += '<path fill="' + (spec.highlight === i ? "var(--sun)" : s.color) + '" d="M' + bx + " " + base + "V" + (top + r) + "q0 -" + r + " " + r + " -" + r + "h" + (bw - 2 * r) + "q" + r + " 0 " + r + " " + r + "V" + base + 'Z"/>';
+          svg += '<path fill="' + (spec.highlight === i ? "var(--ink)" : s.color) + '" d="M' + bx + " " + base + "V" + (top + r) + "q0 -" + r + " " + r + " -" + r + "h" + (bw - 2 * r) + "q" + r + " 0 " + r + " " + r + "V" + base + 'Z"/>';
         });
       });
     }

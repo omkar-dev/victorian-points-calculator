@@ -8,8 +8,8 @@ import re
 
 from build_pages import ICON_TAGS, ROOT, SITE, esc, table
 
-FONTS = ("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800"
-         "&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap")
+FONTS = ("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700"
+         "&family=IBM+Plex+Mono:wght@500&display=swap")
 GUIDES = [("victorian-points-test/age-points/", "Age points", "Every year from 18 to 44."),
           ("victorian-points-test/salary-points/", "Salary points", "All 19 Victorian earnings bands."),
           ("victorian-points-test/score-examples/", "Score examples", "Eight profiles, fully worked.")]
@@ -53,7 +53,7 @@ def shell(path, title, desc, body, graph):
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{url}">
 <meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0e1613" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="VPT Points">

@@ -244,7 +244,7 @@ def occupation_page(D, code, updated):
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{url}">
 <meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0e1613" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="VPT Points">
@@ -263,8 +263,8 @@ def occupation_page(D, code, updated):
 {ICON_TAGS.format(p="../../")}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=IBM+Plex+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=IBM+Plex+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="../../assets/site.css">
 <script type="application/ld+json">{ld}</script>
 </head>
@@ -521,16 +521,16 @@ def og_images():
             continue
         seen.add(key)
         dst = out / f"{key}.png"
-        sig = hashlib.sha1(f"{title}|{kicker}|{line}|v2".encode()).hexdigest()[:10]
+        sig = hashlib.sha1(f"{title}|{kicker}|{line}|v3".encode()).hexdigest()[:10]
         sigf = out / f".{key}.sig"
         if dst.exists() and sigf.exists() and sigf.read_text() == sig:
             continue
-        im = Image.new("RGB", (1200, 630), "#f4f6f1")
+        im = Image.new("RGB", (1200, 630), "#f7f7f7")
         d = ImageDraw.Draw(im)
         d.rounded_rectangle((70, 70, 150, 150), 24, fill="#1d5a44")
-        d.line([(93, 98), (110, 128), (127, 98)], fill="#f2b81f", width=9, joint="curve")
-        d.text((172, 88), "VPT Points", font=f(40, 2), fill="#13261f")
-        d.rounded_rectangle((70, 210, 70 + 26 + d.textlength(kicker, font=f(30, 5)) + 26, 262), 26, fill="#e1ece4")
+        d.line([(93, 98), (110, 128), (127, 98)], fill="#ffffff", width=9, joint="curve")
+        d.text((172, 88), "VPT Points", font=f(40, 2), fill="#1e1f24")
+        d.rounded_rectangle((70, 210, 70 + 26 + d.textlength(kicker, font=f(30, 5)) + 26, 262), 26, fill="#e3eee7")
         d.text((96, 216), kicker, font=f(30, 5), fill="#1d5a44")
         words, lines, cur = title.split(), [], ""
         big = f(92, 2)
@@ -542,19 +542,19 @@ def og_images():
         lines.append(cur)
         y = 290
         for i, l in enumerate(lines[:2]):
-            d.text((70, y), l, font=big, fill="#13261f")
+            d.text((70, y), l, font=big, fill="#1e1f24")
             if i == len(lines[:2]) - 1:
                 w = d.textlength(l, font=big)
-                d.rectangle((70, y + 104, 70 + w, y + 116), fill="#f2b81f")
+                d.rectangle((70, y + 104, 70 + w, y + 116), fill="#1d5a44")
             y += 104
-        d.text((70, 540), line, font=f(36, 5), fill="#56675f")
-        d.text((1130, 548), "vptpoints.com", font=f(28, 5), fill="#56675f", anchor="ra")
+        d.text((70, 540), line, font=f(36, 5), fill="#5d5e66")
+        d.text((1130, 548), "vptpoints.com", font=f(28, 5), fill="#5d5e66", anchor="ra")
         im.save(dst, optimize=True)
         sigf.write_text(sig)
 
 
 def mark(size, radius=0.25, inset=0.0):
-    """The V mark from favicon.svg: green square, yellow V. inset shrinks the V for maskable icons."""
+    """The V mark from favicon.svg: green square, white V. inset shrinks the V for maskable icons."""
     from PIL import Image, ImageDraw
     k = 4  # draw large, scale down for clean edges
     S = size * k
@@ -565,9 +565,9 @@ def mark(size, radius=0.25, inset=0.0):
     o = S * inset / 2
     pts = [(o + 8 * u, o + 10 * u), (o + 16 * u, o + 24 * u), (o + 24 * u, o + 10 * u)]
     w = max(2, int(3 * u))
-    d.line(pts, fill="#f2b81f", width=w, joint="curve")
+    d.line(pts, fill="#ffffff", width=w, joint="curve")
     for x, y in (pts[0], pts[2]):  # round caps, as in the SVG
-        d.ellipse((x - w / 2, y - w / 2, x + w / 2, y + w / 2), fill="#f2b81f")
+        d.ellipse((x - w / 2, y - w / 2, x + w / 2, y + w / 2), fill="#ffffff")
     return im.resize((size, size), Image.LANCZOS)
 
 
@@ -601,7 +601,7 @@ def icons_and_extras(updated):
         "name": "VPT Points: Victorian Points Test calculator", "short_name": "VPT Points",
         "description": "Victorian Points Test calculator and skilled visa tools for Australia.",
         "start_url": "/", "scope": "/", "display": "standalone", "lang": "en-AU",
-        "background_color": "#f4f6f1", "theme_color": "#1d5a44",
+        "background_color": "#f7f7f7", "theme_color": "#1d5a44",
         "icons": [{"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"},
                   {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"},
                   {"src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
