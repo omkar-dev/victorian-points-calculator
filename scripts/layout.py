@@ -37,7 +37,7 @@ EXTRA = [("privacy/", "Privacy", "")]  # stamped like the rest, linked from the 
 # added to the pages until it is set. Cloudflare Web Analytics needs no code:
 # Cloudflare injects it at the edge.
 GA4_ID = "G-3FJECMFC01"          # Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ9"
-ADSENSE_CLIENT = ""  # AdSense publisher ID, e.g. "ca-pub-1234567890123456"
+ADSENSE_CLIENT = "ca-pub-9285887335649555"  # AdSense publisher ID, e.g. "ca-pub-1234567890123456"
 # No ads where people type in their own details. The calculators keep answers
 # in the page address, and ad requests send that address to the ad network.
 AD_FREE = {"", "skillselect-points/", "189-chances/", "my-journey/", "compare/", "404", "privacy/"}
