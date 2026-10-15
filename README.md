@@ -46,3 +46,7 @@ velocity run tests/velocity/mobile.yaml    # 8 tests at 390 px
 ```
 
 Not affiliated with the Victorian Government, any state government or the Department of Home Affairs.
+
+## Analytics and ads
+
+Cloudflare Web Analytics is on already (Cloudflare injects it; see the Cloudflare dashboard). To add Google Analytics 4 or AdSense, set `GA4_ID` or `ADSENSE_CLIENT` at the top of `scripts/layout.py` and run it. It adds the tags to every page, writes `ads.txt`, and fills in the Google section of `/privacy/`. Calculator pages never get ads, and GA4 receives page addresses without the query string, so answers are never sent.

@@ -54,6 +54,13 @@
 
   var VPT = window.VPT = {};
 
+  // Analytics events (GA4, when it's configured). Never pass answers or scores.
+  VPT.track = function (name, params) { if (typeof window.gtag === "function") window.gtag("event", name, params || {}); };
+  document.addEventListener("click", function (e) {
+    var el = e.target.closest && e.target.closest("[data-track]");
+    if (el) VPT.track(el.getAttribute("data-track"));
+  });
+
   VPT.$ = function (sel, root) { return (root || document).querySelector(sel); };
   VPT.esc = function (s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
