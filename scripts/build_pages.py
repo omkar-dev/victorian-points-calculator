@@ -148,9 +148,11 @@ def occupation_page(D, code, updated):
         facts.append(f"It belongs to the {esc(c['name'])} group ({c['unitGroup']}), with a {D.ceil_fy} occupation ceiling of "
                      f"{c['ceiling']:,} places and {left} left for subclass 189 after 2024–25 grants.")
 
-    title = f"{name} ({code}): 189 Cut-off, EOIs and Visa Options"
-    if len(title) > 62:
-        title = f"{name} ({code}): 189 Cut-off and EOIs"
+    # Longest wording that stays within the ~60 characters search results show.
+    for title in (f"{name} ({code}): 189 Cut-off, EOIs and Visas", f"{name} ({code}): 189 Cut-off & EOIs",
+                  f"{name}: 189 Cut-off & EOIs", f"{name} ({code})", name):
+        if len(title) <= 60:
+            break
     desc_bits = []
     if cut:
         desc_bits.append(f"Latest 189 cut-off for {name}: {cut['minPoints']} points ({short_date(cut['roundDate'])}).")
@@ -238,7 +240,7 @@ def occupation_page(D, code, updated):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)} | VPT Points</title>
+<title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{url}">
 <meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
@@ -454,7 +456,11 @@ def seo_block(path, text, D, updated):
     img = f"{SITE}assets/og/{meta['og']}.png"
     graph = []
     if path == "":
+        graph.append({"@type": "Organization", "@id": SITE + "#organization", "name": "VPT Points", "url": SITE,
+                      "logo": {"@type": "ImageObject", "url": SITE + "icon-512.png", "width": 512, "height": 512},
+                      "description": "Independent Victorian Points Test calculator and skilled visa tools for Australia."})
         graph.append({"@type": "WebSite", "@id": SITE + "#website", "url": SITE, "name": "VPT Points",
+                      "alternateName": ["VPT Calculator", "Victorian Points Test calculator"], "publisher": {"@id": SITE + "#organization"},
                       "potentialAction": {"@type": "SearchAction",
                                           "target": {"@type": "EntryPoint", "urlTemplate": SITE + "occupations/?q={search_term_string}"},
                                           "query-input": "required name=search_term_string"}})
@@ -566,17 +572,25 @@ def mark(size, radius=0.25, inset=0.0):
 
 
 ICON_TAGS = """<link rel="icon" href="{p}favicon.ico" sizes="48x48">
+<link rel="icon" href="{p}favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="icon" href="{p}favicon-48x48.png" type="image/png" sizes="48x48">
 <link rel="icon" href="{p}favicon-32x32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="{p}favicon-16x16.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="{p}apple-touch-icon.png">
 <link rel="manifest" href="{p}site.webmanifest">
 <meta name="application-name" content="VPT Points">
-<meta name="apple-mobile-web-app-title" content="VPT Points">"""
+<meta name="apple-mobile-web-app-title" content="VPT Points">
+<link rel="mask-icon" href="{p}safari-pinned-tab.svg" color="#1d5a44">"""
 
 
 def icons_and_extras(updated):
     mark(180, radius=0).convert("RGB").save(ROOT / "apple-touch-icon.png", optimize=True)  # iOS rounds the corners itself
     mark(32).save(ROOT / "favicon-32x32.png", optimize=True)
+    mark(48).save(ROOT / "favicon-48x48.png", optimize=True)
+    mark(96).save(ROOT / "favicon-96x96.png", optimize=True)
+    (ROOT / "safari-pinned-tab.svg").write_text(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M8 10l8 14 8-14" fill="none" stroke="#000" '
+        'stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>\n')
     mark(16, radius=0.2).save(ROOT / "favicon-16x16.png", optimize=True)
     mark(192).save(ROOT / "icon-192.png", optimize=True)
     mark(512).save(ROOT / "icon-512.png", optimize=True)
@@ -649,6 +663,20 @@ def main(updated):
         if new != old:
             p.write_text(new)
 
+    import vpt_guides  # Victorian Points Test guides, from the calculator's own tables
+    guide_paths = []
+    for path, page in vpt_guides.pages(updated).items():
+        f = ROOT / path / "index.html"
+        f.parent.mkdir(parents=True, exist_ok=True)
+        old = f.read_text() if f.exists() else ""
+        for tag in ("header", "footer"):
+            m = re.search(rf"<!-- {tag} -->.*?<!-- /{tag} -->", old, re.S)
+            if m:
+                page = re.sub(rf"<!-- {tag} -->.*?<!-- /{tag} -->", lambda _: m.group(0), page, flags=re.S)
+        if page != old:
+            f.write_text(page)
+        guide_paths.append(path)
+
     blocks = prerenders(D)
     targets = {"rounds/index.html": ["rounds-stats", "rounds-table", "rounds-occ"], "occupations/index.html": ["occ-list"],
                "occupation-ceilings/index.html": ["ceilings"], "eoi-pool/index.html": ["eoi-stats", "eoi"],
@@ -673,7 +701,7 @@ def main(updated):
     icons_and_extras(updated)
     (ROOT / "404.html").write_text(NOT_FOUND)
     print(f"built {len(D.pages)} occupation pages, {len(blocks)} pre-rendered blocks, SEO for {len(PAGES)} pages")
-    return [f"occupations/{c}/" for c in D.pages]
+    return guide_paths, [f"occupations/{c}/" for c in D.pages]
 
 
 if __name__ == "__main__":

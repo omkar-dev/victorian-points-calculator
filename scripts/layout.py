@@ -70,10 +70,13 @@ def header(page, current=None):
 
 def footer(page):
     pre = "../" * page.count("/")
-    links = " · ".join(f'<a href="{pre}{p or "./"}">{l}</a>' for p, l, _ in PAGES)
+    links = " · ".join(f'<a href="{pre}{p or "./"}">{"Victorian Points Test calculator" if p == "" else l}</a>' for p, l, _ in PAGES)
+    guides = " · ".join(f'<a href="{pre}victorian-points-test/{slug}/">{name}</a>' for slug, name in
+                        [("age-points", "VPT age points"), ("salary-points", "VPT salary points"), ("score-examples", "VPT score examples")])
     return f"""<!-- footer -->
     <footer class="site-foot">
       <p class="foot-links">{links}</p>
+      <p class="foot-links">Guides: {guides}</p>
       <p>VPT Points is an independent, free project. It isn’t made by or connected to the Victorian Government, any state government or the Department of Home Affairs, and it isn’t migration advice. Figures come from official publications and can lag behind the latest round, so check the source links and talk to a registered migration agent before you act.</p>
       <p>Updated {int(UPDATED[8:])} October {UPDATED[:4]} · Your answers stay in your browser.</p>
     </footer>
@@ -88,8 +91,8 @@ def stamp(text, tag, block):
 
 
 def main():
-    import build_pages  # occupation pages, pre-rendered tables, structured data
-    generated = build_pages.main(UPDATED)
+    import build_pages  # occupation pages, VPT guides, pre-rendered tables, structured data
+    guides, generated = build_pages.main(UPDATED)
 
     for path, _, _ in PAGES:
         f = ROOT / path / "index.html"
@@ -103,14 +106,14 @@ def main():
         print("ok", f.relative_to(ROOT))
 
     changed = 0
-    for path in generated:  # occupation pages sit under Occupations in the nav
-        f = ROOT / path / "index.html"
+    for path, current in [(g, "") for g in guides] + [(o, "occupations/") for o in generated]:
+        f = ROOT / path / "index.html"  # guides sit under the VPT, occupation pages under Occupations
         old = f.read_text()
-        t = stamp(stamp(old, "header", header(path, "occupations/")), "footer", footer(path))
+        t = stamp(stamp(old, "header", header(path, current)), "footer", footer(path))
         if t != old:
             f.write_text(t)
             changed += 1
-    print(f"ok {len(generated)} occupation pages ({changed} changed)")
+    print(f"ok {len(guides)} guides and {len(generated)} occupation pages ({changed} changed)")
 
     for src in sorted((ROOT / "data").glob("*.json")):
         data = json.loads(src.read_text())
@@ -122,6 +125,7 @@ def main():
         print("data", src.with_suffix(".js").relative_to(ROOT))
 
     entries = [(p, "monthly" if p == "" else "weekly", "1.0" if p == "" else "0.8") for p, _, _ in PAGES if (ROOT / p / "index.html").exists()]
+    entries += [(p, "monthly", "0.8") for p in guides]
     entries += [(p, "monthly", "0.6") for p in generated]
     urls = "\n".join(
         f"  <url>\n    <loc>{SITE}{p}</loc>\n    <lastmod>{UPDATED}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{prio}</priority>\n  </url>"

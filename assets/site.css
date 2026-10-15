@@ -368,7 +368,8 @@ h1, h2, .lede, .val { overflow-wrap: break-word; }
 .fields { grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); }
 .brand { min-width: 0; }
 @media (max-width: 260px) { .brand { font-size: 0; gap: 0; } .top { padding-block: 12px; } }
-.panel .data { display: block; overflow-x: auto; }
+.panel .data { width: 100%; }
+@media (max-width: 420px) { .panel .data { display: block; overflow-x: auto; } }
 .chart-sum { margin: 0 0 10px; font-size: 14px; color: var(--muted); }
 .stepper { margin-left: auto; display: inline-flex; gap: 8px; }
 .stepper button { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--control); background: var(--paper); color: var(--ink); font: 600 22px/1 var(--body); cursor: pointer; }

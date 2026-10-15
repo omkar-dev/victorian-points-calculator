@@ -211,6 +211,35 @@ tests:
       - scrollUntilVisible: { selector: { css: "#occupation-guides .tool" }, direction: down, maxScrolls: 40 }
       - assertVisible: { css: "#occupation-guides a.tool[href^='occupations/']" }
 
+  # ── Victorian Points Test guides ────────────────────────
+  - name: "Guide: age points table opens the calculator"
+    steps:
+      - goto: "http://localhost:8765/victorian-points-test/age-points/"
+      - assertText: { selector: { css: "h1" }, expected: "VPT age points for every year" }
+      - tap: { css: "tbody a[href='../../?age=40']" }
+      - assertText: { selector: { css: "#age-pts" }, expected: "136 pts" }
+
+  - name: "Guide: salary points table opens the calculator"
+    steps:
+      - goto: "http://localhost:8765/victorian-points-test/salary-points/"
+      - assertText: { selector: { css: "h1" }, expected: "VPT salary points by earnings band" }
+      - tap: { css: "tbody a[href='../../?salary=125000']" }
+      - assertText: { selector: { css: "#salary-pts" }, expected: "79 pts" }
+
+  - name: "Guide: a score example matches the calculator"
+    steps:
+      - goto: "http://localhost:8765/victorian-points-test/score-examples/"
+      - assertVisible: { text: "Senior specialist" }
+      - tap: { css: "a[href*='age=35&salary=135000']" }
+      - assertText: { selector: { css: "#total" }, expected: "780" }
+
+  - name: "Home links to the guides"
+    steps:
+      - goto: "http://localhost:8765/"
+      - scrollUntilVisible: { selector: { css: "#points-tables a[href='victorian-points-test/score-examples/']" }, direction: down, maxScrolls: 30 }
+      - tap: { css: "#points-tables a[href='victorian-points-test/score-examples/']" }
+      - assertText: { selector: { css: "h1" }, expected: "VPT score examples, worked out" }
+
   - name: "404 page offers a way back"
     steps:
       - goto: "http://localhost:8765/404.html"
