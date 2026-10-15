@@ -258,8 +258,7 @@ def occupation_page(D, code, updated):
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{SITE}assets/og/occupations.png">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-<link rel="manifest" href="../../site.webmanifest">
+{ICON_TAGS.format(p="../../")}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -303,7 +302,7 @@ def occupation_page(D, code, updated):
 
     <section class="block" aria-labelledby="vic-h">
       <h2 id="vic-h">Applying in Victoria?</h2>
-      <p class="prose">Victoria ranks subclass 190 and 491 Registrations of Interest with the Victorian Points Test, scored out of 950. Check Victoria’s current eligibility for {esc(name)} on Live in Melbourne before you apply, then <a href="../../">work out your VPT score</a>.</p>
+      <p class="prose">Victoria ranks subclass 190 and 491 Registrations of Interest with the Victorian Points Test, scored out of 950. Check Victoria’s current eligibility for {esc(name)} on Live in Melbourne before you apply, then use the <a href="../../">Victorian Points Test calculator</a> to work out your score.</p>
     </section>
 
     {f'<section class="block" aria-labelledby="faq-h"><h2 id="faq-h">Questions</h2><div class="faq">{faq_html}</div></section>' if faqs else ''}
@@ -491,7 +490,7 @@ def seo_block(path, text, D, updated):
     tags += ['<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',
              '<meta property="og:locale" content="en_AU">']
     prefix = "../" * path.count("/")
-    tags += [f'<link rel="apple-touch-icon" href="{prefix}apple-touch-icon.png">', f'<link rel="manifest" href="{prefix}site.webmanifest">']
+    tags.append(ICON_TAGS.format(p=prefix))
     return "\n" + "\n".join(tags) + "\n"
 
 
@@ -548,17 +547,50 @@ def og_images():
         sigf.write_text(sig)
 
 
-def icons_and_extras(updated):
+def mark(size, radius=0.25, inset=0.0):
+    """The V mark from favicon.svg: green square, yellow V. inset shrinks the V for maskable icons."""
     from PIL import Image, ImageDraw
-    im = Image.new("RGBA", (180, 180), (0, 0, 0, 0))
+    k = 4  # draw large, scale down for clean edges
+    S = size * k
+    im = Image.new("RGBA", (S, S), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle((0, 0, 179, 179), 40, fill="#1d5a44")
-    d.line([(50, 56), (90, 128), (130, 56)], fill="#f2b81f", width=18, joint="curve")
-    im.save(ROOT / "apple-touch-icon.png", optimize=True)
+    d.rounded_rectangle((0, 0, S - 1, S - 1), int(S * radius), fill="#1d5a44")
+    u = S / 32 * (1 - inset)
+    o = S * inset / 2
+    pts = [(o + 8 * u, o + 10 * u), (o + 16 * u, o + 24 * u), (o + 24 * u, o + 10 * u)]
+    w = max(2, int(3 * u))
+    d.line(pts, fill="#f2b81f", width=w, joint="curve")
+    for x, y in (pts[0], pts[2]):  # round caps, as in the SVG
+        d.ellipse((x - w / 2, y - w / 2, x + w / 2, y + w / 2), fill="#f2b81f")
+    return im.resize((size, size), Image.LANCZOS)
+
+
+ICON_TAGS = """<link rel="icon" href="{p}favicon.ico" sizes="48x48">
+<link rel="icon" href="{p}favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="{p}favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="{p}apple-touch-icon.png">
+<link rel="manifest" href="{p}site.webmanifest">
+<meta name="application-name" content="VPT Points">
+<meta name="apple-mobile-web-app-title" content="VPT Points">"""
+
+
+def icons_and_extras(updated):
+    mark(180, radius=0).convert("RGB").save(ROOT / "apple-touch-icon.png", optimize=True)  # iOS rounds the corners itself
+    mark(32).save(ROOT / "favicon-32x32.png", optimize=True)
+    mark(16, radius=0.2).save(ROOT / "favicon-16x16.png", optimize=True)
+    mark(192).save(ROOT / "icon-192.png", optimize=True)
+    mark(512).save(ROOT / "icon-512.png", optimize=True)
+    mark(512, radius=0, inset=0.3).save(ROOT / "icon-maskable-512.png", optimize=True)  # V inside the safe zone
+    big = mark(256)
+    big.save(ROOT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
     (ROOT / "site.webmanifest").write_text(json.dumps({
-        "name": "VPT Points", "short_name": "VPT Points", "start_url": "/", "display": "standalone",
+        "name": "VPT Points: Victorian Points Test calculator", "short_name": "VPT Points",
+        "description": "Victorian Points Test calculator and skilled visa tools for Australia.",
+        "start_url": "/", "scope": "/", "display": "standalone", "lang": "en-AU",
         "background_color": "#f4f6f1", "theme_color": "#1d5a44",
-        "icons": [{"src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"},
+        "icons": [{"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"},
+                  {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"},
+                  {"src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
                   {"src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}, indent=2) + "\n")
 
 
@@ -571,6 +603,7 @@ NOT_FOUND = """<!DOCTYPE html>
 <meta name="robots" content="noindex">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+""" + ICON_TAGS.format(p="/") + """
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>

@@ -102,7 +102,7 @@
   };
   VPT.sources = function (el, data) {
     if (!el || !data) return;
-    var s = (data.sources || []).map(function (x) { return '<a href="' + VPT.esc(x.url) + '" rel="noopener">' + VPT.esc(x.label) + "</a>"; }).join(" · ");
+    var s = (data.sources || []).map(function (x) { return '<a href="' + VPT.esc(x.url) + '" rel="noopener">' + VPT.esc(x.label || x.name || x.url) + "</a>"; }).join(" · ");
     el.innerHTML = "Source: " + (s || "official publications") + (data.updated ? " · Checked " + VPT.date(data.updated) : "");
   };
   VPT.fail = function (el, err) {
