@@ -33,18 +33,19 @@ MORE = [
 PAGES = PRIMARY + MORE
 
 
-def header(page):
+def header(page, current=None):
     pre = "../" * page.count("/")
+    current = page if current is None else current
 
     def link(path, label, desc=None):
-        cur = ' aria-current="page"' if path == page else ""
+        cur = ' aria-current="page"' if path == current else ""
         cls = ' class="vic"' if path == "" else ""
         sub = f"<small>{desc}</small>" if desc else ""
         return f'<a href="{pre}{path or "./"}"{cls}{cur}>{label}{sub}</a>'
 
     prim = "\n      ".join(link(p, l) for p, l, _ in PRIMARY)
     more = "\n          ".join(link(p, l, d) for p, l, d in MORE)
-    more_cur = " is-current" if any(p == page for p, _, _ in MORE) else ""
+    more_cur = " is-current" if any(p == current for p, _, _ in MORE) else ""
     return f"""<!-- header -->
 <div class="wrap">
   <header class="top">
@@ -87,6 +88,9 @@ def stamp(text, tag, block):
 
 
 def main():
+    import build_pages  # occupation pages, pre-rendered tables, structured data
+    generated = build_pages.main(UPDATED)
+
     for path, _, _ in PAGES:
         f = ROOT / path / "index.html"
         if not f.exists():
@@ -98,6 +102,16 @@ def main():
         f.write_text(t)
         print("ok", f.relative_to(ROOT))
 
+    changed = 0
+    for path in generated:  # occupation pages sit under Occupations in the nav
+        f = ROOT / path / "index.html"
+        old = f.read_text()
+        t = stamp(stamp(old, "header", header(path, "occupations/")), "footer", footer(path))
+        if t != old:
+            f.write_text(t)
+            changed += 1
+    print(f"ok {len(generated)} occupation pages ({changed} changed)")
+
     for src in sorted((ROOT / "data").glob("*.json")):
         data = json.loads(src.read_text())
         src.with_suffix(".js").write_text(
@@ -107,9 +121,11 @@ def main():
         )
         print("data", src.with_suffix(".js").relative_to(ROOT))
 
+    entries = [(p, "monthly" if p == "" else "weekly", "1.0" if p == "" else "0.8") for p, _, _ in PAGES if (ROOT / p / "index.html").exists()]
+    entries += [(p, "monthly", "0.6") for p in generated]
     urls = "\n".join(
-        f"  <url>\n    <loc>{SITE}{p}</loc>\n    <lastmod>{UPDATED}</lastmod>\n    <changefreq>{'monthly' if p == '' else 'weekly'}</changefreq>\n    <priority>{'1.0' if p == '' else '0.7'}</priority>\n  </url>"
-        for p, _, _ in PAGES if (ROOT / p / "index.html").exists()
+        f"  <url>\n    <loc>{SITE}{p}</loc>\n    <lastmod>{UPDATED}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{prio}</priority>\n  </url>"
+        for p, freq, prio in entries
     )
     (ROOT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n'

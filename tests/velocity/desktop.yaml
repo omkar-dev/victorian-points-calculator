@@ -158,15 +158,65 @@ tests:
       - assertText: { selector: { css: "#rounds-table tbody tr:first-child td:first-child" }, expected: "7 Nov 2024" }
 
   # ── Occupations ─────────────────────────────────────────
-  - name: "Occupations: search by code and open detail"
+  - name: "Occupations: search by code and open its page"
     steps:
       - goto: "http://localhost:8765/occupations/"
       - inputText: { selector: { css: "#q" }, text: "261313" }
       - assertText: { selector: { css: "#count" }, expected: "1 occupation" }
-      - tap: { css: "a[data-open='261313']" }
-      - assertText: { selector: { css: "#detail h2" }, expected: "Software Engineer" }
+      - tap: { css: "#table a[href='261313/']" }
+      - assertText: { selector: { css: "h1" }, expected: "Software Engineer" }
       - assertVisible: { css: "#hist svg" }
-      - screenshot: "occupation-detail"
+      - screenshot: "occupation-page"
+
+  - name: "Occupations: the ?code= detail view still works"
+    steps:
+      - goto: "http://localhost:8765/occupations/?code=261313"
+      - assertText: { selector: { css: "#detail h2" }, expected: "Software Engineer" }
+      - assertVisible: { css: "#detail a[href='261313/']" }
+
+  # ── Occupation pages (generated) ────────────────────────
+  - name: "Occupation page: numbers, history and breadcrumbs"
+    steps:
+      - goto: "http://localhost:8765/occupations/254499/"
+      - assertText: { selector: { css: "h1" }, expected: "Registered Nurses nec" }
+      - assertVisible: { textContains: "the lowest score invited for Registered Nurses nec was" }
+      - assertVisible: { css: ".site-nav a[aria-current='page'][href='../../occupations/']" }
+      - assertVisible: { css: "nav.crumbs a[href='../']" }
+      - assertVisible: { css: "#hist svg" }
+      - assertVisible: { text: "Applying in Victoria?" }
+
+  - name: "Occupation page: related link and chances button"
+    steps:
+      - goto: "http://localhost:8765/occupations/254499/"
+      - scrollUntilVisible: { selector: { css: "a.tool[href='../254411/']" }, direction: down, maxScrolls: 30 }
+      - tap: { css: "a.tool[href='../254411/']" }
+      - assertText: { selector: { css: "h1" }, expected: "Nurse Practitioner" }
+      - goto: "http://localhost:8765/occupations/254499/"
+      - tap: { css: "a[href='../../189-chances/?occ=254499']" }
+      - assertVisible: { css: "#occ" }
+      - assertVisible: { css: "#pts" }
+
+  - name: "Occupation page: not on the 189 list"
+    steps:
+      - goto: "http://localhost:8765/occupations/141999/"
+      - assertVisible: { textContains: "isn’t on the MLTSSL, so subclass 189 isn’t available" }
+      - assertNotVisible: { css: "a[href='../../189-chances/?occ=141999']" }
+
+  - name: "Pre-rendered tables are in the HTML"
+    steps:
+      - goto: "http://localhost:8765/189-chances/"
+      - assertVisible: { text: "Latest 189 cut-off for every occupation" }
+      - assertVisible: { css: "a[href='../occupations/254499/']" }
+      - goto: "http://localhost:8765/"
+      - scrollUntilVisible: { selector: { css: "#occupation-guides .tool" }, direction: down, maxScrolls: 40 }
+      - assertVisible: { css: "#occupation-guides a.tool[href^='occupations/']" }
+
+  - name: "404 page offers a way back"
+    steps:
+      - goto: "http://localhost:8765/404.html"
+      - assertText: { selector: { css: "h1" }, expected: "That page isn’t here" }
+      - tap: { css: "a.tool.feature" }
+      - assertText: { selector: { css: "#total" }, expected: "560" }
 
   - name: "Occupations: filters narrow the list"
     steps:
@@ -181,25 +231,25 @@ tests:
       - tap: { css: "#detail .star" }
       - assertVisible: { css: "#detail .star[aria-pressed='true']" }
       - tap: { css: "#compare-link" }
-      - assertVisible: { css: ".cmp a[href='../occupations/?code=261313']" }
+      - assertVisible: { css: ".cmp a[href='../occupations/261313/']" }
 
   # ── Compare ─────────────────────────────────────────────
   - name: "Compare: two occupations side by side, then remove one"
     steps:
       - goto: "http://localhost:8765/compare/?codes=261313,233211"
-      - assertVisible: { css: ".cmp a[href='../occupations/?code=261313']" }
-      - assertVisible: { css: ".cmp a[href='../occupations/?code=233211']" }
+      - assertVisible: { css: ".cmp a[href='../occupations/261313/']" }
+      - assertVisible: { css: ".cmp a[href='../occupations/233211/']" }
       - assertVisible: { css: "#chart svg" }
       - screenshot: "compare"
       - tap: { css: "[data-rm='233211']" }
-      - assertNotVisible: { css: ".cmp a[href='../occupations/?code=233211']" }
+      - assertNotVisible: { css: ".cmp a[href='../occupations/233211/']" }
 
   - name: "Compare: add by typing"
     steps:
       - goto: "http://localhost:8765/compare/?codes=261313"
       - inputText: { selector: { css: "#occ" }, text: "Registered Nurses nec (254499)" }
       - tap: { css: "#add button[type='submit']" }
-      - assertVisible: { css: ".cmp a[href='../occupations/?code=254499']" }
+      - assertVisible: { css: ".cmp a[href='../occupations/254499/']" }
 
   - name: "Compare: unknown occupation shows a message"
     steps:
@@ -246,7 +296,7 @@ tests:
       - goto: "http://localhost:8765/eoi-pool/"
       - scrollUntilVisible: { selector: { css: "#q" }, direction: down, maxScrolls: 25 }
       - inputText: { selector: { css: "#q" }, text: "261313" }
-      - assertVisible: { css: "#table a[href='../occupations/?code=261313']" }
+      - assertVisible: { css: "#table a[href='../occupations/261313/']" }
 
   # ── Ceilings ────────────────────────────────────────────
   - name: "Ceilings: search a group"

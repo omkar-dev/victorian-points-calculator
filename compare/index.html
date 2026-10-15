@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Compare Skilled Occupations | 189 Cut-offs, EOIs &amp; Ceilings Side by Side</title>
-<meta name="description" content="Compare up to four skilled occupations side by side: eligible visas, 189 cut-off history, EOIs waiting, occupation ceilings and assessing authorities.">
+<meta name="description" content="Compare up to four skilled occupations side by side: visas, 189 cut-off history, EOIs waiting, occupation ceilings and assessing authorities.">
 <link rel="canonical" href="https://vptpoints.com/compare/">
 <meta name="theme-color" content="#1d5a44" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0e1613" media="(prefers-color-scheme: dark)">
@@ -12,9 +12,9 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VPT Points">
 <meta property="og:title" content="Compare skilled occupations">
-<meta property="og:description" content="Cut-offs, EOIs and ceilings for up to four occupations side by side.">
+<meta property="og:description" content="Compare up to four skilled occupations side by side: visas, 189 cut-off history, EOIs waiting, occupation ceilings and assessing authorities.">
 <meta property="og:url" content="https://vptpoints.com/compare/">
-<meta property="og:image" content="https://vptpoints.com/og-image.png">
+<meta property="og:image" content="https://vptpoints.com/assets/og/compare.png">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,18 @@
 .cmp .best { font-weight: 700; }
 .cmp .best::after { content: " ✓"; color: var(--leaf); }
 </style>
+<!-- seo -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://vptpoints.com/compare/", "url": "https://vptpoints.com/compare/", "name": "Compare Skilled Occupations | 189 Cut-offs, EOIs & Ceilings Side by Side", "description": "Compare up to four skilled occupations side by side: visas, 189 cut-off history, EOIs waiting, occupation ceilings and assessing authorities.", "dateModified": "2026-10-15", "inLanguage": "en-AU", "isPartOf": {"@id": "https://vptpoints.com/#website"}, "breadcrumb": {"@id": "https://vptpoints.com/compare/#breadcrumb"}, "primaryImageOfPage": "https://vptpoints.com/assets/og/compare.png"}, {"@type": "BreadcrumbList", "@id": "https://vptpoints.com/compare/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vptpoints.com/"}, {"@type": "ListItem", "position": 2, "name": "Compare occupations", "item": "https://vptpoints.com/compare/"}]}, {"@type": "WebApplication", "@id": "https://vptpoints.com/compare/#app", "name": "Compare occupations", "url": "https://vptpoints.com/compare/", "description": "Compare up to four skilled occupations side by side: visas, 189 cut-off history, EOIs waiting, occupation ceilings and assessing authorities.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}}]}</script>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compare Skilled Occupations | 189 Cut-offs, EOIs &amp; Ceilings Side by Side">
+<meta name="twitter:description" content="Compare up to four skilled occupations side by side: visas, 189 cut-off history, EOIs waiting, occupation ceilings and assessing authorities.">
+<meta name="twitter:image" content="https://vptpoints.com/assets/og/compare.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_AU">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<!-- /seo -->
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -128,7 +140,7 @@
       return row(label, function (o) { var v = val(o, k); return v == null ? "–" : '<span class="' + (v === b ? "best" : "") + '">' + V.num(v) + (suffix || "") + "</span>"; });
     };
     $("cmp").innerHTML = '<div class="scroll"><table class="data cmp"><thead><tr><th></th>' + picks.map(function (o) {
-      return '<th scope="col"><a href="../occupations/?code=' + o.anzsco + '">' + V.esc(o.name) + '</a><br><span class="code">' + o.anzsco + '</span> · <button class="linkbtn" type="button" data-rm="' + o.anzsco + '">Remove</button></th>';
+      return '<th scope="col"><a href="../occupations/' + o.anzsco + '/\">' + V.esc(o.name) + '</a><br><span class="code">' + o.anzsco + '</span> · <button class="linkbtn" type="button" data-rm="' + o.anzsco + '">Remove</button></th>';
     }).join("") + "</tr></thead><tbody>" +
       row("Lists", function (o) { return o.lists.map(function (l) { return '<span class="pill">' + l + "</span>"; }).join(""); }) +
       row("Visas", function (o) { return o.visas.join(", ") || "–"; }) +

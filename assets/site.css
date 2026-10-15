@@ -393,5 +393,6 @@ h1, h2, .lede, .val { overflow-wrap: break-word; }
   .big strong { font-size: 56px; }
   .q, .panel { padding-inline: 12px; }
 }
-.form, .q, .slider, .score-body, .faq, .tools, .journeys, .new-form { grid-template-columns: minmax(0, 1fr); }
+.form, .q, .slider, .score-body, .faq, .journeys, .new-form { grid-template-columns: minmax(0, 1fr); }
+.tools { grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr)); }
 .nav-toggle { align-items: center; }

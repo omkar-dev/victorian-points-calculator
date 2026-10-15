@@ -19,6 +19,7 @@ Live: https://vptpoints.com/
 | `/eoi-pool/` | SkillSelect EOI counts by visa, points and occupation |
 | `/visa-grants/` | Migration Program planning levels and grants |
 | `/occupation-ceilings/` | 2025–26 occupation ceilings |
+| `/occupations/<ANZSCO>/` | 505 generated occupation pages: cut-off history, EOIs, ceiling, visas, related occupations |
 
 ## Data
 
@@ -26,7 +27,7 @@ Everything in `data/` comes from official sources (Home Affairs, the SkillSelect
 
 ## Editing
 
-No build step is needed to serve the site. Shared styles and helpers live in `assets/`. The header, footer and `sitemap.xml` are stamped into every page by:
+No build step is needed to serve the site. Shared styles and helpers live in `assets/`. One command regenerates everything derived from `data/`: the occupation pages, the tables pre-rendered into each page (so search engines see the numbers without running JavaScript), structured data, preview images in `assets/og/`, `404.html`, the icon and manifest, plus the shared header, footer and `sitemap.xml`:
 
 ```
 python3 scripts/layout.py
